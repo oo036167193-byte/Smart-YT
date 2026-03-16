@@ -12,61 +12,87 @@ html{scroll-behavior:smooth;}
 body{font-family:"Montserrat","Heebo",sans-serif;background:var(--navy);color:var(--w);overflow-x:hidden;}
 
 /* ── RTL ── */
+/* ── RTL BASE ── */
 body.rtl{direction:rtl;font-family:"Heebo",sans-serif;}
+
+/* NAV */
 body.rtl nav{flex-direction:row-reverse;}
 body.rtl .nav-links{flex-direction:row-reverse;}
 body.rtl .nav-right{flex-direction:row-reverse;}
 body.rtl .logo-side{margin-left:0;margin-right:.5rem;text-align:right;}
 body.rtl .nav-links a::after{left:auto;right:0;}
+body.rtl .wa-tooltip{right:auto;left:74px;}
+
+/* HERO */
 body.rtl .badge{flex-direction:row-reverse;}
 body.rtl .hero-inner{direction:rtl;}
 body.rtl .hero h1,body.rtl .hero-sub,body.rtl .hero-sub2,body.rtl .hero-sub3{text-align:right;}
-body.rtl .hero-btns{flex-direction:row-reverse;justify-content:flex-end;}
+body.rtl .hero-btns{flex-direction:row-reverse;}
+
+/* SECTIONS */
 body.rtl .sh{text-align:right;}
-body.rtl .sh>*{text-align:right;}
 body.rtl .sh h2,body.rtl .sh p{text-align:right;}
 body.rtl .stag{text-align:right;display:inline-block;}
+
+/* SERVICES */
 body.rtl .svc{text-align:right;}
 body.rtl .spills{flex-direction:row-reverse;justify-content:flex-end;}
 body.rtl .pbody{text-align:right;}
 body.rtl .pchips{flex-direction:row-reverse;justify-content:flex-end;}
-body.rtl .sr{flex-direction:row-reverse;}
-body.rtl .sr .snc{order:2;}
-body.rtl .sr .scon{order:1;text-align:right;}
-body.rtl .sr:hover{padding-left:1rem!important;padding-right:1.8rem!important;}
-body.rtl .slist{width:100%;}
-body.rtl .scon{text-align:right;}
-body.rtl .wi{flex-direction:row-reverse;}
-body.rtl .wi div{text-align:right;}
-body.rtl .wi strong,body.rtl .wi p{text-align:right;}
+
+/* STEPS — number on RIGHT, text on RIGHT */
+
+
+
+
+
+
+/* WHY — checkmark on RIGHT, text on RIGHT */
+
+
+
+
 body.rtl .wbt{flex-direction:row-reverse;}
 body.rtl .wbox{text-align:right;}
 body.rtl .wmg{direction:rtl;}
 body.rtl .lrow{flex-direction:row-reverse;}
+
+/* FAQ */
 body.rtl .fi{text-align:right;}
 body.rtl .fq{flex-direction:row-reverse;text-align:right;}
 body.rtl .fq>span:first-child{text-align:right;flex:1;}
-body.rtl .fbi p{border-left:none;border-right:3px solid var(--cy);padding-left:0;padding-right:1rem;text-align:right;}
-body.rtl .cgrid{direction:rtl;}
-body.rtl .ci{flex-direction:row-reverse;}
-body.rtl .ci:hover{transform:translateX(-5px)!important;}
-body.rtl .ci>div:last-child{text-align:right;}
-body.rtl .cl{text-align:right;}
-body.rtl .cv{text-align:right;}
-body.rtl .cv a[href^="tel"],body.rtl .cv a[href^="mailto"]{direction:ltr;unicode-bidi:embed;display:inline-block;}
+body.rtl .fbi p{
+  border-left:none;border-right:3px solid var(--cy);
+  padding-left:0;padding-right:1rem;text-align:right;
+}
+
+/* CONTACT — icon first (right), text on right */
+
+
+
+
+
+
+
+body.rtl .cv a[href^="tel"],body.rtl .cv a[href^="mailto"]{
+  direction:ltr;unicode-bidi:embed;display:inline-block;
+}
+
+/* FORM */
 body.rtl .cfbox{text-align:right;}
 body.rtl .cfbox h3{text-align:right;}
 body.rtl .fg{text-align:right;}
 body.rtl .fg label{text-align:right;}
 body.rtl .fg input,body.rtl .fg textarea,body.rtl .fg select{text-align:right;}
 body.rtl .frow{direction:rtl;}
+
+/* FOOTER */
 body.rtl .ft{direction:rtl;}
 body.rtl .fc{text-align:right;}
 body.rtl .fc ul li{text-align:right;}
 body.rtl .fb2 p{text-align:right;}
 body.rtl .fbot{flex-direction:row-reverse;}
 body.rtl .flinks{flex-direction:row-reverse;}
-body.rtl .wa-tooltip{right:auto;left:74px;}
 
 /* ── BG ── */
 body::before{content:"";position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse at 20% 20%,rgba(33,150,243,.1) 0%,transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(0,180,255,.08) 0%,transparent 50%),linear-gradient(180deg,#081628,#060f1e);pointer-events:none;}
@@ -265,7 +291,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .cic{width:44px;height:44px;border-radius:11px;background:rgba(33,150,243,.12);border:1px solid rgba(33,150,243,.2);color:var(--cy);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
 .cl{font-size:.7rem;font-weight:700;color:var(--gm);letter-spacing:1px;text-transform:uppercase;margin-bottom:.2rem;}
 .cv{font-size:.95rem;color:white;font-weight:600;}
-.cv a{color:var(--cy);text-decoration:none;}
+.cv a{color:inherit;text-decoration:none;font-weight:600;}.cv a:hover{text-decoration:underline;}
 .cv a:hover{text-decoration:underline;}
 .cfbox{background:rgba(255,255,255,.04);border:1px solid rgba(33,150,243,.15);border-radius:20px;padding:2.5rem;}
 .cfbox h3{font-size:1.2rem;font-weight:800;color:white;margin-bottom:1.8rem;}
@@ -329,6 +355,240 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
   .ft{grid-template-columns:1fr 1fr;}.frow{grid-template-columns:1fr;}
   .wa-float{bottom:20px;right:20px;width:54px;height:54px;}
 }
+
+/* ━━━ LIGHT SECTIONS ━━━ */
+:root {
+  --light-bg:#f0f4f8; --light-bg2:#e8eef5; --light-text:#1a2840;
+  --light-sub:#4a6080; --light-border:#d0dcea;
+}
+.sec-light { background:var(--light-bg) !important; color:var(--light-text); }
+.sec-light2 { background:var(--light-bg2) !important; color:var(--light-text); }
+.sec-light .sh h2, .sec-light2 .sh h2 { color:var(--light-text); }
+.sec-light .sh p, .sec-light2 .sh p { color:var(--light-sub); }
+.sec-light .stag, .sec-light2 .stag {
+  background:rgba(21,101,192,.1);color:#1565c0;
+  border-color:rgba(21,101,192,.25);animation:none;box-shadow:none;
+}
+/* Steps in light */
+.sec-light .sr, .sec-light2 .sr { border-bottom:1px solid var(--light-border); }
+.sec-light .sr:hover, .sec-light2 .sr:hover { background:rgba(21,101,192,.05); }
+.sec-light .scon h3, .sec-light2 .scon h3 { color:var(--light-text); }
+.sec-light .scon p, .sec-light2 .scon p { color:var(--light-sub); }
+.sec-light .sl, .sec-light2 .sl { background:linear-gradient(to bottom,rgba(21,101,192,.3),transparent); }
+/* FAQ in light */
+.sec-light .fi { border-bottom:1px solid var(--light-border); }
+.sec-light .fq { color:var(--light-text); }
+.sec-light .fq:hover, .sec-light .fq.open { color:#1565c0; }
+.sec-light .fa { color:#1565c0; }
+.sec-light .fbi p { color:var(--light-sub); border-left:3px solid #1565c0; }
+/* Contact in light */
+.sec-light2 .ci { background:transparent; }
+.sec-light2 .cic { background:rgba(21,101,192,.1); border-color:rgba(21,101,192,.2); color:#1565c0; }
+.sec-light2 .cl { color:var(--light-sub); }
+.sec-light2 .cv { color:var(--light-text); }
+.sec-light2 .cv a { color:var(--light-text); font-weight:600; }
+.sec-light2 .cfbox { background:white; border:1px solid var(--light-border); box-shadow:0 4px 20px rgba(0,0,0,.07); }
+.sec-light2 .cfbox h3 { color:var(--light-text); }
+.sec-light2 .fg label { color:var(--light-sub); }
+.sec-light2 .fg input, .sec-light2 .fg textarea, .sec-light2 .fg select {
+  background:var(--light-bg); border:1.5px solid var(--light-border);
+  color:var(--light-text);
+}
+.sec-light2 .fg input:focus,.sec-light2 .fg textarea:focus,.sec-light2 .fg select:focus {
+  border-color:#1565c0; background:white; box-shadow:0 0 0 3px rgba(21,101,192,.1);
+}
+.sec-light2 .fg input::placeholder,.sec-light2 .fg textarea::placeholder { color:#aab8c8; }
+.sec-light2 .fg select option { background:white; color:var(--light-text); }
+.sec-light2 #fok { color:#1565c0; }
+/* Platforms in light */
+.sec-light .pc { background:white; border:1px solid var(--light-border); box-shadow:0 2px 12px rgba(0,0,0,.06); }
+.sec-light .pc:hover { box-shadow:0 20px 40px rgba(21,101,192,.15); border-color:#1565c0; }
+.sec-light .pbody { background:white; }
+.sec-light .pbody p { color:var(--light-sub); }
+/* Ticker in light */
+.tstrip { background:var(--light-bg2); border-top:1px solid var(--light-border); border-bottom:1px solid var(--light-border); }
+.tp { background:white; border:1px solid var(--light-border); box-shadow:0 2px 8px rgba(0,0,0,.05); }
+.tp:hover { border-color:#1565c0; background:#f0f8ff; }
+.tn { color:var(--light-text); }
+/* RTL for light sections */
+body.rtl .sec-light .fq,body.rtl .sec-light2 .fq { flex-direction:row-reverse; text-align:right; }
+body.rtl .sec-light .fbi p { border-left:none; border-right:3px solid #1565c0; padding-left:0; padding-right:1rem; text-align:right; }
+
+
+
+
+
+
+body.rtl .sec-light2 .cfbox h3,body.rtl .sec-light2 .fg label { text-align:right; }
+body.rtl .sec-light2 .frow { direction:rtl; }
+
+
+/* ── RTL LIGHT SECTIONS FIX ── */
+
+
+body.rtl .sec-light .fq,body.rtl .sec-light2 .fq{flex-direction:row-reverse!important;text-align:right;}
+body.rtl .sec-light .fbi p{border-left:none!important;border-right:3px solid #1565c0;padding-left:0!important;padding-right:1rem!important;text-align:right!important;}
+
+
+
+body.rtl .sec-light2 .cfbox h3{text-align:right!important;}
+body.rtl .sec-light2 .fg label{text-align:right!important;}
+body.rtl .sec-light2 .frow{direction:rtl!important;}
+
+/* ═══════════════════════════════════════
+   FINAL RTL COMPREHENSIVE FIX
+   ═══════════════════════════════════════ */
+
+/* Steps: number circle on RIGHT, text flows right-to-left */
+
+
+
+/* Why Us: checkmark on RIGHT, text right-aligned */
+
+body.rtl .wi > div,
+
+
+/* Hero buttons: align to right side */
+body.rtl .hero-btns {
+  justify-content: flex-end !important;
+}
+
+/* Contact: icon first (right side), text right-aligned, all pushed right */
+
+
+body.rtl .ci > div {
+  text-align: right !important;
+  flex: 1;
+}
+
+
+
+/* Section head: stag inline so it doesn't stretch full width */
+body.rtl .stag {
+  display: inline-block !important;
+  text-align: right !important;
+}
+
+/* Checklist items in why section */
+
+
+/* FAQ answers */
+body.rtl .fbi p {
+  border-left: none !important;
+  border-right: 3px solid var(--cy) !important;
+  padding-left: 0 !important;
+  padding-right: 1rem !important;
+  text-align: right !important;
+}
+
+/* Light section specifics */
+body.rtl .sec-light .fbi p,
+body.rtl .sec-light2 .fbi p {
+  border-left: none !important;
+  border-right: 3px solid #1565c0 !important;
+  padding-left: 0 !important;
+  padding-right: 1rem !important;
+  text-align: right !important;
+}
+
+/* Contact section in light */
+
+
+
+
+/* ─── RTL CONTACT: mirror of LTR, text right-aligned ─── */
+body.rtl .cgrid { direction: rtl; }
+body.rtl .cinfo { align-items: stretch; }
+/* Row: reverse order so icon is on RIGHT, text on LEFT visually → same feel as LTR mirrored */
+body.rtl .ci {
+  flex-direction: row-reverse;
+  text-align: right;
+  gap: 1rem;
+}
+body.rtl .ci:hover { transform: translateX(-5px); }
+/* Text block inside ci: right-aligned */
+body.rtl .ci > div:first-of-type { text-align: right; }
+body.rtl .cl { text-align: right; direction: rtl; }
+body.rtl .cv { text-align: right; }
+body.rtl .cv a[href^="tel"],
+body.rtl .cv a[href^="mailto"] {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+body.rtl .wbt { flex-direction: row-reverse; }
+body.rtl .wbox { text-align: right; direction: rtl; }
+body.rtl .wmg { direction: rtl; }
+body.rtl .lrow { flex-direction: row-reverse; }
+
+/* ─── RTL WHY-US ─── */
+body.rtl .wlist { direction: rtl; text-align: right; }
+body.rtl .wi {
+  direction: ltr;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 1rem;
+}
+body.rtl .wi > div {
+  direction: rtl;
+  text-align: right;
+  flex: 1;
+}
+body.rtl .wi strong { display: block; text-align: right; }
+body.rtl .wi p { text-align: right; }
+
+/* ─── RTL STEPS: number RIGHT first, text right-aligned ─── */
+body.rtl .slist { direction: rtl; text-align: right; }
+body.rtl .sr {
+  direction: ltr;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  text-align: right;
+}
+body.rtl .sr:hover { padding-left: 1rem !important; padding-right: 1.8rem !important; }
+body.rtl .scon {
+  direction: rtl;
+  text-align: right;
+  flex: 1;
+}
+body.rtl .scon h3 { text-align: right; }
+body.rtl .scon p  { text-align: right; }
+
+/* Footer links unified color */
+footer .fc ul li a,
+footer .fc ul li a[href^="tel"] {
+  color: rgba(255,255,255,.4);
+  text-decoration: none;
+  font-size: .85rem;
+}
+footer .fc ul li a:hover {
+  color: var(--cy);
+}
+
+.cinfo .cv a[href^="tel"] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+}
+
+/* Force footer phone to match other footer links */
+footer .fc ul li a[href^="tel"] {
+  color: rgba(255,255,255,.4) !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  font-size: .85rem !important;
+}
+footer .fc ul li a[href^="tel"]:hover {
+  color: var(--cy) !important;
+}
 </style>
 </head>
 <body>
@@ -367,7 +627,7 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
   <div class="hgrid"></div><div class="horb1"></div><div class="horb2"></div><div class="hbeam"></div>
   <div class="hero-inner">
     <div>
-      <div class="badge"><span class="dot"></span><span data-en="· Business Automation Experts" data-he="· מומחי אוטומציה עסקית">· Business Automation Experts</span></div>
+      <div class="badge"><span class="dot"></span><span data-en="Business Automation Experts" data-he="מומחי אוטומציה עסקית">Business Automation Experts</span></div>
       <h1 data-en="Any App. Any Tool. <span class='grad'>Fully Automated.</span>" data-he="כל אפליקציה. כל כלי. <span class='grad'>אוטומציה מלאה.</span>">Any App. Any Tool. <span class="grad">Fully Automated.</span></h1>
       <p class="hero-sub" data-en="Smart YT builds custom automations for any tool your business uses — eliminating manual work and saving you real time and money." data-he="Smart YT בונה אוטומציות מותאמות אישית לכל כלי שהעסק שלך משתמש בו — מבטלת עבודה ידנית וחוסכת זמן וכסף אמיתיים.">Smart YT builds custom automations for any tool your business uses — eliminating manual work and saving you real time and money.</p>
       <p class="hero-sub2" data-en="Stop wasting time on what automation can do — focus on what truly matters in your business." data-he="הפסק לבזבז זמן על מה שאוטומציה יכולה לעשות — התמקד במה שבאמת חשוב בעסק שלך.">Stop wasting time on what automation can do — focus on what truly matters in your business.</p>
@@ -393,39 +653,39 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
 <!-- TICKER -->
 <div class="tstrip"><div class="touter"><div class="ttrack">
   <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10.2 30a4.2 4.2 0 0 1-4.2-4.2 4.2 4.2 0 0 1 4.2-4.2h4.2v4.2A4.2 4.2 0 0 1 10.2 30z" fill="#E01E5A"/><path d="M14.4 30h4.2a4.2 4.2 0 0 1 0 8.4 4.2 4.2 0 0 1-4.2-4.2V30z" fill="#E01E5A"/><path d="M18.6 10.2A4.2 4.2 0 0 1 22.8 6a4.2 4.2 0 0 1 4.2 4.2v4.2h-4.2A4.2 4.2 0 0 1 18.6 10.2z" fill="#36C5F0"/><path d="M18.6 14.4v4.2a4.2 4.2 0 0 1-8.4 0 4.2 4.2 0 0 1 4.2-4.2h4.2z" fill="#36C5F0"/><path d="M38.4 18.6a4.2 4.2 0 0 1 4.2 4.2 4.2 4.2 0 0 1-4.2 4.2h-4.2v-4.2a4.2 4.2 0 0 1 4.2-4.2z" fill="#2EB67D"/><path d="M34.2 18.6h-4.2a4.2 4.2 0 0 1 0-8.4 4.2 4.2 0 0 1 4.2 4.2v4.2z" fill="#2EB67D"/><path d="M30 38.4a4.2 4.2 0 0 1-4.2 4.2 4.2 4.2 0 0 1-4.2-4.2v-4.2H26A4.2 4.2 0 0 1 30 38.4z" fill="#ECB22E"/><path d="M30 34.2v-4.2a4.2 4.2 0 0 1 8.4 0 4.2 4.2 0 0 1-4.2 4.2H30z" fill="#ECB22E"/></svg></div><span class="tn">Slack</span></div>
-      <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h40v32H4V8z" fill="#fff" stroke="#E0E0E0" stroke-width="1"/><path d="M4 8v4l20 16 20-16V8z" fill="#EA4335"/><path d="M4 12v28h6V20l14 11 14-11v20h6V12L24 28z" fill="#4285F4"/></svg></div><span class="tn">Gmail</span></div>
-      <div class="tp"><div class="ti" style="background:#25D366;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 10L4 44l10.3-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4z"/><path fill="#25D366" d="M24 6.5C14.3 6.5 6.5 14.3 6.5 24c0 3.4.9 6.5 2.5 9.2L6.5 41.5l8.5-2.4c2.6 1.4 5.6 2.2 8.8 2.2 9.7 0 17.5-7.8 17.5-17.5S33.7 6.5 24 6.5z"/><path fill="#fff" d="M34.5 29.2c-.4-.2-2.5-1.2-2.9-1.4-.4-.2-.7-.2-1 .2-.3.4-1.2 1.4-1.4 1.7-.3.3-.5.3-.9.1-.4-.2-1.8-.7-3.4-2.1-1.3-1.1-2.1-2.5-2.4-2.9-.3-.4 0-.7.2-.9l.6-.7c.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.3-1.3-3.1-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.4 3.9 1.6 4.2c.2.3 2.8 4.4 7 6.1 1 .4 1.7.6 2.3.8 1 .3 1.9.2 2.6.1.8-.1 2.5-1 2.8-2 .4-.9.4-1.7.3-1.9z"/></svg></div><span class="tn">WhatsApp</span></div>
-      <div class="tp"><div class="ti" style="background:#0F9D58;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#0F9D58"/><path d="M30 2v10h10z" fill="#87C280"/><path d="M14 20h20v2H14zm0 5h20v2H14zm0 5h14v2H14z" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Sheets</span></div>
-      <div class="tp"><div class="ti" style="background:#673AB7;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#673AB7"/><path d="M30 2v10h10z" fill="#9575CD"/><rect x="14" y="20" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="26" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="32" width="13" height="2" rx="1" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Forms</span></div>
-      <div class="tp"><div class="ti" style="background:#4285F4;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#4285F4"/><path d="M30 2v10h10z" fill="#7BAAF7"/><rect x="14" y="20" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="25" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="30" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="35" width="12" height="2" rx="1" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Docs</span></div>
-      <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 40l8-14h20l8 14H6z" fill="#4285F4"/><path d="M14 8h16l14 24H28z" fill="#0F9D58"/><path d="M14 8L2 28l4 12 16-26z" fill="#EA4335"/><path d="M34 32l4-8 4 8h-8z" fill="#FBBC04"/></svg></div><span class="tn">Google Drive</span></div>
-      <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="40" height="36" rx="4" fill="#fff" stroke="#DADCE0" stroke-width="1.5"/><rect x="4" y="8" width="40" height="14" rx="4" fill="#4285F4"/><rect x="4" y="18" width="40" height="4" fill="#4285F4"/><rect x="13" y="4" width="4" height="10" rx="2" fill="#1565C0"/><rect x="31" y="4" width="4" height="10" rx="2" fill="#1565C0"/><text x="24" y="39" text-anchor="middle" font-size="13" font-weight="700" fill="#4285F4" font-family="Arial">31</text></svg></div><span class="tn">Google Calendar</span></div>
-      <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#fff"/><rect x="8" y="18" width="23" height="14" rx="2" fill="#00BFA5"/><path d="M31 23 41 18v12l-10-5z" fill="#00897B"/></svg></div><span class="tn">Google Meet</span></div>
-      <div class="tp"><div class="ti" style="background:#2D8CFF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#2D8CFF"/><path d="M7 17h21a3 3 0 0 1 3 3v11H10a3 3 0 0 1-3-3V17z" fill="#fff"/><path d="M31 22 42 17v14l-11-5z" fill="#fff"/></svg></div><span class="tn">Zoom</span></div>
-      <div class="tp"><div class="ti" style="background:#FF3D57;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#FF3D57"/><ellipse cx="13" cy="30" rx="5" ry="5" fill="#FFCB00"/><ellipse cx="24" cy="30" rx="5" ry="5" fill="#00CA72"/><ellipse cx="35" cy="30" rx="5" ry="5" fill="#FF7043"/></svg></div><span class="tn">monday.com</span></div>
-      <div class="tp"><div class="ti" style="background:#6D00CC;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#6D00CC"/><circle cx="24" cy="10" r="4" fill="#fff"/><circle cx="38" cy="24" r="4" fill="#fff"/><circle cx="24" cy="38" r="4" fill="#fff"/><circle cx="10" cy="24" r="4" fill="#fff"/><path d="M24 14 38 24 24 34 10 24z" fill="none" stroke="#fff" stroke-width="1.5" opacity=".5"/></svg></div><span class="tn">Make</span></div>
-      <div class="tp"><div class="ti" style="background:#1a1a1a;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M22 7 2 16l20 8 20-8z" fill="#FCB400"/><path d="M26 26v14l18-7V19z" fill="#18BFFF"/><path d="M22 26 4 19v14l18 7z" fill="#F82B60"/></svg></div><span class="tn">Airtable</span></div>
-      <div class="tp"><div class="ti" style="background:#111827;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#111827"/><rect x="10" y="14" width="28" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2"/><line x1="10" y1="21" x2="38" y2="21" stroke="#fff" stroke-width="2"/><rect x="16" y="10" width="3" height="8" rx="1.5" fill="#fff"/><rect x="29" y="10" width="3" height="8" rx="1.5" fill="#fff"/><circle cx="18" cy="28" r="2" fill="#fff"/><circle cx="24" cy="28" r="2" fill="#fff"/><circle cx="30" cy="28" r="2" fill="#fff"/></svg></div><span class="tn">Cal.com</span></div>
-      <div class="tp"><div class="ti" style="background:#E3F2FF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 8 0 16l12 8 12-8z" fill="#0061FF"/><path d="M36 8 24 16l12 8 12-8z" fill="#0061FF"/><path d="M0 32l12 8 12-8-12-8z" fill="#0061FF"/><path d="M24 32l12 8 12-8-12-8z" fill="#0061FF"/><path d="M12 42l12-8 12 8-12 4z" fill="#0061FF"/></svg></div><span class="tn">Dropbox</span></div>
-      <div class="tp"><div class="ti" style="background:#E8F4FF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10 36a9 9 0 0 1-1-17.9A13 13 0 0 1 33 17a11 11 0 0 1 6 19H10z" fill="#0364B8"/><path d="M29 36H43a7 7 0 0 0 .5-14A10 10 0 0 0 23 22a9 9 0 0 1 6 14z" fill="#0078D4"/></svg></div><span class="tn">OneDrive</span></div>
-      <div class="tp"><div class="ti" style="background:#29B6F6;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#29B6F6"/><path d="M8 23.5 36 13l-5 27-9-9-4 3 1-10 17-9-19 9z" fill="#fff"/><path d="M22 33l-3-10 19-11-16 21z" fill="#E3F2FD"/></svg></div><span class="tn">Telegram</span></div>
-      <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10.2 30a4.2 4.2 0 0 1-4.2-4.2 4.2 4.2 0 0 1 4.2-4.2h4.2v4.2A4.2 4.2 0 0 1 10.2 30z" fill="#E01E5A"/><path d="M14.4 30h4.2a4.2 4.2 0 0 1 0 8.4 4.2 4.2 0 0 1-4.2-4.2V30z" fill="#E01E5A"/><path d="M18.6 10.2A4.2 4.2 0 0 1 22.8 6a4.2 4.2 0 0 1 4.2 4.2v4.2h-4.2A4.2 4.2 0 0 1 18.6 10.2z" fill="#36C5F0"/><path d="M18.6 14.4v4.2a4.2 4.2 0 0 1-8.4 0 4.2 4.2 0 0 1 4.2-4.2h4.2z" fill="#36C5F0"/><path d="M38.4 18.6a4.2 4.2 0 0 1 4.2 4.2 4.2 4.2 0 0 1-4.2 4.2h-4.2v-4.2a4.2 4.2 0 0 1 4.2-4.2z" fill="#2EB67D"/><path d="M34.2 18.6h-4.2a4.2 4.2 0 0 1 0-8.4 4.2 4.2 0 0 1 4.2 4.2v4.2z" fill="#2EB67D"/><path d="M30 38.4a4.2 4.2 0 0 1-4.2 4.2 4.2 4.2 0 0 1-4.2-4.2v-4.2H26A4.2 4.2 0 0 1 30 38.4z" fill="#ECB22E"/><path d="M30 34.2v-4.2a4.2 4.2 0 0 1 8.4 0 4.2 4.2 0 0 1-4.2 4.2H30z" fill="#ECB22E"/></svg></div><span class="tn">Slack</span></div>
-      <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h40v32H4V8z" fill="#fff" stroke="#E0E0E0" stroke-width="1"/><path d="M4 8v4l20 16 20-16V8z" fill="#EA4335"/><path d="M4 12v28h6V20l14 11 14-11v20h6V12L24 28z" fill="#4285F4"/></svg></div><span class="tn">Gmail</span></div>
-      <div class="tp"><div class="ti" style="background:#25D366;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 10L4 44l10.3-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4z"/><path fill="#25D366" d="M24 6.5C14.3 6.5 6.5 14.3 6.5 24c0 3.4.9 6.5 2.5 9.2L6.5 41.5l8.5-2.4c2.6 1.4 5.6 2.2 8.8 2.2 9.7 0 17.5-7.8 17.5-17.5S33.7 6.5 24 6.5z"/><path fill="#fff" d="M34.5 29.2c-.4-.2-2.5-1.2-2.9-1.4-.4-.2-.7-.2-1 .2-.3.4-1.2 1.4-1.4 1.7-.3.3-.5.3-.9.1-.4-.2-1.8-.7-3.4-2.1-1.3-1.1-2.1-2.5-2.4-2.9-.3-.4 0-.7.2-.9l.6-.7c.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.3-1.3-3.1-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.4 3.9 1.6 4.2c.2.3 2.8 4.4 7 6.1 1 .4 1.7.6 2.3.8 1 .3 1.9.2 2.6.1.8-.1 2.5-1 2.8-2 .4-.9.4-1.7.3-1.9z"/></svg></div><span class="tn">WhatsApp</span></div>
-      <div class="tp"><div class="ti" style="background:#0F9D58;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#0F9D58"/><path d="M30 2v10h10z" fill="#87C280"/><path d="M14 20h20v2H14zm0 5h20v2H14zm0 5h14v2H14z" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Sheets</span></div>
-      <div class="tp"><div class="ti" style="background:#673AB7;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#673AB7"/><path d="M30 2v10h10z" fill="#9575CD"/><rect x="14" y="20" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="26" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="32" width="13" height="2" rx="1" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Forms</span></div>
-      <div class="tp"><div class="ti" style="background:#4285F4;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#4285F4"/><path d="M30 2v10h10z" fill="#7BAAF7"/><rect x="14" y="20" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="25" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="30" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="35" width="12" height="2" rx="1" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Docs</span></div>
-      <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 40l8-14h20l8 14H6z" fill="#4285F4"/><path d="M14 8h16l14 24H28z" fill="#0F9D58"/><path d="M14 8L2 28l4 12 16-26z" fill="#EA4335"/><path d="M34 32l4-8 4 8h-8z" fill="#FBBC04"/></svg></div><span class="tn">Google Drive</span></div>
-      <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="40" height="36" rx="4" fill="#fff" stroke="#DADCE0" stroke-width="1.5"/><rect x="4" y="8" width="40" height="14" rx="4" fill="#4285F4"/><rect x="4" y="18" width="40" height="4" fill="#4285F4"/><rect x="13" y="4" width="4" height="10" rx="2" fill="#1565C0"/><rect x="31" y="4" width="4" height="10" rx="2" fill="#1565C0"/><text x="24" y="39" text-anchor="middle" font-size="13" font-weight="700" fill="#4285F4" font-family="Arial">31</text></svg></div><span class="tn">Google Calendar</span></div>
-      <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#fff"/><rect x="8" y="18" width="23" height="14" rx="2" fill="#00BFA5"/><path d="M31 23 41 18v12l-10-5z" fill="#00897B"/></svg></div><span class="tn">Google Meet</span></div>
-      <div class="tp"><div class="ti" style="background:#2D8CFF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#2D8CFF"/><path d="M7 17h21a3 3 0 0 1 3 3v11H10a3 3 0 0 1-3-3V17z" fill="#fff"/><path d="M31 22 42 17v14l-11-5z" fill="#fff"/></svg></div><span class="tn">Zoom</span></div>
-      <div class="tp"><div class="ti" style="background:#FF3D57;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#FF3D57"/><ellipse cx="13" cy="30" rx="5" ry="5" fill="#FFCB00"/><ellipse cx="24" cy="30" rx="5" ry="5" fill="#00CA72"/><ellipse cx="35" cy="30" rx="5" ry="5" fill="#FF7043"/></svg></div><span class="tn">monday.com</span></div>
-      <div class="tp"><div class="ti" style="background:#6D00CC;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#6D00CC"/><circle cx="24" cy="10" r="4" fill="#fff"/><circle cx="38" cy="24" r="4" fill="#fff"/><circle cx="24" cy="38" r="4" fill="#fff"/><circle cx="10" cy="24" r="4" fill="#fff"/><path d="M24 14 38 24 24 34 10 24z" fill="none" stroke="#fff" stroke-width="1.5" opacity=".5"/></svg></div><span class="tn">Make</span></div>
-      <div class="tp"><div class="ti" style="background:#1a1a1a;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M22 7 2 16l20 8 20-8z" fill="#FCB400"/><path d="M26 26v14l18-7V19z" fill="#18BFFF"/><path d="M22 26 4 19v14l18 7z" fill="#F82B60"/></svg></div><span class="tn">Airtable</span></div>
-      <div class="tp"><div class="ti" style="background:#111827;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#111827"/><rect x="10" y="14" width="28" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2"/><line x1="10" y1="21" x2="38" y2="21" stroke="#fff" stroke-width="2"/><rect x="16" y="10" width="3" height="8" rx="1.5" fill="#fff"/><rect x="29" y="10" width="3" height="8" rx="1.5" fill="#fff"/><circle cx="18" cy="28" r="2" fill="#fff"/><circle cx="24" cy="28" r="2" fill="#fff"/><circle cx="30" cy="28" r="2" fill="#fff"/></svg></div><span class="tn">Cal.com</span></div>
-      <div class="tp"><div class="ti" style="background:#E3F2FF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 8 0 16l12 8 12-8z" fill="#0061FF"/><path d="M36 8 24 16l12 8 12-8z" fill="#0061FF"/><path d="M0 32l12 8 12-8-12-8z" fill="#0061FF"/><path d="M24 32l12 8 12-8-12-8z" fill="#0061FF"/><path d="M12 42l12-8 12 8-12 4z" fill="#0061FF"/></svg></div><span class="tn">Dropbox</span></div>
-      <div class="tp"><div class="ti" style="background:#E8F4FF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10 36a9 9 0 0 1-1-17.9A13 13 0 0 1 33 17a11 11 0 0 1 6 19H10z" fill="#0364B8"/><path d="M29 36H43a7 7 0 0 0 .5-14A10 10 0 0 0 23 22a9 9 0 0 1 6 14z" fill="#0078D4"/></svg></div><span class="tn">OneDrive</span></div>
-      <div class="tp"><div class="ti" style="background:#29B6F6;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#29B6F6"/><path d="M8 23.5 36 13l-5 27-9-9-4 3 1-10 17-9-19 9z" fill="#fff"/><path d="M22 33l-3-10 19-11-16 21z" fill="#E3F2FD"/></svg></div><span class="tn">Telegram</span></div>
+    <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h40v32H4V8z" fill="#fff" stroke="#E0E0E0" stroke-width="1"/><path d="M4 8v4l20 16 20-16V8z" fill="#EA4335"/><path d="M4 12v28h6V20l14 11 14-11v20h6V12L24 28z" fill="#4285F4"/></svg></div><span class="tn">Gmail</span></div>
+    <div class="tp"><div class="ti" style="background:#25D366;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 10L4 44l10.3-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4z"/><path fill="#25D366" d="M24 6.5C14.3 6.5 6.5 14.3 6.5 24c0 3.4.9 6.5 2.5 9.2L6.5 41.5l8.5-2.4c2.6 1.4 5.6 2.2 8.8 2.2 9.7 0 17.5-7.8 17.5-17.5S33.7 6.5 24 6.5z"/><path fill="#fff" d="M34.5 29.2c-.4-.2-2.5-1.2-2.9-1.4-.4-.2-.7-.2-1 .2-.3.4-1.2 1.4-1.4 1.7-.3.3-.5.3-.9.1-.4-.2-1.8-.7-3.4-2.1-1.3-1.1-2.1-2.5-2.4-2.9-.3-.4 0-.7.2-.9l.6-.7c.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.3-1.3-3.1-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.4 3.9 1.6 4.2c.2.3 2.8 4.4 7 6.1 1 .4 1.7.6 2.3.8 1 .3 1.9.2 2.6.1.8-.1 2.5-1 2.8-2 .4-.9.4-1.7.3-1.9z"/></svg></div><span class="tn">WhatsApp</span></div>
+    <div class="tp"><div class="ti" style="background:#0F9D58;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#0F9D58"/><path d="M30 2v10h10z" fill="#87C280"/><path d="M14 20h20v2H14zm0 5h20v2H14zm0 5h14v2H14z" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Sheets</span></div>
+    <div class="tp"><div class="ti" style="background:#673AB7;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#673AB7"/><path d="M30 2v10h10z" fill="#9575CD"/><rect x="14" y="20" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="26" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="32" width="13" height="2" rx="1" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Forms</span></div>
+    <div class="tp"><div class="ti" style="background:#4285F4;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#4285F4"/><path d="M30 2v10h10z" fill="#7BAAF7"/><rect x="14" y="20" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="25" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="30" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="35" width="12" height="2" rx="1" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Docs</span></div>
+    <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 40l8-14h20l8 14H6z" fill="#4285F4"/><path d="M14 8h16l14 24H28z" fill="#0F9D58"/><path d="M14 8L2 28l4 12 16-26z" fill="#EA4335"/><path d="M34 32l4-8 4 8h-8z" fill="#FBBC04"/></svg></div><span class="tn">Google Drive</span></div>
+    <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="40" height="36" rx="4" fill="#fff" stroke="#DADCE0" stroke-width="1.5"/><rect x="4" y="8" width="40" height="14" rx="4" fill="#4285F4"/><rect x="4" y="18" width="40" height="4" fill="#4285F4"/><rect x="13" y="4" width="4" height="10" rx="2" fill="#1565C0"/><rect x="31" y="4" width="4" height="10" rx="2" fill="#1565C0"/><text x="24" y="39" text-anchor="middle" font-size="13" font-weight="700" fill="#4285F4" font-family="Arial">31</text></svg></div><span class="tn">Google Calendar</span></div>
+    <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#fff"/><rect x="8" y="18" width="23" height="14" rx="2" fill="#00BFA5"/><path d="M31 23 41 18v12l-10-5z" fill="#00897B"/></svg></div><span class="tn">Google Meet</span></div>
+    <div class="tp"><div class="ti" style="background:#2D8CFF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#2D8CFF"/><path d="M7 17h21a3 3 0 0 1 3 3v11H10a3 3 0 0 1-3-3V17z" fill="#fff"/><path d="M31 22 42 17v14l-11-5z" fill="#fff"/></svg></div><span class="tn">Zoom</span></div>
+    <div class="tp"><div class="ti" style="background:#FF3D57;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#FF3D57"/><ellipse cx="13" cy="30" rx="5" ry="5" fill="#FFCB00"/><ellipse cx="24" cy="30" rx="5" ry="5" fill="#00CA72"/><ellipse cx="35" cy="30" rx="5" ry="5" fill="#FF7043"/></svg></div><span class="tn">monday.com</span></div>
+    <div class="tp"><div class="ti" style="background:#6D00CC;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#6D00CC"/><circle cx="24" cy="10" r="4" fill="#fff"/><circle cx="38" cy="24" r="4" fill="#fff"/><circle cx="24" cy="38" r="4" fill="#fff"/><circle cx="10" cy="24" r="4" fill="#fff"/><path d="M24 14 38 24 24 34 10 24z" fill="none" stroke="#fff" stroke-width="1.5" opacity=".5"/></svg></div><span class="tn">Make</span></div>
+    <div class="tp"><div class="ti" style="background:#1a1a1a;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M22 7 2 16l20 8 20-8z" fill="#FCB400"/><path d="M26 26v14l18-7V19z" fill="#18BFFF"/><path d="M22 26 4 19v14l18 7z" fill="#F82B60"/></svg></div><span class="tn">Airtable</span></div>
+    <div class="tp"><div class="ti" style="background:#111827;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#111827"/><rect x="10" y="14" width="28" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2"/><line x1="10" y1="21" x2="38" y2="21" stroke="#fff" stroke-width="2"/><rect x="16" y="10" width="3" height="8" rx="1.5" fill="#fff"/><rect x="29" y="10" width="3" height="8" rx="1.5" fill="#fff"/><circle cx="18" cy="28" r="2" fill="#fff"/><circle cx="24" cy="28" r="2" fill="#fff"/><circle cx="30" cy="28" r="2" fill="#fff"/></svg></div><span class="tn">Cal.com</span></div>
+    <div class="tp"><div class="ti" style="background:#E3F2FF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 8 0 16l12 8 12-8z" fill="#0061FF"/><path d="M36 8 24 16l12 8 12-8z" fill="#0061FF"/><path d="M0 32l12 8 12-8-12-8z" fill="#0061FF"/><path d="M24 32l12 8 12-8-12-8z" fill="#0061FF"/><path d="M12 42l12-8 12 8-12 4z" fill="#0061FF"/></svg></div><span class="tn">Dropbox</span></div>
+    <div class="tp"><div class="ti" style="background:#E8F4FF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10 36a9 9 0 0 1-1-17.9A13 13 0 0 1 33 17a11 11 0 0 1 6 19H10z" fill="#0364B8"/><path d="M29 36H43a7 7 0 0 0 .5-14A10 10 0 0 0 23 22a9 9 0 0 1 6 14z" fill="#0078D4"/></svg></div><span class="tn">OneDrive</span></div>
+    <div class="tp"><div class="ti" style="background:#29B6F6;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#29B6F6"/><path d="M8 23.5 36 13l-5 27-9-9-4 3 1-10 17-9-19 9z" fill="#fff"/><path d="M22 33l-3-10 19-11-16 21z" fill="#E3F2FD"/></svg></div><span class="tn">Telegram</span></div>
+  <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10.2 30a4.2 4.2 0 0 1-4.2-4.2 4.2 4.2 0 0 1 4.2-4.2h4.2v4.2A4.2 4.2 0 0 1 10.2 30z" fill="#E01E5A"/><path d="M14.4 30h4.2a4.2 4.2 0 0 1 0 8.4 4.2 4.2 0 0 1-4.2-4.2V30z" fill="#E01E5A"/><path d="M18.6 10.2A4.2 4.2 0 0 1 22.8 6a4.2 4.2 0 0 1 4.2 4.2v4.2h-4.2A4.2 4.2 0 0 1 18.6 10.2z" fill="#36C5F0"/><path d="M18.6 14.4v4.2a4.2 4.2 0 0 1-8.4 0 4.2 4.2 0 0 1 4.2-4.2h4.2z" fill="#36C5F0"/><path d="M38.4 18.6a4.2 4.2 0 0 1 4.2 4.2 4.2 4.2 0 0 1-4.2 4.2h-4.2v-4.2a4.2 4.2 0 0 1 4.2-4.2z" fill="#2EB67D"/><path d="M34.2 18.6h-4.2a4.2 4.2 0 0 1 0-8.4 4.2 4.2 0 0 1 4.2 4.2v4.2z" fill="#2EB67D"/><path d="M30 38.4a4.2 4.2 0 0 1-4.2 4.2 4.2 4.2 0 0 1-4.2-4.2v-4.2H26A4.2 4.2 0 0 1 30 38.4z" fill="#ECB22E"/><path d="M30 34.2v-4.2a4.2 4.2 0 0 1 8.4 0 4.2 4.2 0 0 1-4.2 4.2H30z" fill="#ECB22E"/></svg></div><span class="tn">Slack</span></div>
+    <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 8h40v32H4V8z" fill="#fff" stroke="#E0E0E0" stroke-width="1"/><path d="M4 8v4l20 16 20-16V8z" fill="#EA4335"/><path d="M4 12v28h6V20l14 11 14-11v20h6V12L24 28z" fill="#4285F4"/></svg></div><span class="tn">Gmail</span></div>
+    <div class="tp"><div class="ti" style="background:#25D366;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 10L4 44l10.3-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4z"/><path fill="#25D366" d="M24 6.5C14.3 6.5 6.5 14.3 6.5 24c0 3.4.9 6.5 2.5 9.2L6.5 41.5l8.5-2.4c2.6 1.4 5.6 2.2 8.8 2.2 9.7 0 17.5-7.8 17.5-17.5S33.7 6.5 24 6.5z"/><path fill="#fff" d="M34.5 29.2c-.4-.2-2.5-1.2-2.9-1.4-.4-.2-.7-.2-1 .2-.3.4-1.2 1.4-1.4 1.7-.3.3-.5.3-.9.1-.4-.2-1.8-.7-3.4-2.1-1.3-1.1-2.1-2.5-2.4-2.9-.3-.4 0-.7.2-.9l.6-.7c.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.3-1.3-3.1-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.4 3.9 1.6 4.2c.2.3 2.8 4.4 7 6.1 1 .4 1.7.6 2.3.8 1 .3 1.9.2 2.6.1.8-.1 2.5-1 2.8-2 .4-.9.4-1.7.3-1.9z"/></svg></div><span class="tn">WhatsApp</span></div>
+    <div class="tp"><div class="ti" style="background:#0F9D58;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#0F9D58"/><path d="M30 2v10h10z" fill="#87C280"/><path d="M14 20h20v2H14zm0 5h20v2H14zm0 5h14v2H14z" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Sheets</span></div>
+    <div class="tp"><div class="ti" style="background:#673AB7;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#673AB7"/><path d="M30 2v10h10z" fill="#9575CD"/><rect x="14" y="20" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="26" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="32" width="13" height="2" rx="1" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Forms</span></div>
+    <div class="tp"><div class="ti" style="background:#4285F4;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M30 2H10a2 2 0 0 0-2 2v40a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12L30 2z" fill="#4285F4"/><path d="M30 2v10h10z" fill="#7BAAF7"/><rect x="14" y="20" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="25" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="30" width="20" height="2" rx="1" fill="#fff" opacity=".85"/><rect x="14" y="35" width="12" height="2" rx="1" fill="#fff" opacity=".85"/></svg></div><span class="tn">Google Docs</span></div>
+    <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M6 40l8-14h20l8 14H6z" fill="#4285F4"/><path d="M14 8h16l14 24H28z" fill="#0F9D58"/><path d="M14 8L2 28l4 12 16-26z" fill="#EA4335"/><path d="M34 32l4-8 4 8h-8z" fill="#FBBC04"/></svg></div><span class="tn">Google Drive</span></div>
+    <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="40" height="36" rx="4" fill="#fff" stroke="#DADCE0" stroke-width="1.5"/><rect x="4" y="8" width="40" height="14" rx="4" fill="#4285F4"/><rect x="4" y="18" width="40" height="4" fill="#4285F4"/><rect x="13" y="4" width="4" height="10" rx="2" fill="#1565C0"/><rect x="31" y="4" width="4" height="10" rx="2" fill="#1565C0"/><text x="24" y="39" text-anchor="middle" font-size="13" font-weight="700" fill="#4285F4" font-family="Arial">31</text></svg></div><span class="tn">Google Calendar</span></div>
+    <div class="tp"><div class="ti" style="background:#fff;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#fff"/><rect x="8" y="18" width="23" height="14" rx="2" fill="#00BFA5"/><path d="M31 23 41 18v12l-10-5z" fill="#00897B"/></svg></div><span class="tn">Google Meet</span></div>
+    <div class="tp"><div class="ti" style="background:#2D8CFF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#2D8CFF"/><path d="M7 17h21a3 3 0 0 1 3 3v11H10a3 3 0 0 1-3-3V17z" fill="#fff"/><path d="M31 22 42 17v14l-11-5z" fill="#fff"/></svg></div><span class="tn">Zoom</span></div>
+    <div class="tp"><div class="ti" style="background:#FF3D57;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#FF3D57"/><ellipse cx="13" cy="30" rx="5" ry="5" fill="#FFCB00"/><ellipse cx="24" cy="30" rx="5" ry="5" fill="#00CA72"/><ellipse cx="35" cy="30" rx="5" ry="5" fill="#FF7043"/></svg></div><span class="tn">monday.com</span></div>
+    <div class="tp"><div class="ti" style="background:#6D00CC;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#6D00CC"/><circle cx="24" cy="10" r="4" fill="#fff"/><circle cx="38" cy="24" r="4" fill="#fff"/><circle cx="24" cy="38" r="4" fill="#fff"/><circle cx="10" cy="24" r="4" fill="#fff"/><path d="M24 14 38 24 24 34 10 24z" fill="none" stroke="#fff" stroke-width="1.5" opacity=".5"/></svg></div><span class="tn">Make</span></div>
+    <div class="tp"><div class="ti" style="background:#1a1a1a;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M22 7 2 16l20 8 20-8z" fill="#FCB400"/><path d="M26 26v14l18-7V19z" fill="#18BFFF"/><path d="M22 26 4 19v14l18 7z" fill="#F82B60"/></svg></div><span class="tn">Airtable</span></div>
+    <div class="tp"><div class="ti" style="background:#111827;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="10" fill="#111827"/><rect x="10" y="14" width="28" height="22" rx="3" fill="none" stroke="#fff" stroke-width="2"/><line x1="10" y1="21" x2="38" y2="21" stroke="#fff" stroke-width="2"/><rect x="16" y="10" width="3" height="8" rx="1.5" fill="#fff"/><rect x="29" y="10" width="3" height="8" rx="1.5" fill="#fff"/><circle cx="18" cy="28" r="2" fill="#fff"/><circle cx="24" cy="28" r="2" fill="#fff"/><circle cx="30" cy="28" r="2" fill="#fff"/></svg></div><span class="tn">Cal.com</span></div>
+    <div class="tp"><div class="ti" style="background:#E3F2FF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 8 0 16l12 8 12-8z" fill="#0061FF"/><path d="M36 8 24 16l12 8 12-8z" fill="#0061FF"/><path d="M0 32l12 8 12-8-12-8z" fill="#0061FF"/><path d="M24 32l12 8 12-8-12-8z" fill="#0061FF"/><path d="M12 42l12-8 12 8-12 4z" fill="#0061FF"/></svg></div><span class="tn">Dropbox</span></div>
+    <div class="tp"><div class="ti" style="background:#E8F4FF;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10 36a9 9 0 0 1-1-17.9A13 13 0 0 1 33 17a11 11 0 0 1 6 19H10z" fill="#0364B8"/><path d="M29 36H43a7 7 0 0 0 .5-14A10 10 0 0 0 23 22a9 9 0 0 1 6 14z" fill="#0078D4"/></svg></div><span class="tn">OneDrive</span></div>
+    <div class="tp"><div class="ti" style="background:#29B6F6;"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#29B6F6"/><path d="M8 23.5 36 13l-5 27-9-9-4 3 1-10 17-9-19 9z" fill="#fff"/><path d="M22 33l-3-10 19-11-16 21z" fill="#E3F2FD"/></svg></div><span class="tn">Telegram</span></div>
 </div></div></div>
 
 <!-- SERVICES -->
@@ -450,7 +710,7 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
 </section>
 
 <!-- PLATFORMS -->
-<section class="sec sec-alt" id="platforms">
+<section class="sec sec-light" id="platforms">
   <div class="inner">
     <div class="sh fin">
       <span class="stag" data-en="TOOLS IN DEPTH" data-he="כלים לעומק">TOOLS IN DEPTH</span>
@@ -466,7 +726,7 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
 </section>
 
 <!-- HOW -->
-<section class="sec" id="how">
+<section class="sec sec-light2" id="how">
   <div class="inner">
     <div class="sh fin">
       <span class="stag" data-en="THE PROCESS" data-he="התהליך">THE PROCESS</span>
@@ -483,7 +743,7 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
 </section>
 
 <!-- WHY -->
-<section class="sec sec-alt" id="why">
+<section class="sec" id="why">
   <div class="inner">
     <div class="stband fin">
       <div class="stb"><span class="n" data-target="80" data-suffix="%">80%</span><div class="l" data-en="Reduction in manual tasks" data-he="הפחתה במשימות ידניות">Reduction in manual tasks</div></div>
@@ -500,7 +760,7 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
           <li class="wi"><span class="wck">✓</span><div><strong data-en="Specialists, Not Generalists" data-he="מומחים, לא גנרליים">Specialists, Not Generalists</strong><p data-en="We focus 100% on business automation — no side projects, no distractions." data-he="אנחנו מתמקדים 100% באוטומציה עסקית — ללא פרויקטים צדדיים, ללא הסחות דעת.">We focus 100% on business automation — no side projects, no distractions.</p></div></li>
           <li class="wi"><span class="wck">✓</span><div><strong data-en="Personal &amp; Tailored Process" data-he="תהליך אישי ומותאם">Personal &amp; Tailored Process</strong><p data-en="Every automation is custom-built for your specific business. No templates, no shortcuts." data-he="כל אוטומציה נבנית בהתאמה אישית לעסק הספציפי שלך. ללא תבניות, ללא קיצורים.">Every automation is custom-built for your specific business. No templates, no shortcuts.</p></div></li>
           <li class="wi"><span class="wck">✓</span><div><strong data-en="6-Month Warranty" data-he="אחריות 6 חודשים">6-Month Warranty</strong><p data-en="Everything we build includes a 6-month warranty. If anything breaks, we fix it free." data-he="כל מה שאנחנו בונים כולל אחריות של 6 חודשים. אם משהו מתקלקל, אנחנו מתקנים חינם.">Everything we build includes a 6-month warranty. If anything breaks, we fix it free.</p></div></li>
-          <li class="wi"><span class="wck">✓</span><div><strong data-en="English &amp; Hebrew" data-he="אנגלית ועברית">English &amp; Hebrew</strong><p data-en="Based in London, serving UK and international businesses in both languages." data-he="מבוסס בלונדון, משרת עסקים בבריטניה ובינלאומי — בשתי השפות.">Based in London, serving UK and international businesses in both languages.</p></div></li>
+
         </ul>
       </div>
       <div class="wbox fin">
@@ -511,14 +771,13 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
           <div class="wm"><span class="wn">24/7</span><div class="wl" data-en="Always running" data-he="רץ תמיד">Always running</div></div>
           <div class="wm"><span class="wn">120h</span><div class="wl" data-en="Saved monthly" data-he="נחסך בחודש">Saved monthly</div></div>
         </div>
-        <div class="lrow"><span class="ltag">🇬🇧 English</span><span class="ltag">🇮🇱 עברית</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="sec" id="faq">
+<section class="sec sec-light" id="faq">
   <div class="inner">
     <div class="sh fin">
       <span class="stag" data-en="FAQ" data-he="שאלות נפוצות">FAQ</span>
@@ -534,7 +793,7 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
 </section>
 
 <!-- CONTACT -->
-<section class="sec sec-alt" id="contact">
+<section class="sec sec-light2" id="contact">
   <div class="inner">
     <div class="cgrid">
       <div>
@@ -547,13 +806,13 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
           <div class="ci"><div class="cic">📍</div><div><div class="cl" data-en="LOCATION" data-he="מיקום">LOCATION</div><div class="cv">London, United Kingdom</div></div></div>
           <div class="ci"><div class="cic">📞</div><div><div class="cl" data-en="PHONE" data-he="טלפון">PHONE</div><div class="cv"><a href="tel:+4407356042086" dir="ltr">07356 042086</a></div></div></div>
           <div class="ci">
-            <div class="cic" style="background:rgba(37,211,102,.15);border-color:rgba(37,211,102,.3);"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 10L4 44l10.3-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4z"/><path fill="#25D366" d="M24 6.5C14.3 6.5 6.5 14.3 6.5 24c0 3.4.9 6.5 2.5 9.2L6.5 41.5l8.5-2.4c2.6 1.4 5.6 2.2 8.8 2.2 9.7 0 17.5-7.8 17.5-17.5S33.7 6.5 24 6.5z"/><path fill="#fff" d="M34.5 29.2c-.4-.2-2.5-1.2-2.9-1.4-.4-.2-.7-.2-1 .2-.3.4-1.2 1.4-1.4 1.7-.3.3-.5.3-.9.1-.4-.2-1.8-.7-3.4-2.1-1.3-1.1-2.1-2.5-2.4-2.9-.3-.4 0-.7.2-.9l.6-.7c.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.3-1.3-3.1-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.4 3.9 1.6 4.2c.2.3 2.8 4.4 7 6.1 1 .4 1.7.6 2.3.8 1 .3 1.9.2 2.6.1.8-.1 2.5-1 2.8-2 .4-.9.4-1.7.3-1.9z"/></svg></div>
+            <div class="cic" style="background:rgba(21,101,192,.12);border-color:rgba(21,101,192,.3);"><svg viewBox="0 0 48 48" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 10L4 44l10.3-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4z"/><path fill="#25D366" d="M24 6.5C14.3 6.5 6.5 14.3 6.5 24c0 3.4.9 6.5 2.5 9.2L6.5 41.5l8.5-2.4c2.6 1.4 5.6 2.2 8.8 2.2 9.7 0 17.5-7.8 17.5-17.5S33.7 6.5 24 6.5z"/><path fill="#fff" d="M34.5 29.2c-.4-.2-2.5-1.2-2.9-1.4-.4-.2-.7-.2-1 .2-.3.4-1.2 1.4-1.4 1.7-.3.3-.5.3-.9.1-.4-.2-1.8-.7-3.4-2.1-1.3-1.1-2.1-2.5-2.4-2.9-.3-.4 0-.7.2-.9l.6-.7c.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.3-1.3-3.1-.3-.8-.7-.7-1-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.4 3.9 1.6 4.2c.2.3 2.8 4.4 7 6.1 1 .4 1.7.6 2.3.8 1 .3 1.9.2 2.6.1.8-.1 2.5-1 2.8-2 .4-.9.4-1.7.3-1.9z"/></svg></div>
             <div>
               <div class="cl" data-en="WHATSAPP" data-he="וואטסאפ">WHATSAPP</div>
-              <div class="cv"><a href="https://wa.me/447356042086?text=Hi%2C%20I%20found%20you%20through%20your%20website.%20I%27d%20love%20to%20chat%20about%20automating%20my%20business." target="_blank" style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.3);color:#25D366;padding:.4rem .9rem;border-radius:100px;font-size:.85rem;font-weight:700;text-decoration:none;" data-en="Chat on WhatsApp →" data-he="שוחח בוואטסאפ →">Chat on WhatsApp →</a></div>
+              <div class="cv"><a href="https://wa.me/447356042086?text=Hi%2C%20I%20found%20you%20through%20your%20website.%20I%27d%20love%20to%20chat%20about%20automating%20my%20business." target="_blank" style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(21,101,192,.12);border:1px solid rgba(21,101,192,.3);color:#1565c0;padding:.4rem .9rem;border-radius:100px;font-size:.85rem;font-weight:700;text-decoration:none;" data-en="Chat on WhatsApp →" data-he="שוחח בוואטסאפ →">Chat on WhatsApp →</a></div>
             </div>
           </div>
-          <div class="ci"><div class="cic">✉️</div><div><div class="cl" data-en="EMAIL" data-he="מייל">EMAIL</div><div class="cv"><a href="mailto:oo036167193@gmail.com" dir="ltr">oo036167193@gmail.com</a></div></div></div>
+          <div class="ci"><div class="cic">✉️</div><div><div class="cl" data-en="EMAIL" data-he="מייל">EMAIL</div><div class="cv"><a href="javascript:void(0)" onclick="this.href='mai'+'lto:smartytuk12@gmail.com'" dir="ltr" style="color:inherit;text-decoration:none;font-weight:600;">smartytuk12&#64;gmail.com</a></div></div></div>
           <div class="ci"><div class="cic">💬</div><div><div class="cl" data-en="LANGUAGES" data-he="שפות">LANGUAGES</div><div class="cv" data-en="English &amp; Hebrew" data-he="אנגלית ועברית">English &amp; Hebrew</div></div></div>
         </div>
       </div>
@@ -608,7 +867,7 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
       <div class="fc"><h5 data-en="CONTACT" data-he="צור קשר">CONTACT</h5><ul>
         <li><a href="tel:+4407356042086" dir="ltr">07356 042086</a></li>
         <li><a href="https://wa.me/447356042086?text=Hi%2C%20I%20found%20you%20through%20your%20website.%20I%27d%20love%20to%20chat%20about%20automating%20my%20business." target="_blank">WhatsApp</a></li>
-        <li><a href="mailto:oo036167193@gmail.com" dir="ltr">oo036167193@gmail.com</a></li>
+        <li><a href="javascript:void(0)" onclick="this.href='mai'+'lto:smartytuk12@gmail.com'" style="color:rgba(255,255,255,.4);text-decoration:none;font-size:.85rem;" onmouseover="this.style.color='rgba(255,255,255,.7)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">smartytuk12&#64;gmail.com</a></li>
         <li><span style="color:rgba(255,255,255,.3);font-size:.85rem;">London, UK</span></li>
       </ul></div>
     </div>
@@ -631,10 +890,10 @@ footer{position:relative;z-index:1;background:rgba(0,0,0,.25);border-top:1px sol
 <script>
 var isHe = false;
 
-var PRIV_EN = "<h2>Who We Are</h2><p>Smart YT is a business automation consultancy based in London, UK. Contact: oo036167193@gmail.com</p><h2>What Data We Collect</h2><p>When you use our contact form we collect your name, email, company name (optional) and message.</p><h2>How We Use Your Data</h2><p>We use your data solely to respond to your enquiry. We do not sell or share your data with third parties.</p><h2>Your Rights (UK GDPR)</h2><p>You have the right to access, correct or request erasure of your data. Contact the ICO at ico.org.uk.</p><h2>Cookies</h2><p>This website does not use tracking cookies.</p>";
-var PRIV_HE = "<h2>מי אנחנו</h2><p>Smart YT היא חברת ייעוץ אוטומציה עסקית בלונדון. צור קשר: oo036167193@gmail.com</p><h2>אילו נתונים אנו אוספים</h2><p>בטופס יצירת הקשר אנחנו אוספים שם, מייל, שם חברה (אופציונלי) והודעה.</p><h2>שימוש בנתונים</h2><p>הנתונים משמשים אך ורק למענה לפנייתך. אנחנו לא מוכרים או משתפים נתוניך.</p><h2>זכויותיך (UK GDPR)</h2><p>יש לך זכות לגשת, לתקן או למחוק את הנתונים שלך. ניתן להגיש תלונה ל-ICO בכתובת ico.org.uk.</p><h2>עוגיות</h2><p>האתר אינו משתמש בעוגיות מעקב.</p>";
-var ACC_EN = "<h2>Our Commitment</h2><p>Smart YT is committed to digital accessibility and aims to conform to WCAG 2.1 Level AA.</p><h2>Features</h2><ul><li>Semantic HTML</li><li>Keyboard navigation</li><li>Sufficient colour contrast</li><li>Bilingual English &amp; Hebrew with RTL</li><li>Responsive design</li></ul><h2>Contact</h2><p>Accessibility queries: oo036167193@gmail.com. Response within 5 business days. Equality Act 2010 applies.</p>";
-var ACC_HE = "<h2>המחויבות שלנו</h2><p>Smart YT מחויבת לנגישות דיגיטלית ושואפת לעמוד ב-WCAG 2.1 רמה AA.</p><h2>תכונות</h2><ul><li>HTML סמנטי</li><li>ניווט מקלדת</li><li>ניגודיות צבע מספקת</li><li>עברית ואנגלית עם RTL</li><li>עיצוב רספונסיבי</li></ul><h2>צרו קשר</h2><p>פניות נגישות: oo036167193@gmail.com. מגיבים תוך 5 ימי עסקים. חוק השוויון 2010 חל.</p>";
+var PRIV_EN = "<h2>Who We Are</h2><p>Smart YT is a business automation consultancy based in London, UK. Contact: smartytuk12@gmail.com</p><h2>What Data We Collect</h2><p>When you use our contact form we collect your name, email, company name (optional) and message.</p><h2>How We Use Your Data</h2><p>We use your data solely to respond to your enquiry. We do not sell or share your data with third parties.</p><h2>Your Rights (UK GDPR)</h2><p>You have the right to access, correct or request erasure of your data. Contact the ICO at ico.org.uk.</p><h2>Cookies</h2><p>This website does not use tracking cookies.</p>";
+var PRIV_HE = "<h2>מי אנחנו</h2><p>Smart YT היא חברת ייעוץ אוטומציה עסקית בלונדון. צור קשר: smartytuk12@gmail.com</p><h2>אילו נתונים אנו אוספים</h2><p>בטופס יצירת הקשר אנחנו אוספים שם, מייל, שם חברה (אופציונלי) והודעה.</p><h2>שימוש בנתונים</h2><p>הנתונים משמשים אך ורק למענה לפנייתך. אנחנו לא מוכרים או משתפים נתוניך.</p><h2>זכויותיך (UK GDPR)</h2><p>יש לך זכות לגשת, לתקן או למחוק את הנתונים שלך. ניתן להגיש תלונה ל-ICO בכתובת ico.org.uk.</p><h2>עוגיות</h2><p>האתר אינו משתמש בעוגיות מעקב.</p>";
+var ACC_EN = "<h2>Our Commitment</h2><p>Smart YT is committed to digital accessibility and aims to conform to WCAG 2.1 Level AA.</p><h2>Features</h2><ul><li>Semantic HTML</li><li>Keyboard navigation</li><li>Sufficient colour contrast</li><li>Bilingual English &amp; Hebrew with RTL</li><li>Responsive design</li></ul><h2>Contact</h2><p>Accessibility queries: smartytuk12@gmail.com. Response within 5 business days. Equality Act 2010 applies.</p>";
+var ACC_HE = "<h2>המחויבות שלנו</h2><p>Smart YT מחויבת לנגישות דיגיטלית ושואפת לעמוד ב-WCAG 2.1 רמה AA.</p><h2>תכונות</h2><ul><li>HTML סמנטי</li><li>ניווט מקלדת</li><li>ניגודיות צבע מספקת</li><li>עברית ואנגלית עם RTL</li><li>עיצוב רספונסיבי</li></ul><h2>צרו קשר</h2><p>פניות נגישות: smartytuk12@gmail.com. מגיבים תוך 5 ימי עסקים. חוק השוויון 2010 חל.</p>";
 
 function showL(t) {
   var lp=document.getElementById('lp'), lt=document.getElementById('lt'), lc=document.getElementById('lc');
@@ -815,12 +1074,12 @@ var so = new IntersectionObserver(function(es){
 var sb=document.querySelector('.stband'); if(sb)so.observe(sb);
 
 // 3D tilt on cards
-document.querySelectorAll('.pc,.svc').forEach(function(c){
-  c.addEventListener('mousemove',function(e){
-    var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-    c.style.transform='perspective(700px) rotateY('+(x*10)+'deg) rotateX('+(-y*10)+'deg) translateY(-4px)';
+document.querySelectorAll('.pc,.svc').forEach(function(c2){
+  c2.addEventListener('mousemove',function(e){
+    var r=c2.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    c2.style.transform='perspective(700px) rotateY('+(x*10)+'deg) rotateX('+(-y*10)+'deg) translateY(-4px)';
   });
-  c.addEventListener('mouseleave',function(){c.style.transform='';});
+  c2.addEventListener('mouseleave',function(){c2.style.transform='';});
 });
 </script>
 </body>
