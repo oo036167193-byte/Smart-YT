@@ -589,6 +589,101 @@ footer .fc ul li a[href^="tel"] {
 footer .fc ul li a[href^="tel"]:hover {
   color: var(--cy) !important;
 }
+
+/* ── Phone field ── */
+.phone-wrap{display:flex;gap:.5rem;align-items:flex-start;}
+.phone-select{
+  width:130px;flex-shrink:0;
+  background:rgba(255,255,255,.05);
+  border:1.5px solid rgba(33,150,243,.15);
+  border-radius:10px;padding:.8rem .6rem;
+  color:white;font-size:.85rem;font-family:inherit;
+  outline:none;cursor:pointer;
+  transition:border-color .2s,background .2s;
+  appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238faac8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .5rem center;
+  padding-right:1.5rem;
+}
+.phone-select:focus{border-color:var(--cy);background:rgba(33,150,243,.08);}
+.phone-select option{background:#0d1f3c;color:white;}
+.phone-input{flex:1;
+  background:rgba(255,255,255,.05);
+  border:1.5px solid rgba(33,150,243,.15);
+  border-radius:10px;padding:.8rem 1rem;
+  color:white;font-size:.9rem;font-family:inherit;
+  outline:none;
+  transition:border-color .2s,background .2s;
+}
+.phone-input::placeholder{color:rgba(255,255,255,.2);}
+.phone-input:focus{border-color:var(--cy);background:rgba(33,150,243,.08);}
+.phone-input.invalid{border-color:#ff4444;}
+.phone-input.valid{border-color:#00ca72;}
+.phone-error{color:#ff4444;font-size:.72rem;margin-top:.3rem;display:none;}
+.phone-error.show{display:block;}
+/* Light section override */
+.sec-light2 .phone-select,.sec-light2 .phone-input{
+  background:var(--light-bg);
+  border-color:var(--light-border);
+  color:var(--light-text);
+}
+.sec-light2 .phone-select:focus,.sec-light2 .phone-input:focus{
+  border-color:#1565c0;background:white;
+  box-shadow:0 0 0 3px rgba(21,101,192,.1);
+}
+.sec-light2 .phone-input::placeholder{color:#9aa5b4;}
+.sec-light2 .phone-select option{background:white;color:var(--light-text);}
+body.rtl .phone-wrap{flex-direction:row-reverse;}
+body.rtl .phone-input{text-align:right;}
+
+
+/* ── Phone field ── */
+.phone-wrap{display:flex;gap:.5rem;}
+.phone-select{
+  width:120px;flex-shrink:0;
+  background:rgba(255,255,255,.05);
+  border:1.5px solid rgba(33,150,243,.15);
+  border-radius:10px;
+  padding:.8rem .5rem .8rem .7rem;
+  color:white;font-size:.82rem;font-family:inherit;
+  outline:none;cursor:pointer;
+  transition:border-color .2s;
+  -webkit-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238faac8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .4rem center;
+  padding-right:1.4rem;
+}
+.phone-select:focus{border-color:var(--cy);}
+.phone-select option{background:#0d1f3c;color:white;font-size:.85rem;}
+.phone-input{
+  flex:1;
+  background:rgba(255,255,255,.05);
+  border:1.5px solid rgba(33,150,243,.15);
+  border-radius:10px;padding:.8rem 1rem;
+  color:white;font-size:.9rem;font-family:inherit;
+  outline:none;transition:border-color .2s,background .2s;
+}
+.phone-input::placeholder{color:rgba(255,255,255,.2);}
+.phone-input:focus{border-color:var(--cy);background:rgba(33,150,243,.08);}
+.phone-input.invalid{border-color:#ff4444!important;}
+.phone-input.valid{border-color:#00ca72!important;}
+.phone-error{
+  color:#ff4444;font-size:.72rem;margin-top:.3rem;
+  display:none;font-weight:600;
+}
+.phone-error.show{display:block;}
+/* Light section */
+.sec-light2 .phone-select,.sec-light2 .phone-input{
+  background:var(--light-bg);border-color:var(--light-border);color:var(--light-text);
+}
+.sec-light2 .phone-select:focus,.sec-light2 .phone-input:focus{
+  border-color:#1565c0;background:white;box-shadow:0 0 0 3px rgba(21,101,192,.1);
+}
+.sec-light2 .phone-input::placeholder{color:#9aa5b4;}
+.sec-light2 .phone-select option{background:white;color:var(--light-text);}
+body.rtl .phone-wrap{flex-direction:row-reverse;}
+body.rtl .phone-input{text-align:right;}
+
 </style>
 </head>
 <body>
@@ -826,6 +921,60 @@ footer .fc ul li a[href^="tel"]:hover {
           <div class="frow">
             <div class="fg"><label data-en="FULL NAME" data-he="שם מלא">FULL NAME</label><input type="text" name="name" placeholder="John Smith" required></div>
             <div class="fg"><label data-en="EMAIL" data-he="מייל">EMAIL</label><input type="email" name="email" placeholder="john@company.com" required></div>
+          </div>
+          
+          <div class="fg" id="phoneFg">
+            <label data-en="PHONE" data-he="טלפון">PHONE</label>
+            <div class="phone-wrap">
+              <select class="phone-select" id="phoneCode" aria-label="Country code">
+                <option value="+972" data-min="9" data-max="9" selected>🇮🇱 +972</option>
+<option value="+44" data-min="10" data-max="10">🇬🇧 +44</option>
+<option value="+1" data-min="10" data-max="10">🇺🇸 +1</option>
+<option value="+61" data-min="9" data-max="9">🇦🇺 +61</option>
+<option value="+43" data-min="7" data-max="13">🇦🇹 +43</option>
+<option value="+32" data-min="8" data-max="9">🇧🇪 +32</option>
+<option value="+55" data-min="10" data-max="11">🇧🇷 +55</option>
+<option value="+1-CA" data-min="10" data-max="10">🇨🇦 +1</option>
+<option value="+86" data-min="11" data-max="11">🇨🇳 +86</option>
+<option value="+357" data-min="8" data-max="8">🇨🇾 +357</option>
+<option value="+45" data-min="8" data-max="8">🇩🇰 +45</option>
+<option value="+20" data-min="10" data-max="10">🇪🇬 +20</option>
+<option value="+33" data-min="9" data-max="9">🇫🇷 +33</option>
+<option value="+49" data-min="10" data-max="12">🇩🇪 +49</option>
+<option value="+30" data-min="10" data-max="10">🇬🇷 +30</option>
+<option value="+91" data-min="10" data-max="10">🇮🇳 +91</option>
+<option value="+353" data-min="9" data-max="9">🇮🇪 +353</option>
+<option value="+39" data-min="9" data-max="10">🇮🇹 +39</option>
+<option value="+81" data-min="10" data-max="11">🇯🇵 +81</option>
+<option value="+962" data-min="8" data-max="9">🇯🇴 +962</option>
+<option value="+961" data-min="7" data-max="8">🇱🇧 +961</option>
+<option value="+52" data-min="10" data-max="10">🇲🇽 +52</option>
+<option value="+31" data-min="9" data-max="9">🇳🇱 +31</option>
+<option value="+64" data-min="8" data-max="10">🇳🇿 +64</option>
+<option value="+47" data-min="8" data-max="8">🇳🇴 +47</option>
+<option value="+48" data-min="9" data-max="9">🇵🇱 +48</option>
+<option value="+351" data-min="9" data-max="9">🇵🇹 +351</option>
+<option value="+7" data-min="10" data-max="10">🇷🇺 +7</option>
+<option value="+966" data-min="9" data-max="9">🇸🇦 +966</option>
+<option value="+27" data-min="9" data-max="9">🇿🇦 +27</option>
+<option value="+34" data-min="9" data-max="9">🇪🇸 +34</option>
+<option value="+46" data-min="9" data-max="9">🇸🇪 +46</option>
+<option value="+41" data-min="9" data-max="9">🇨🇭 +41</option>
+<option value="+90" data-min="10" data-max="10">🇹🇷 +90</option>
+<option value="+380" data-min="9" data-max="9">🇺🇦 +380</option>
+<option value="+971" data-min="9" data-max="9">🇦🇪 +971</option>
+              </select>
+              <input
+                type="tel"
+                class="phone-input"
+                id="phoneNumber"
+                placeholder="50 123 4567"
+                required
+                inputmode="numeric"
+              >
+            </div>
+            <input type="hidden" name="phone" id="phoneHidden">
+            <div class="phone-error" id="phoneError">Please enter a valid phone number</div>
           </div>
           <div class="fg"><label data-en="COMPANY" data-he="חברה">COMPANY</label><input type="text" name="company" placeholder="Your Company Ltd"></div>
           <div class="fg"><label data-en="WHAT DO YOU NEED?" data-he="מה אתה צריך?">WHAT DO YOU NEED?</label>
@@ -1081,6 +1230,112 @@ document.querySelectorAll('.pc,.svc').forEach(function(c2){
   });
   c2.addEventListener('mouseleave',function(){c2.style.transform='';});
 });
+
+// Override form submit to validate phone
+var origSubmit = document.getElementById('cForm').onsubmit;
+document.getElementById('cForm').addEventListener('submit', function(e) {
+  if (!validatePhone()) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    phoneInput.focus();
+    return false;
+  }
+  phoneHidden.value = getPhoneCode(phoneCode.value) + ' ' + phoneInput.value.trim();
+}, true);
+
+// Update placeholder on lang toggle - patch toggleLang
+var _origToggleLang = toggleLang;
+toggleLang = function() {
+  _origToggleLang();
+  // update phone error text
+  var err = document.getElementById('phoneError');
+  if (err) {
+    err.textContent = isHe
+      ? 'אנא הכנס מספר טלפון תקין'
+      : 'Please enter a valid phone number';
+  }
+};
+
+
+// ── PHONE VALIDATION ──
+(function() {
+  var phoneInput  = document.getElementById('phoneNumber');
+  var phoneCode   = document.getElementById('phoneCode');
+  var phoneError  = document.getElementById('phoneError');
+  var phoneHidden = document.getElementById('phoneHidden');
+  if (!phoneInput) return;
+
+  function getSelected() {
+    var opt = phoneCode.options[phoneCode.selectedIndex];
+    return {
+      prefix: phoneCode.value.replace(/-[A-Z]+$/, ''),
+      min: parseInt(opt.getAttribute('data-min') || '6'),
+      max: parseInt(opt.getAttribute('data-max') || '15')
+    };
+  }
+
+  function getErrMsg(min, max) {
+    var isHe = document.body.classList.contains('rtl');
+    if (min === max) {
+      return isHe
+        ? 'מספר הטלפון חייב להכיל בדיוק ' + min + ' ספרות'
+        : 'Phone number must be exactly ' + min + ' digits';
+    }
+    return isHe
+      ? 'מספר הטלפון חייב להכיל ' + min + '–' + max + ' ספרות'
+      : 'Phone number must be ' + min + '–' + max + ' digits';
+  }
+
+  function validatePhone() {
+    var digits = phoneInput.value.replace(/[^0-9]/g, '');
+    var sel = getSelected();
+    var ok = digits.length >= sel.min && digits.length <= sel.max;
+    var hasInput = phoneInput.value.length > 0;
+    phoneInput.classList.toggle('invalid', !ok && hasInput);
+    phoneInput.classList.toggle('valid', ok);
+    phoneError.textContent = getErrMsg(sel.min, sel.max);
+    phoneError.classList.toggle('show', !ok && hasInput);
+    if (ok) phoneHidden.value = sel.prefix + ' ' + phoneInput.value.trim();
+    return ok;
+  }
+
+  phoneInput.addEventListener('input', validatePhone);
+  phoneCode.addEventListener('change', function() {
+    if (phoneInput.value.length > 0) validatePhone();
+    // Update placeholder based on country
+    var examples = {
+      '+972':'50 123 4567','+44':'7911 123456','+1':'212 555 0100',
+      '+1-CA':'416 555 0100','+61':'412 345 678','+33':'6 12 34 56 78',
+      '+49':'151 23456789','+39':'312 345 6789','+34':'612 345 678',
+      '+31':'6 12345678','+7':'912 345 6789','+86':'139 1234 5678',
+      '+81':'90 1234 5678','+55':'11 91234 5678','+91':'98765 43210',
+      '+971':'50 123 4567','+966':'55 123 4567','+20':'100 123 4567'
+    };
+    var ex = examples[phoneCode.value] || '123 456 789';
+    phoneInput.placeholder = ex;
+  });
+
+  // Override form submit
+  document.getElementById('cForm').addEventListener('submit', function(e) {
+    if (!validatePhone()) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      phoneInput.focus();
+      phoneError.classList.add('show');
+      return false;
+    }
+    var sel = getSelected();
+    phoneHidden.value = sel.prefix + ' ' + phoneInput.value.trim();
+  }, true);
+
+  // Re-validate on language toggle
+  var _orig = window.toggleLang;
+  window.toggleLang = function() {
+    _orig();
+    if (phoneInput.value.length > 0) validatePhone();
+  };
+})();
+
 </script>
 </body>
 </html>
