@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+<!-- Google tag (Google Analytics). Nothing is measured until the visitor accepts cookies. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+  try { if (localStorage.getItem('syt_consent') === 'yes') gtag('consent', 'update', {analytics_storage: 'granted'}); } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NR5XCXCG"></script>
+<script>
+  gtag('js', new Date());
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smart YT – Smart Business Solutions</title>
@@ -1423,5 +1434,6 @@ renderAiHome();
 <script>
 document.querySelectorAll("nav .nav-links a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("menu-open");});});
 </script>
+<script src="consent.js"></script>
 </body>
 </html>

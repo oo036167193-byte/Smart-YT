@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+<!-- Google tag (Google Analytics). Nothing is measured until the visitor accepts cookies. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+  try { if (localStorage.getItem('syt_consent') === 'yes') gtag('consent', 'update', {analytics_storage: 'granted'}); } catch (e) {}
+</script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NR5XCXCG"></script>
+<script>
+  gtag('js', new Date());
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Monday | Smart YT</title>
@@ -267,6 +278,7 @@ function showStoryFromHash(){
   if(!p||!t(p,"full")){el.classList.remove("open");document.body.style.overflow="";return;}
   var f=t(p,"full");var half=Math.ceil(f.length/3);
   document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+(p.image?'<img class="story-img" src="'+esc(p.image)+'" alt="">':'')+f.slice(0,(p.videoAt||2)).map(block).join("")+videoHTML(p)+f.slice(p.videoAt||2).map(block).join("")+'<div class="srcs"><b>'+(isHe?"מקורות":"Sources")+'</b>'+allLinks(p)+'</div>';
+  if(window.gtag)gtag("event","story_open",{story_id:p.id,story_title:p.title_en});
   el.classList.add("open");el.scrollTop=0;document.body.style.overflow="hidden";
 }
 window.addEventListener("hashchange",showStoryFromHash);
@@ -285,5 +297,6 @@ function toggleLang(){isHe=!isHe;try{localStorage.setItem("aim_lang",isHe?"he":"
 <script>
 document.querySelectorAll("nav .nav-links a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("menu-open");});});
 </script>
+<script src="consent.js"></script>
 </body>
 </html>
