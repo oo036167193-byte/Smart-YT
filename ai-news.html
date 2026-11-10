@@ -40,7 +40,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .banner{container-type:inline-size;max-width:1100px;margin:0 auto;border-radius:12px;overflow:hidden;background:#011033;box-shadow:0 14px 40px rgba(0,0,0,.45);direction:ltr;}
 .banner-top{aspect-ratio:1100/256;overflow:hidden;}
 .banner-top img{display:block;width:100%;height:auto;}
-.tools{display:flex;justify-content:space-between;align-items:center;gap:.6cqw;padding:1.7cqw 1.6cqw 1.9cqw;border-top:.3cqw solid #1a8bfc;}
+.tools{overflow:hidden;padding:1.7cqw 0 1.9cqw;border-top:.3cqw solid #1a8bfc;}
+.track{display:flex;width:max-content;animation:toolsMove 24s linear infinite;}
+.tools:hover .track{animation-play-state:paused;}
+.track .tool{margin-right:2.2cqw;flex-shrink:0;}
+@keyframes toolsMove{from{transform:translateX(0)}to{transform:translateX(-25%)}}
+@media (prefers-reduced-motion:reduce){.track{animation:none;}}
 .tool{background:#fff;border-radius:10cqw;height:4cqw;padding:0 1.25cqw;display:inline-flex;align-items:center;gap:.7cqw;font-family:"Montserrat",sans-serif;font-weight:600;font-size:1.6cqw;color:#111;white-space:nowrap;box-shadow:0 .3cqw .9cqw rgba(0,0,0,.25);}
 .tool img{display:block;width:auto;}
 .tool .ic{height:2.2cqw;}
@@ -132,6 +137,7 @@ footer a{color:var(--gm);text-decoration:none;}
   <div class="banner">
     <div class="banner-top"><img src="assets/ai-monday-banner.gif" width="1100" height="326" alt="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086"></div>
     <div class="tools">
+     <div class="track">
       <span class="tool"><img class="ic" src="assets/tools/chatgpt.png" alt="">ChatGPT</span>
       <span class="tool"><img class="wm" src="assets/tools/gemini.png" alt="Gemini"></span>
       <span class="tool"><img class="ic rd" src="assets/tools/claude.png" alt="">Claude</span>
@@ -139,6 +145,28 @@ footer a{color:var(--gm);text-decoration:none;}
       <span class="tool"><img class="gk" src="assets/tools/grok.png" alt="Grok"></span>
       <span class="tool"><img class="wm" src="assets/tools/monday.png" alt="monday.com"></span>
       <span class="tool"><img class="nb" src="assets/tools/notebooklm.png" alt="NotebookLM"></span>
+      <span class="tool" aria-hidden="true"><img class="ic" src="assets/tools/chatgpt.png" alt="">ChatGPT</span>
+      <span class="tool" aria-hidden="true"><img class="wm" src="assets/tools/gemini.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="ic rd" src="assets/tools/claude.png" alt="">Claude</span>
+      <span class="tool" aria-hidden="true"><img class="mk" src="assets/tools/make.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="gk" src="assets/tools/grok.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="wm" src="assets/tools/monday.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="nb" src="assets/tools/notebooklm.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="ic" src="assets/tools/chatgpt.png" alt="">ChatGPT</span>
+      <span class="tool" aria-hidden="true"><img class="wm" src="assets/tools/gemini.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="ic rd" src="assets/tools/claude.png" alt="">Claude</span>
+      <span class="tool" aria-hidden="true"><img class="mk" src="assets/tools/make.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="gk" src="assets/tools/grok.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="wm" src="assets/tools/monday.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="nb" src="assets/tools/notebooklm.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="ic" src="assets/tools/chatgpt.png" alt="">ChatGPT</span>
+      <span class="tool" aria-hidden="true"><img class="wm" src="assets/tools/gemini.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="ic rd" src="assets/tools/claude.png" alt="">Claude</span>
+      <span class="tool" aria-hidden="true"><img class="mk" src="assets/tools/make.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="gk" src="assets/tools/grok.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="wm" src="assets/tools/monday.png" alt=""></span>
+      <span class="tool" aria-hidden="true"><img class="nb" src="assets/tools/notebooklm.png" alt=""></span>
+     </div>
     </div>
   </div>
 </header>
