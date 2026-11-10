@@ -149,6 +149,10 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45
   body.menu-open nav .nav-links li:last-child a{border-bottom:0;}
   body.menu-open nav .nav-links a::after{display:none;}
 }
+
+/* keep the page from sliding sideways on phones */
+html,body{overflow-x:hidden;}
+@supports (overflow:clip){html,body{overflow-x:clip;}}
 </style>
 </head>
 <body>

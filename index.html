@@ -740,6 +740,10 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45
 .aih-more{display:none;}
 body.rtl .aih-head,body.rtl .aih-body{text-align:right;}
 @media(max-width:900px){.aih{padding:3.5rem 1.25rem;}.aih-in{grid-template-columns:1fr;gap:2rem;}.aih-head{position:static;}.aih-card{grid-template-columns:110px 1fr;gap:1rem;}.aih-card h3{font-size:1rem;}}
+
+/* keep the page from sliding sideways on phones */
+html,body{overflow-x:hidden;}
+@supports (overflow:clip){html,body{overflow-x:clip;}}
 </style>
 </head>
 <body>
@@ -1129,6 +1133,7 @@ function closeL() { document.getElementById('lp').classList.remove('active'); do
 
 function toggleLang() {
   isHe = !isHe;
+  try { localStorage.setItem('aim_lang', isHe ? 'he' : 'en'); } catch (e) {}
   document.querySelector('.lang-btn').textContent = isHe ? '🇬🇧 English' : '🇮🇱 עברית';
   document.body.classList.toggle('rtl', isHe);
   document.documentElement.lang = isHe ? 'he' : 'en';
@@ -1435,6 +1440,7 @@ renderAiHome();
 <script>
 document.querySelectorAll("nav .nav-links a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("menu-open");});});
 </script>
+<script>try { if (localStorage.getItem('aim_lang') === 'he' || new URLSearchParams(location.search).get('lang') === 'he') toggleLang(); } catch (e) {}</script>
 <script src="consent.js"></script>
 </body>
 </html>
