@@ -172,12 +172,19 @@ nav .lang-btn:hover{border-color:#1565c0 !important;color:#1565c0 !important;}
   body.menu-open nav .nav-links{background:#fff !important;border-bottom:1px solid #e3eaf3 !important;box-shadow:0 20px 40px rgba(13,31,60,.12) !important;}
   body.menu-open nav .nav-links a{color:#1a2840 !important;border-bottom-color:#eef2f7 !important;}
 }
+
+/* SAME HEADER ON EVERY PAGE: logo, Home first, buttons at the end. Hebrew is an exact mirror of English. */
+nav{direction:ltr !important;flex-direction:row !important;}
+nav .nav-links,nav .nav-right,nav .logo-wrap{flex-direction:row !important;}
+body.rtl nav{direction:rtl !important;}
+nav .nav-links{gap:1.8rem;}
+nav .logo-wrap{text-decoration:none;cursor:pointer;}
 </style>
 </head>
 <body>
 
 <nav>
-  <a class="logo-wrap" href="index.html">
+  <a class="logo-wrap" href="/">
     <img src="assets/logo.jpg" alt="Smart YT" class="logo-img">
     <div class="logo-side">
       <span class="logo-name">Smart <span>YT</span></span>
@@ -186,10 +193,12 @@ nav .lang-btn:hover{border-color:#1565c0 !important;color:#1565c0 !important;}
   </a>
   <ul class="nav-links">
     <li><a href="/" data-en="Home" data-he="בית">Home</a></li>
-    <li><a href="index.html#services" data-en="Services" data-he="שירותים">Services</a></li>
-    <li><a href="index.html#how" data-en="How It Works" data-he="איך זה עובד">How It Works</a></li>
+    <li><a href="/#services" data-en="Services" data-he="שירותים">Services</a></li>
+    <li><a href="/#platforms" data-en="Platforms" data-he="פלטפורמות">Platforms</a></li>
+    <li><a href="/#how" data-en="How It Works" data-he="איך זה עובד">How It Works</a></li>
     <li><a href="/ai" class="active">AI Monday</a></li>
-    <li><a href="index.html#contact" data-en="Contact" data-he="צור קשר">Contact</a></li>
+    <li><a href="/#faq" data-en="FAQ" data-he="שאלות">FAQ</a></li>
+    <li><a href="/#contact" data-en="Contact" data-he="צור קשר">Contact</a></li>
   </ul>
   <div class="nav-right">
     <button class="lang-btn" onclick="toggleLang()">🇮🇱 עברית</button>
@@ -323,5 +332,14 @@ function toggleLang(){isHe=!isHe;try{localStorage.setItem("aim_lang",isHe?"he":"
 document.querySelectorAll("nav .nav-links a").forEach(function(a){a.addEventListener("click",function(){document.body.classList.remove("menu-open");});});
 </script>
 <script src="consent.js?v=3"></script>
+<script>
+/* WhatsApp message follows the site language */
+(function(){
+  var EN="Hi, I found you through your website. I'd love to chat about automating my business.";
+  var HE="שלום, הגעתי אליכם דרך האתר. אשמח לדבר על אוטומציה לעסק שלי.";
+  function upd(){var he=document.body.classList.contains("rtl");document.querySelectorAll('a[href*="wa.me/447356042086"]').forEach(function(a){a.href="https://wa.me/447356042086?text="+encodeURIComponent(he?HE:EN);});}
+  upd(); new MutationObserver(upd).observe(document.body,{attributes:true,attributeFilter:["class"]});
+})();
+</script>
 </body>
 </html>

@@ -819,6 +819,13 @@ body.rtl .cx-v[dir="ltr"]{text-align:right;}
 @media(max-width:900px){.cx{max-width:none;}}
 @media(max-width:900px){.cgrid{grid-template-columns:minmax(0,1fr) !important;}.cgrid>*{min-width:0;}.phone-wrap{min-width:0;}.phone-input{min-width:0;width:100%;}.phone-select{width:105px !important;}.cx-card{padding:.95rem;}.cx-v{font-size:.95rem;}.cx-sm{font-size:.95rem;}.cx-grid{grid-template-columns:minmax(0,1fr);gap:.7rem;}.cx-card{display:grid;grid-template-columns:44px 1fr;column-gap:.9rem;align-items:center;padding:.85rem 1rem;}.cx-ic{grid-row:1/3;margin:0;}.cx-l{align-self:end;}.cx-v{align-self:start;}}
 @media(max-width:360px){.cx-grid{grid-template-columns:1fr;}}
+
+/* SAME HEADER ON EVERY PAGE: logo, Home first, buttons at the end. Hebrew is an exact mirror of English. */
+nav{direction:ltr !important;flex-direction:row !important;}
+nav .nav-links,nav .nav-right,nav .logo-wrap{flex-direction:row !important;}
+body.rtl nav{direction:rtl !important;}
+nav .nav-links{gap:1.8rem;}
+nav .logo-wrap{text-decoration:none;cursor:pointer;}
 </style>
 </head>
 <body>
@@ -1535,5 +1542,14 @@ document.querySelectorAll("nav .nav-links a").forEach(function(a){a.addEventList
 </script>
 <script>try { if (localStorage.getItem('aim_lang') === 'he' || new URLSearchParams(location.search).get('lang') === 'he') toggleLang(); } catch (e) {}</script>
 <script src="consent.js?v=3"></script>
+<script>
+/* WhatsApp message follows the site language */
+(function(){
+  var EN="Hi, I found you through your website. I'd love to chat about automating my business.";
+  var HE="שלום, הגעתי אליכם דרך האתר. אשמח לדבר על אוטומציה לעסק שלי.";
+  function upd(){var he=document.body.classList.contains("rtl");document.querySelectorAll('a[href*="wa.me/447356042086"]').forEach(function(a){a.href="https://wa.me/447356042086?text="+encodeURIComponent(he?HE:EN);});}
+  upd(); new MutationObserver(upd).observe(document.body,{attributes:true,attributeFilter:["class"]});
+})();
+</script>
 </body>
 </html>
