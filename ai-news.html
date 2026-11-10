@@ -34,22 +34,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta{background:linear-gradient(135deg,var(--blue),var(--cy));color:#fff;padding:.55rem 1.4rem;border-radius:100px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:0 4px 15px rgba(33,150,243,.3);transition:all .2s;white-space:nowrap;}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(33,150,243,.5);}
 
-/* HERO: sharp HTML version of the AI Monday banner */
-.hero{position:relative;z-index:1;padding:110px 5vw 2.5rem;}
-.banner{direction:ltr;max-width:1000px;margin:0 auto;border-radius:18px;overflow:hidden;background:radial-gradient(ellipse at 18% 0%,rgba(66,165,245,.35),transparent 55%),radial-gradient(ellipse at 85% 30%,rgba(0,140,255,.22),transparent 50%),linear-gradient(180deg,#0a2a63 0%,#081a3d 75%);box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 1px rgba(66,165,245,.3);}
-.b-top{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:2.4rem 2.6rem 1.8rem;}
-.b-title{font-family:"Montserrat",sans-serif;font-size:clamp(2.6rem,7.5vw,5.4rem);font-weight:900;letter-spacing:-1.5px;line-height:1;color:#fff;}
-.b-title .ai{background:linear-gradient(100deg,#1e88ff 0%,#42a5f5 40%,#9fd8ff 50%,#42a5f5 60%,#1e88ff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 4s linear infinite;}
-@keyframes shine{0%{background-position:100% 0}100%{background-position:-150% 0}}
-.b-bar{width:clamp(70px,11vw,120px);height:5px;border-radius:5px;background:linear-gradient(90deg,#1e88ff,#00b4ff);margin:.9rem 0 1rem;box-shadow:0 0 14px rgba(0,180,255,.7);}
-.b-tag{font-family:"Montserrat",sans-serif;color:#dfe9f7;font-size:clamp(.85rem,1.9vw,1.25rem);font-weight:600;}
-.b-right{display:flex;flex-direction:column;align-items:center;gap:.6rem;flex-shrink:0;}
-.b-right img{width:clamp(140px,28vw,320px);height:auto;filter:drop-shadow(0 0 10px rgba(0,180,255,.35));}
-.b-phone{display:inline-flex;align-items:center;gap:.5rem;color:#fff;text-decoration:none;font-family:"Montserrat",sans-serif;font-weight:800;font-size:clamp(.95rem,2vw,1.35rem);}
-.b-phone .ico{width:1.6em;height:1.6em;border-radius:50%;background:#1e88ff;display:grid;place-items:center;font-size:.8em;}
-.b-chips{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;padding:1rem 2.6rem 1.2rem;border-top:2px solid #1e88ff;background:rgba(4,14,34,.55);}
-.chip{background:#fff;color:#111;border-radius:100px;padding:.45rem 1.15rem;font-family:"Montserrat",sans-serif;font-weight:800;font-size:clamp(.78rem,1.6vw,1.05rem);display:inline-flex;align-items:center;gap:.45rem;box-shadow:0 2px 8px rgba(0,0,0,.25);}
-.chip i{width:.65em;height:.65em;border-radius:50%;display:inline-block;}
+/* HERO: the AI Monday banner exactly as supplied, shown at its real size so it stays sharp */
+.hero{position:relative;z-index:1;padding:110px 1rem 2.5rem;text-align:center;}
+.banner-img{display:block;width:600px;max-width:100%;height:auto;margin:0 auto;border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,.45);}
 
 /* SECTION: light, easy to read (same light palette as the home page) */
 .sec{position:relative;z-index:1;padding:3.5rem 5vw 5rem;background:#f0f4f8;color:#1a2840;}
@@ -85,8 +72,7 @@ footer a{color:var(--gm);text-decoration:none;}
 
 @media(max-width:900px){
   nav{padding:.7rem 1rem;} .nav-links{display:none;} .logo-img{height:42px;} .nav-cta{display:none;}
-  .hero{padding:90px .75rem 1.5rem;} .banner{border-radius:12px;}
-  .b-top{padding:1.4rem 1.1rem 1rem;gap:.8rem;} .b-chips{padding:.8rem 1rem;justify-content:center;}
+  .hero{padding:90px .75rem 1.5rem;}
   .feat{grid-template-columns:1fr;padding:1.6rem;}
   .sec{padding:1rem 1rem 4rem;} .grid{grid-template-columns:1fr;}
 }
@@ -115,27 +101,7 @@ footer a{color:var(--gm);text-decoration:none;}
 </nav>
 
 <header class="hero">
-  <div class="banner" role="img" aria-label="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086">
-    <div class="b-top">
-      <div class="b-left">
-        <div class="b-title"><span class="ai">AI</span> Monday</div>
-        <div class="b-bar"></div>
-        <div class="b-tag">The week’s most interesting AI stories by SmartYT</div>
-      </div>
-      <div class="b-right">
-        <img src="assets/smartyt-logo.png" alt="Smart YT Smart Business Solutions">
-        <a class="b-phone" href="tel:+447356042086"><span class="ico">☎</span>07356 042086</a>
-      </div>
-    </div>
-    <div class="b-chips">
-      <span class="chip"><i style="background:#10a37f"></i>ChatGPT</span>
-      <span class="chip"><i style="background:#4285F4"></i>Gemini</span>
-      <span class="chip"><i style="background:#d97757"></i>Claude</span>
-      <span class="chip"><i style="background:#6D00CC"></i>make</span>
-      <span class="chip"><i style="background:#111"></i>Grok</span>
-      <span class="chip"><i style="background:#FF3D57"></i>monday</span>
-    </div>
-  </div>
+  <img class="banner-img" src="assets/ai-monday-banner.gif" width="600" height="178" alt="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086">
 </header>
 
 <main class="sec">
