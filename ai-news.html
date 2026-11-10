@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Monday – Smart YT</title>
+<meta name="description" content="AI Monday – the week's most interesting AI stories, explained for business owners. By Smart YT.">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#081628;--navy2:#0d1f3c;--blue:#1565c0;--bl:#42a5f5;--cy:#00b4ff;--w:#fff;--gm:#8faac8;--gl:#e3eaf5;--r:14px;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"Montserrat","Heebo",sans-serif;background:var(--navy);color:var(--w);overflow-x:hidden;min-height:100vh;}
+body.rtl{font-family:"Heebo",sans-serif;}
+body::before{content:"";position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse at 20% 20%,rgba(33,150,243,.1) 0%,transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(0,180,255,.08) 0%,transparent 50%),linear-gradient(180deg,#081628,#060f1e);pointer-events:none;}
+a{color:inherit;}
+
+/* NAV (same as main site) */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 5vw;background:rgba(8,22,40,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(33,150,243,.15);}
+.logo-wrap{display:flex;align-items:center;gap:.55rem;text-decoration:none;}
+.logo-img{height:52px;width:auto;filter:drop-shadow(0 0 8px rgba(0,180,255,.6));}
+.logo-side{display:flex;flex-direction:column;}
+.logo-name{font-size:.95rem;font-weight:800;color:#fff;letter-spacing:-.3px;}
+.logo-name span{color:var(--cy);}
+.logo-sub{font-size:.58rem;font-weight:600;color:var(--gm);letter-spacing:1.5px;text-transform:uppercase;}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
+.nav-links a{color:var(--gm);text-decoration:none;font-size:.85rem;font-weight:600;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--cy);}
+.nav-right{display:flex;gap:.8rem;align-items:center;}
+.lang-btn{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:var(--gm);padding:.4rem 1rem;border-radius:100px;cursor:pointer;font-size:.82rem;font-weight:600;font-family:inherit;transition:all .2s;}
+.lang-btn:hover{border-color:var(--cy);color:var(--cy);}
+.nav-cta{background:linear-gradient(135deg,var(--blue),var(--cy));color:#fff;padding:.55rem 1.4rem;border-radius:100px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:0 4px 15px rgba(33,150,243,.3);transition:all .2s;white-space:nowrap;}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(33,150,243,.5);}
+
+/* HERO — matches the AI Monday banner */
+.hero{position:relative;z-index:1;padding:140px 5vw 3rem;}
+.hero-card{max-width:1200px;margin:0 auto;position:relative;overflow:hidden;border-radius:22px;padding:3rem 3rem 2rem;background:radial-gradient(ellipse at 15% 0%,rgba(66,165,245,.25),transparent 55%),radial-gradient(ellipse at 100% 100%,rgba(0,180,255,.15),transparent 50%),linear-gradient(135deg,#0b2550,#081628 70%);border:1px solid rgba(66,165,245,.25);box-shadow:0 20px 60px rgba(0,0,0,.35);}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap;}
+.hero h1{font-size:clamp(3rem,8vw,5.5rem);font-weight:900;letter-spacing:-2px;line-height:1;direction:ltr;}
+.hero h1 .ai{background:linear-gradient(90deg,var(--bl),var(--cy));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.bar{width:110px;height:5px;border-radius:5px;background:linear-gradient(90deg,var(--blue),var(--cy));margin:1rem 0 1.1rem;box-shadow:0 0 14px rgba(0,180,255,.6);}
+body.rtl .bar{margin-right:0;}
+body.rtl .hero h1{text-align:right;}
+.tagline{color:var(--gl);font-size:clamp(1rem,2vw,1.25rem);font-weight:600;}
+.brand{display:flex;flex-direction:column;align-items:flex-end;gap:.7rem;}
+body.rtl .brand{align-items:flex-start;}
+.brand img{height:90px;width:auto;filter:drop-shadow(0 0 14px rgba(0,180,255,.5));}
+.phone{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:800;font-size:1.05rem;direction:ltr;}
+.phone .ico{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cy));display:grid;place-items:center;}
+.chips{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.2rem;padding-top:1.5rem;border-top:1px solid rgba(66,165,245,.25);}
+.chip{background:#fff;color:#111;border-radius:100px;padding:.45rem 1.1rem;font-weight:800;font-size:.9rem;display:inline-flex;align-items:center;gap:.45rem;direction:ltr;}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block;}
+
+/* SECTION */
+.sec{position:relative;z-index:1;padding:2rem 5vw 5rem;}
+.inner{max-width:1200px;margin:0 auto;}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem;}
+.stag{display:inline-block;background:rgba(33,150,243,.12);color:var(--cy);border:1px solid rgba(33,150,243,.25);padding:.3rem .9rem;border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;}
+.sh h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.5px;}
+.sh .week{color:var(--gm);font-size:.95rem;margin-top:.4rem;}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;}
+.fbtn{background:rgba(255,255,255,.04);border:1px solid rgba(33,150,243,.2);color:var(--gm);padding:.4rem 1rem;border-radius:100px;font-size:.8rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;}
+.fbtn:hover,.fbtn.on{background:rgba(0,180,255,.15);border-color:var(--cy);color:#fff;}
+
+/* POSTS */
+.feat{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;background:rgba(255,255,255,.04);border:1px solid rgba(0,180,255,.3);border-radius:18px;padding:2.2rem;margin-bottom:1.6rem;position:relative;overflow:hidden;}
+.feat::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 0% 0%,rgba(0,180,255,.12),transparent 60%);pointer-events:none;}
+.feat h3{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:900;line-height:1.2;margin:.6rem 0 0;}
+.feat p{color:var(--gl);line-height:1.8;font-size:1rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem;}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(33,150,243,.12);border-radius:var(--r);padding:1.6rem;display:flex;flex-direction:column;gap:.8rem;transition:transform .25s,border-color .25s,box-shadow .25s;}
+.card:hover{transform:translateY(-4px);border-color:rgba(0,180,255,.4);box-shadow:0 12px 30px rgba(0,0,0,.25);}
+.meta{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;font-size:.75rem;color:var(--gm);font-weight:600;}
+.tag{background:rgba(0,180,255,.12);color:var(--cy);border-radius:100px;padding:.2rem .7rem;font-weight:800;letter-spacing:.5px;}
+.card h3{font-size:1.12rem;font-weight:800;line-height:1.35;}
+.card p{color:var(--gm);font-size:.92rem;line-height:1.7;}
+.why{background:rgba(66,165,245,.08);border-inline-start:3px solid var(--cy);border-radius:8px;padding:.7rem .9rem;font-size:.86rem;line-height:1.6;color:var(--gl);}
+.why b{color:var(--cy);}
+.more{margin-top:auto;color:var(--cy);font-weight:700;font-size:.85rem;text-decoration:none;}
+.more:hover{text-decoration:underline;}
+.empty{color:var(--gm);text-align:center;padding:3rem 0;}
+
+/* SUBSCRIBE */
+.sub{margin-top:3.5rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;background:linear-gradient(135deg,rgba(21,101,192,.35),rgba(0,180,255,.15));border:1px solid rgba(0,180,255,.3);border-radius:18px;padding:2rem 2.2rem;}
+.sub h3{font-size:1.4rem;font-weight:900;}
+.sub p{color:var(--gl);margin-top:.3rem;}
+.wa{background:#25D366;color:#fff;text-decoration:none;font-weight:800;padding:.8rem 1.6rem;border-radius:100px;box-shadow:0 6px 20px rgba(37,211,102,.35);white-space:nowrap;}
+
+footer{position:relative;z-index:1;border-top:1px solid rgba(33,150,243,.15);padding:2rem 5vw;color:rgba(255,255,255,.45);font-size:.85rem;text-align:center;}
+footer a{color:var(--gm);text-decoration:none;}
+
+@media(max-width:900px){
+  nav{padding:.7rem 1rem;} .nav-links{display:none;} .logo-img{height:42px;} .nav-cta{display:none;}
+  .hero{padding:105px 1rem 2rem;} .hero-card{padding:2rem 1.4rem 1.5rem;}
+  .brand,body.rtl .brand{align-items:flex-start;} .brand img{height:64px;}
+  .feat{grid-template-columns:1fr;padding:1.6rem;}
+  .sec{padding:1rem 1rem 4rem;} .grid{grid-template-columns:1fr;}
+  .sub{padding:1.6rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo-wrap" href="index.html">
+    <img src="assets/logo.jpg" alt="Smart YT" class="logo-img">
+    <div class="logo-side">
+      <span class="logo-name">Smart <span>YT</span></span>
+      <span class="logo-sub" data-en="Smart Business Solutions" data-he="פתרונות עסקיים חכמים">Smart Business Solutions</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services" data-en="Services" data-he="שירותים">Services</a></li>
+    <li><a href="index.html#how" data-en="How It Works" data-he="איך זה עובד">How It Works</a></li>
+    <li><a href="ai-news.html" class="active">AI Monday</a></li>
+    <li><a href="index.html#contact" data-en="Contact" data-he="צור קשר">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-btn" onclick="toggleLang()">🇮🇱 עברית</button>
+    <a href="index.html#contact" class="nav-cta" data-en="Free Consultation" data-he="ייעוץ חינם">Free Consultation</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-card">
+    <div class="hero-top">
+      <div>
+        <h1><span class="ai">AI</span> Monday</h1>
+        <div class="bar"></div>
+        <p class="tagline" data-en="The week's most interesting AI stories – by SmartYT" data-he="סיפורי ה-AI המעניינים של השבוע – מבית SmartYT">The week's most interesting AI stories – by SmartYT</p>
+      </div>
+      <div class="brand">
+        <img src="assets/logo.jpg" alt="Smart YT – Smart Business Solutions">
+        <a class="phone" href="tel:+447356042086"><span class="ico">☎</span>07356 042086</a>
+      </div>
+    </div>
+    <div class="chips">
+      <span class="chip"><i style="background:#10a37f"></i>ChatGPT</span>
+      <span class="chip"><i style="background:#4285F4"></i>Gemini</span>
+      <span class="chip"><i style="background:#d97757"></i>Claude</span>
+      <span class="chip"><i style="background:#6D00CC"></i>Make</span>
+      <span class="chip"><i style="background:#111"></i>Grok</span>
+      <span class="chip"><i style="background:#FF3D57"></i>monday.com</span>
+    </div>
+  </div>
+</header>
+
+<main class="sec">
+  <div class="inner">
+    <div class="sh">
+      <div>
+        <span class="stag" data-en="This week" data-he="השבוע">This week</span>
+        <h2 data-en="The stories worth your time" data-he="הסיפורים ששווים את הזמן שלך">The stories worth your time</h2>
+        <p class="week" id="weekLabel"></p>
+      </div>
+      <div class="filters" id="filters"></div>
+    </div>
+
+    <div id="featured"></div>
+    <div class="grid" id="grid"></div>
+
+    <div class="sub">
+      <div>
+        <h3 data-en="Get AI Monday every week" data-he="קבלו את AI Monday כל שבוע">Get AI Monday every week</h3>
+        <p data-en="Join on WhatsApp — one short message every Monday, no spam." data-he="הצטרפו בוואטסאפ — הודעה קצרה אחת בכל יום שני, בלי ספאם.">Join on WhatsApp — one short message every Monday, no spam.</p>
+      </div>
+      <a class="wa" target="_blank" rel="noopener" href="https://wa.me/447356042086?text=Hi%2C%20please%20add%20me%20to%20AI%20Monday" data-en="Join on WhatsApp" data-he="הצטרפות בוואטסאפ">Join on WhatsApp</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p><span data-en="© 2026 Smart YT · Smart Business Solutions · London, UK" data-he="© 2026 Smart YT · פתרונות עסקיים חכמים · לונדון">© 2026 Smart YT · Smart Business Solutions · London, UK</span> · <a href="index.html" data-en="Back to home" data-he="חזרה לדף הבית">Back to home</a></p>
+</footer>
+
+<script>
+/* ============================================================
+   AI MONDAY POSTS — to add a story, copy one block and edit it.
+   Newest first. "featured": true = the big card at the top.
+   ============================================================ */
+var POSTS = [
+  {
+    date: "2026-11-09", featured: true, tag: "Open models",
+    title_en: "Mistral releases Large 4 as open weights",
+    title_he: "Mistral משחררת את Large 4 כמודל פתוח",
+    text_en: "Mistral AI published Large 4 — a 1-trillion-parameter model — as open weights under a modified MIT licence. Companies that resell it as a hosted service need a separate commercial agreement.",
+    text_he: "Mistral AI פרסמה את Large 4 — מודל עם טריליון פרמטרים — כמשקלים פתוחים ברישיון MIT מותאם. חברות שמוכרות אותו כשירות מאוחסן צריכות הסכם מסחרי נפרד.",
+    why_en: "Top-tier AI you can run on your own servers is getting closer — good news for businesses that can't send data to outside services.",
+    why_he: "AI ברמה גבוהה שאפשר להריץ על שרתים משלכם הולך ומתקרב — חדשות טובות לעסקים שלא יכולים לשלוח מידע לשירותים חיצוניים.",
+    link: "https://mistral.ai/news/mistral-large-4-oss/"
+  },
+  {
+    date: "2026-11-06", tag: "Shopping",
+    title_en: "Amazon lets customers text Alexa to shop",
+    title_he: "אמזון מאפשרת לקנות דרך הודעות טקסט לאלקסה",
+    text_en: "Amazon opened text-based shopping through Alexa, starting with invited US customers — weeks after it blocked Meta's Muse shopping agent from its store.",
+    text_he: "אמזון פתחה קניות בהודעות טקסט דרך אלקסה, בשלב ראשון ללקוחות מוזמנים בארה\"ב — שבועות אחרי שחסמה את סוכן הקניות Muse של Meta מהחנות שלה.",
+    why_en: "AI agents that buy on behalf of customers are arriving. Clear product info and easy ordering will matter more than ever.",
+    why_he: "סוכני AI שקונים בשם הלקוח כבר כאן. מידע ברור על המוצרים והזמנה פשוטה יהיו חשובים מאי פעם.",
+    link: "https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/"
+  },
+  {
+    date: "2026-11-06", tag: "OpenAI",
+    title_en: "OpenAI reportedly raises $11B at a $1.25T valuation",
+    title_he: "דיווח: OpenAI גייסה 11 מיליארד דולר לפי שווי של 1.25 טריליון",
+    text_en: "OpenAI has reportedly raised another $11B — less than the $30B it was seeking — and the round is still open.",
+    text_he: "לפי דיווח, OpenAI גייסה עוד 11 מיליארד דולר — פחות מ-30 המיליארד שביקשה — והסבב עדיין פתוח.",
+    why_en: "The money behind ChatGPT keeps flowing, so expect new features and tools to keep landing fast.",
+    why_he: "הכסף מאחורי ChatGPT ממשיך לזרום, אז צפו שפיצ'רים וכלים חדשים ימשיכו להגיע מהר.",
+    link: "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
+  },
+  {
+    date: "2026-11-04", tag: "Images & video",
+    title_en: "Fal raises $1.3B — Adobe, Canva and Shopify use it for AI images and video",
+    title_he: "Fal גייסה 1.3 מיליארד דולר — Adobe, Canva ו-Shopify משתמשות בה לתמונות ווידאו",
+    text_en: "Generative-media platform Fal raised $1.3B at a $16B valuation, double its April value. Adobe, Canva and Shopify run production image and video work on it.",
+    text_he: "פלטפורמת המדיה הגנרטיבית Fal גייסה 1.3 מיליארד דולר לפי שווי של 16 מיליארד — כפול מאפריל. Adobe, Canva ו-Shopify מריצות עליה עבודות תמונה ווידאו.",
+    why_en: "The design tools you already use are quietly getting stronger AI image and video features.",
+    why_he: "כלי העיצוב שאתם כבר עובדים איתם מקבלים בשקט יכולות תמונה ווידאו חזקות יותר.",
+    link: "https://tech.eu/2026/11/04/fal-doubles-valuation-to-16b-after-13b-series-f/"
+  },
+  {
+    date: "2026-11-04", tag: "Coding agents",
+    title_en: "Meta buys Conductor, the app that runs several coding agents at once",
+    title_he: "Meta קונה את Conductor — האפליקציה שמריצה כמה סוכני קוד במקביל",
+    text_en: "Conductor runs Claude Code, Codex and Cursor agents side by side. Its team joins Meta, and Conductor Cloud shuts down on 20 November, deleting stored data.",
+    text_he: "Conductor מריצה סוכנים של Claude Code, Codex ו-Cursor זה לצד זה. הצוות עובר ל-Meta, ו-Conductor Cloud נסגרת ב-20 בנובמבר והנתונים יימחקו.",
+    why_en: "Using Conductor? Export your work before 20 November.",
+    why_he: "משתמשים ב-Conductor? ייצאו את העבודה שלכם לפני 20 בנובמבר.",
+    link: "https://siliconangle.com/2026/11/04/meta-acquires-ai-coding-startup-conductor-whose-app-runs-several-coding-agents-at-once/"
+  }
+];
+
+var isHe = false, filter = "all";
+function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function fmt(d){var dt=new Date(d+"T12:00:00");return dt.toLocaleDateString(isHe?"he-IL":"en-GB",{day:"numeric",month:"long",year:"numeric"});}
+function t(p,k){return isHe?(p[k+"_he"]||p[k+"_en"]):(p[k+"_en"]||p[k+"_he"]);}
+function cardHTML(p,big){
+  var why=t(p,"why")?'<div class="why"><b>'+(isHe?"מה זה אומר לעסק שלך: ":"Why it matters: ")+'</b>'+esc(t(p,"why"))+'</div>':"";
+  var more=p.link?'<a class="more" target="_blank" rel="noopener" href="'+esc(p.link)+'">'+(isHe?"לכתבה המלאה ←":"Read the full story →")+'</a>':"";
+  var meta='<div class="meta"><span class="tag">'+esc(p.tag)+'</span><span>'+fmt(p.date)+'</span></div>';
+  if(big) return '<article class="feat"><div>'+meta+'<h3>'+esc(t(p,"title"))+'</h3></div><div style="display:flex;flex-direction:column;gap:1rem"><p>'+esc(t(p,"text"))+'</p>'+why+more+'</div></article>';
+  return '<article class="card">'+meta+'<h3>'+esc(t(p,"title"))+'</h3><p>'+esc(t(p,"text"))+'</p>'+why+more+'</article>';
+}
+function render(){
+  var list=POSTS.slice().sort(function(a,b){return a.date<b.date?1:-1;});
+  var tags=["all"];list.forEach(function(p){if(tags.indexOf(p.tag)<0)tags.push(p.tag);});
+  document.getElementById("filters").innerHTML=tags.map(function(g){return '<button class="fbtn'+(g===filter?" on":"")+'" data-t="'+esc(g)+'">'+(g==="all"?(isHe?"הכל":"All"):esc(g))+'</button>';}).join("");
+  document.querySelectorAll(".fbtn").forEach(function(b){b.onclick=function(){filter=b.getAttribute("data-t");render();};});
+  var shown=filter==="all"?list:list.filter(function(p){return p.tag===filter;});
+  var feat=filter==="all"?(shown.filter(function(p){return p.featured;})[0]||shown[0]):null;
+  document.getElementById("featured").innerHTML=feat?cardHTML(feat,true):"";
+  var rest=shown.filter(function(p){return p!==feat;});
+  document.getElementById("grid").innerHTML=rest.length||feat?rest.map(function(p){return cardHTML(p,false);}).join(""):'<p class="empty">'+(isHe?"אין עדיין כתבות":"No stories yet")+'</p>';
+  if(list.length){var d=new Date(list[0].date+"T12:00:00");var day=d.getDay();var mon=new Date(d);mon.setDate(d.getDate()-((day+6)%7));
+    document.getElementById("weekLabel").textContent=(isHe?"שבוע של ":"Week of ")+mon.toLocaleDateString(isHe?"he-IL":"en-GB",{day:"numeric",month:"long",year:"numeric"});}
+}
+function applyLang(){
+  document.querySelector(".lang-btn").textContent=isHe?"🇬🇧 English":"🇮🇱 עברית";
+  document.body.classList.toggle("rtl",isHe);
+  document.documentElement.lang=isHe?"he":"en";
+  document.documentElement.dir=isHe?"rtl":"ltr";
+  document.querySelectorAll("[data-en][data-he]").forEach(function(el){el.innerHTML=isHe?el.getAttribute("data-he"):el.getAttribute("data-en");});
+  render();
+}
+function toggleLang(){isHe=!isHe;try{localStorage.setItem("aim_lang",isHe?"he":"en");}catch(e){}applyLang();}
+(function(){var q=new URLSearchParams(location.search).get("lang");var s=null;try{s=localStorage.getItem("aim_lang");}catch(e){}isHe=(q||s)==="he";applyLang();})();
+</script>
+</body>
+</html>
