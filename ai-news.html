@@ -302,7 +302,6 @@ function render(){
   var rest=shown.filter(function(p){return p!==feat;});
   document.getElementById("grid").innerHTML=rest.length||feat?rest.map(function(p){return cardHTML(p,false);}).join(""):'<div class="empty"><b>'+(isHe?"הסיפורים הראשונים בדרך":"The first stories are on the way")+'</b><span>'+(isHe?"AI Monday יוצא כל יום שני. כדאי לחזור לכאן בקרוב.":"AI Monday comes out every Monday. Check back soon.")+'</span></div>';
   document.getElementById("weekLabel").textContent=(isHe?"גיליון של יום שני ":"Issue of Monday ")+fmt(ISSUE);
-    document.getElementById("weekLabel").textContent=(isHe?"שבוע של ":"Week of ")+mon.toLocaleDateString(isHe?"he-IL":"en-GB",{day:"numeric",month:"long",year:"numeric"});}
   showStoryFromHash();
 }
 function openStory(id){location.hash="story="+id;}
