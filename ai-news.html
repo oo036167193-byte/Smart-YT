@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Monday – Smart YT</title>
-<meta name="description" content="AI Monday – the week's most interesting AI stories, explained for business owners. By Smart YT.">
+<title>AI Monday | Smart YT</title>
+<meta name="description" content="AI Monday. The week's most interesting AI stories by Smart YT.">
 <link rel="icon" href="assets/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta{background:linear-gradient(135deg,var(--blue),var(--cy));color:#fff;padding:.55rem 1.4rem;border-radius:100px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:0 4px 15px rgba(33,150,243,.3);transition:all .2s;white-space:nowrap;}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(33,150,243,.5);}
 
-/* HERO — sharp HTML version of the AI Monday banner */
+/* HERO: sharp HTML version of the AI Monday banner */
 .hero{position:relative;z-index:1;padding:110px 5vw 2.5rem;}
 .banner{direction:ltr;max-width:1000px;margin:0 auto;border-radius:18px;overflow:hidden;background:radial-gradient(ellipse at 18% 0%,rgba(66,165,245,.35),transparent 55%),radial-gradient(ellipse at 85% 30%,rgba(0,140,255,.22),transparent 50%),linear-gradient(180deg,#0a2a63 0%,#081a3d 75%);box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 1px rgba(66,165,245,.3);}
 .b-top{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:2.4rem 2.6rem 1.8rem;}
@@ -51,7 +51,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .chip{background:#fff;color:#111;border-radius:100px;padding:.45rem 1.15rem;font-family:"Montserrat",sans-serif;font-weight:800;font-size:clamp(.78rem,1.6vw,1.05rem);display:inline-flex;align-items:center;gap:.45rem;box-shadow:0 2px 8px rgba(0,0,0,.25);}
 .chip i{width:.65em;height:.65em;border-radius:50%;display:inline-block;}
 
-/* SECTION — light, easy to read (same light palette as the home page) */
+/* SECTION: light, easy to read (same light palette as the home page) */
 .sec{position:relative;z-index:1;padding:3.5rem 5vw 5rem;background:#f0f4f8;color:#1a2840;}
 .inner{max-width:1100px;margin:0 auto;}
 .sh{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;}
@@ -115,15 +115,15 @@ footer a{color:var(--gm);text-decoration:none;}
 </nav>
 
 <header class="hero">
-  <div class="banner" role="img" aria-label="AI Monday – The week's most interesting AI stories – by SmartYT · 07356 042086">
+  <div class="banner" role="img" aria-label="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086">
     <div class="b-top">
       <div class="b-left">
         <div class="b-title"><span class="ai">AI</span> Monday</div>
         <div class="b-bar"></div>
-        <div class="b-tag">The week’s most interesting AI stories – by SmartYT</div>
+        <div class="b-tag">The week’s most interesting AI stories by SmartYT</div>
       </div>
       <div class="b-right">
-        <img src="assets/smartyt-logo.png" alt="Smart YT – Smart Business Solutions">
+        <img src="assets/smartyt-logo.png" alt="Smart YT Smart Business Solutions">
         <a class="b-phone" href="tel:+447356042086"><span class="ico">☎</span>07356 042086</a>
       </div>
     </div>
@@ -143,7 +143,7 @@ footer a{color:var(--gm);text-decoration:none;}
     <div class="sh">
       <div>
         <span class="stag" data-en="This week" data-he="השבוע">This week</span>
-        <h2 data-en="The stories worth your time" data-he="הסיפורים ששווים את הזמן שלך">The stories worth your time</h2>
+        <h2 data-en="This week in AI" data-he="מה קרה השבוע ב-AI">This week in AI</h2>
         <p class="week" id="weekLabel"></p>
       </div>
       <div class="filters" id="filters"></div>
@@ -161,58 +161,58 @@ footer a{color:var(--gm);text-decoration:none;}
 
 <script>
 /* ============================================================
-   AI MONDAY POSTS — to add a story, copy one block and edit it.
+   AI MONDAY POSTS. To add a story, copy one block and edit it.
    Newest first. "featured": true = the big card at the top.
    ============================================================ */
 var POSTS = [
   {
     date: "2026-11-09", featured: true, tag: "Open models",
-    title_en: "Mistral releases Large 4 as open weights",
-    title_he: "Mistral משחררת את Large 4 כמודל פתוח",
-    text_en: "Mistral AI published Large 4 — a 1-trillion-parameter model — as open weights under a modified MIT licence. Companies that resell it as a hosted service need a separate commercial agreement.",
-    text_he: "Mistral AI פרסמה את Large 4 — מודל עם טריליון פרמטרים — כמשקלים פתוחים ברישיון MIT מותאם. חברות שמוכרות אותו כשירות מאוחסן צריכות הסכם מסחרי נפרד.",
-    why_en: "Top-tier AI you can run on your own servers is getting closer — good news for businesses that can't send data to outside services.",
-    why_he: "AI ברמה גבוהה שאפשר להריץ על שרתים משלכם הולך ומתקרב — חדשות טובות לעסקים שלא יכולים לשלוח מידע לשירותים חיצוניים.",
+    title_en: "Mistral gives away its biggest model yet",
+    title_he: "Mistral משחררת את המודל הכי גדול שלה בחינם",
+    text_en: "Mistral AI released Large 4, a model with 1 trillion parameters, as open weights. Anyone can download it and run it. If you want to sell it as a paid online service you need a separate deal with Mistral.",
+    text_he: "Mistral AI שחררה את Large 4, מודל עם טריליון פרמטרים, כמודל פתוח. כל אחד יכול להוריד ולהריץ אותו. מי שרוצה למכור אותו כשירות בתשלום צריך הסכם נפרד עם Mistral.",
+    why_en: "Strong AI that runs on your own servers is getting closer. Useful if you can't send customer data to outside services.",
+    why_he: "AI חזק שרץ על השרתים שלך כבר לא רחוק. שימושי למי שלא יכול לשלוח מידע של לקוחות לשירותים בחוץ.",
     link: "https://mistral.ai/news/mistral-large-4-oss/"
   },
   {
     date: "2026-11-06", tag: "Shopping",
-    title_en: "Amazon lets customers text Alexa to shop",
-    title_he: "אמזון מאפשרת לקנות דרך הודעות טקסט לאלקסה",
-    text_en: "Amazon opened text-based shopping through Alexa, starting with invited US customers — weeks after it blocked Meta's Muse shopping agent from its store.",
-    text_he: "אמזון פתחה קניות בהודעות טקסט דרך אלקסה, בשלב ראשון ללקוחות מוזמנים בארה\"ב — שבועות אחרי שחסמה את סוכן הקניות Muse של Meta מהחנות שלה.",
-    why_en: "AI agents that buy on behalf of customers are arriving. Clear product info and easy ordering will matter more than ever.",
-    why_he: "סוכני AI שקונים בשם הלקוח כבר כאן. מידע ברור על המוצרים והזמנה פשוטה יהיו חשובים מאי פעם.",
+    title_en: "You can now text Alexa to do your shopping",
+    title_he: "אפשר לשלוח הודעה לאלקסה והיא קונה בשבילך",
+    text_en: "Amazon started letting people shop by texting Alexa. For now it's invite only and US only. A few weeks ago Amazon blocked Meta's shopping bot from its store.",
+    text_he: "אמזון התחילה לאפשר קניות בהודעות טקסט לאלקסה. כרגע רק בהזמנה ורק בארה\"ב. לפני כמה שבועות אמזון חסמה את בוט הקניות של Meta מהחנות שלה.",
+    why_en: "Customers will soon send a bot to buy for them. Make sure your products are clearly described and easy to order.",
+    why_he: "בקרוב לקוחות ישלחו בוט לקנות בשבילם. כדאי לוודא שהמוצרים שלך מתוארים ברור ושקל להזמין אותם.",
     link: "https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/"
   },
   {
     date: "2026-11-06", tag: "OpenAI",
-    title_en: "OpenAI reportedly raises $11B at a $1.25T valuation",
-    title_he: "דיווח: OpenAI גייסה 11 מיליארד דולר לפי שווי של 1.25 טריליון",
-    text_en: "OpenAI has reportedly raised another $11B — less than the $30B it was seeking — and the round is still open.",
-    text_he: "לפי דיווח, OpenAI גייסה עוד 11 מיליארד דולר — פחות מ-30 המיליארד שביקשה — והסבב עדיין פתוח.",
-    why_en: "The money behind ChatGPT keeps flowing, so expect new features and tools to keep landing fast.",
-    why_he: "הכסף מאחורי ChatGPT ממשיך לזרום, אז צפו שפיצ'רים וכלים חדשים ימשיכו להגיע מהר.",
+    title_en: "OpenAI raises another $11 billion",
+    title_he: "OpenAI גייסה עוד 11 מיליארד דולר",
+    text_en: "According to reports, OpenAI raised $11B at a $1.25 trillion valuation. They were hoping for $30B, so the round is still open.",
+    text_he: "לפי הדיווחים OpenAI גייסה 11 מיליארד דולר לפי שווי של 1.25 טריליון. הם קיוו ל-30 מיליארד, אז הסבב עדיין פתוח.",
+    why_en: "The company behind ChatGPT has plenty of cash, so expect new features to keep coming fast.",
+    why_he: "לחברה שמאחורי ChatGPT יש הרבה כסף, אז צפו לעוד פיצ'רים חדשים בקצב מהיר.",
     link: "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
   },
   {
     date: "2026-11-04", tag: "Images & video",
-    title_en: "Fal raises $1.3B — Adobe, Canva and Shopify use it for AI images and video",
-    title_he: "Fal גייסה 1.3 מיליארד דולר — Adobe, Canva ו-Shopify משתמשות בה לתמונות ווידאו",
-    text_en: "Generative-media platform Fal raised $1.3B at a $16B valuation, double its April value. Adobe, Canva and Shopify run production image and video work on it.",
-    text_he: "פלטפורמת המדיה הגנרטיבית Fal גייסה 1.3 מיליארד דולר לפי שווי של 16 מיליארד — כפול מאפריל. Adobe, Canva ו-Shopify מריצות עליה עבודות תמונה ווידאו.",
-    why_en: "The design tools you already use are quietly getting stronger AI image and video features.",
-    why_he: "כלי העיצוב שאתם כבר עובדים איתם מקבלים בשקט יכולות תמונה ווידאו חזקות יותר.",
+    title_en: "The company behind Canva's AI images raises $1.3 billion",
+    title_he: "החברה שמאחורי התמונות של Canva גייסה 1.3 מיליארד דולר",
+    text_en: "Fal makes AI images and video for companies like Adobe, Canva and Shopify. It just raised $1.3B and is now worth $16B, double what it was in April.",
+    text_he: "Fal מייצרת תמונות ווידאו ב-AI לחברות כמו Adobe, Canva ו-Shopify. היא גייסה עכשיו 1.3 מיליארד דולר ושווה 16 מיליארד, פי שניים מאפריל.",
+    why_en: "The design apps you already use are getting better at AI images and video.",
+    why_he: "תוכנות העיצוב שאתם כבר משתמשים בהן נהיות טובות יותר בתמונות ווידאו של AI.",
     link: "https://tech.eu/2026/11/04/fal-doubles-valuation-to-16b-after-13b-series-f/"
   },
   {
-    date: "2026-11-04", tag: "Coding agents",
-    title_en: "Meta buys Conductor, the app that runs several coding agents at once",
-    title_he: "Meta קונה את Conductor — האפליקציה שמריצה כמה סוכני קוד במקביל",
-    text_en: "Conductor runs Claude Code, Codex and Cursor agents side by side. Its team joins Meta, and Conductor Cloud shuts down on 20 November, deleting stored data.",
-    text_he: "Conductor מריצה סוכנים של Claude Code, Codex ו-Cursor זה לצד זה. הצוות עובר ל-Meta, ו-Conductor Cloud נסגרת ב-20 בנובמבר והנתונים יימחקו.",
-    why_en: "Using Conductor? Export your work before 20 November.",
-    why_he: "משתמשים ב-Conductor? ייצאו את העבודה שלכם לפני 20 בנובמבר.",
+    date: "2026-11-04", tag: "Coding",
+    title_en: "Meta buys Conductor. The app closes on 20 November",
+    title_he: "Meta קנתה את Conductor. האפליקציה נסגרת ב-20 בנובמבר",
+    text_en: "Conductor lets you run Claude Code, Codex and Cursor side by side. The team is moving to Meta and Conductor Cloud shuts on 20 November. Stored data will be deleted.",
+    text_he: "Conductor מאפשרת להריץ את Claude Code, Codex ו-Cursor ביחד. הצוות עובר ל-Meta ו-Conductor Cloud נסגרת ב-20 בנובמבר. כל המידע השמור יימחק.",
+    why_en: "If you use Conductor, download your work before 20 November.",
+    why_he: "אם אתם משתמשים ב-Conductor, תורידו את העבודה שלכם לפני 20 בנובמבר.",
     link: "https://siliconangle.com/2026/11/04/meta-acquires-ai-coding-startup-conductor-whose-app-runs-several-coding-agents-at-once/"
   }
 ];
@@ -222,7 +222,7 @@ function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&
 function fmt(d){var dt=new Date(d+"T12:00:00");return dt.toLocaleDateString(isHe?"he-IL":"en-GB",{day:"numeric",month:"long",year:"numeric"});}
 function t(p,k){return isHe?(p[k+"_he"]||p[k+"_en"]):(p[k+"_en"]||p[k+"_he"]);}
 function cardHTML(p,big){
-  var why=t(p,"why")?'<div class="why"><b>'+(isHe?"מה זה אומר לעסק שלך: ":"Why it matters: ")+'</b>'+esc(t(p,"why"))+'</div>':"";
+  var why=t(p,"why")?'<div class="why"><b>'+(isHe?"מה זה אומר לך: ":"What it means for you: ")+'</b>'+esc(t(p,"why"))+'</div>':"";
   var more=p.link?'<a class="more" target="_blank" rel="noopener" href="'+esc(p.link)+'">'+(isHe?"לכתבה המלאה ←":"Read the full story →")+'</a>':"";
   var meta='<div class="meta"><span class="tag">'+esc(p.tag)+'</span><span>'+fmt(p.date)+'</span></div>';
   if(big) return '<article class="feat"><div>'+meta+'<h3>'+esc(t(p,"title"))+'</h3></div><div style="display:flex;flex-direction:column;gap:1rem"><p>'+esc(t(p,"text"))+'</p>'+why+more+'</div></article>';
