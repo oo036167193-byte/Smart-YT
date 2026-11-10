@@ -34,24 +34,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta{background:linear-gradient(135deg,var(--blue),var(--cy));color:#fff;padding:.55rem 1.4rem;border-radius:100px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:0 4px 15px rgba(33,150,243,.3);transition:all .2s;white-space:nowrap;}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(33,150,243,.5);}
 
-/* HERO: the AI Monday strip, built in HTML so it is sharp at any size.
-   Everything is sized in cqw (percent of the strip width), so it keeps the same look on every screen. */
+/* HERO: the AI Monday banner (1100px wide, same width as the stories below) */
 .hero{position:relative;z-index:1;padding:110px 5vw 2.5rem;}
-.strip{container-type:inline-size;direction:ltr;max-width:1100px;margin:0 auto;border-radius:12px;overflow:hidden;background:#011030;box-shadow:0 14px 40px rgba(0,0,0,.45);font-family:"Montserrat",sans-serif;}
-.st-main{position:relative;display:flex;justify-content:space-between;align-items:center;padding:3.6cqw 3cqw 2.4cqw 5.2cqw;background:radial-gradient(ellipse 55% 120% at 72% 40%,rgba(30,110,230,.55),transparent 70%),radial-gradient(ellipse 40% 90% at 15% 30%,rgba(30,90,200,.35),transparent 70%),linear-gradient(90deg,#011030 0%,#022258 55%,#011a4a 100%);}
-.st-title{font-size:9.6cqw;font-weight:800;letter-spacing:-.15cqw;line-height:1;color:#fff;text-shadow:0 0 1.6cqw rgba(80,160,255,.35);}
-.st-title .ai{background:linear-gradient(100deg,#1f7bff 0%,#3aa0ff 45%,#a9dcff 52%,#3aa0ff 60%,#1f7bff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 4s linear infinite;text-shadow:none;}
-@keyframes shine{0%{background-position:100% 0}100%{background-position:-150% 0}}
-.st-bar{width:12.5cqw;height:.75cqw;border-radius:1cqw;background:#2a8bff;margin:1.6cqw 0 1.9cqw;box-shadow:0 0 1.4cqw rgba(42,139,255,.8);}
-.st-tag{font-size:2.45cqw;font-weight:500;color:#d6e2f5;white-space:nowrap;}
-.st-right{display:flex;flex-direction:column;align-items:flex-end;gap:.6cqw;}
-.st-right img{width:35cqw;height:auto;display:block;filter:drop-shadow(0 0 1.2cqw rgba(60,150,255,.45));}
-.st-phone{display:flex;align-items:center;gap:1cqw;color:#fff;font-weight:600;font-size:2.9cqw;margin-right:3cqw;}
-.st-phone .ico{width:3.2cqw;height:3.2cqw;border-radius:50%;background:#2a8bff;display:grid;place-items:center;font-size:1.9cqw;}
-.st-chips{display:flex;justify-content:space-between;align-items:center;gap:1cqw;padding:1.9cqw 1.2cqw 2.2cqw;border-top:.45cqw solid #1a8bfc;background:#011033;}
-.chip{background:#fcfcfc;color:#111;border-radius:10cqw;padding:.85cqw 1.9cqw;font-weight:700;font-size:2.15cqw;display:inline-flex;align-items:center;gap:1cqw;line-height:1.1;white-space:nowrap;}
-.chip i{width:1.5cqw;height:1.5cqw;border-radius:50%;display:inline-block;}
-.chip small{font-size:.7em;font-weight:600;}
+.banner-img{display:block;width:100%;max-width:1100px;height:auto;margin:0 auto;border-radius:12px;box-shadow:0 14px 40px rgba(0,0,0,.45);}
 
 /* SECTION: light, easy to read (same light palette as the home page) */
 .sec{position:relative;z-index:1;padding:3.5rem 5vw 5rem;background:#f0f4f8;color:#1a2840;}
@@ -116,27 +101,7 @@ footer a{color:var(--gm);text-decoration:none;}
 </nav>
 
 <header class="hero">
-  <div class="strip" role="img" aria-label="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086">
-    <div class="st-main">
-      <div class="st-left">
-        <div class="st-title"><span class="ai">AI</span> Monday</div>
-        <div class="st-bar"></div>
-        <div class="st-tag">The week’s most interesting AI stories by SmartYT</div>
-      </div>
-      <div class="st-right">
-        <img src="assets/smartyt-logo.png" alt="">
-        <div class="st-phone"><span class="ico">☎</span>07356 042086</div>
-      </div>
-    </div>
-    <div class="st-chips">
-      <span class="chip"><i style="background:#10a37f"></i>ChatGPT</span>
-      <span class="chip"><i style="background:#4285F4"></i>Gemini</span>
-      <span class="chip"><i style="background:#d97757"></i>Claude</span>
-      <span class="chip"><i style="background:#6D00CC"></i>make</span>
-      <span class="chip"><i style="background:#111"></i>Grok</span>
-      <span class="chip"><i style="background:#FF3D57"></i><span>monday<small>.com</small></span></span>
-    </div>
-  </div>
+  <img class="banner-img" src="assets/ai-monday-banner.gif" width="1100" height="326" alt="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086">
 </header>
 
 <main class="sec">
