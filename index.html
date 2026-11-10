@@ -768,6 +768,22 @@ html,body{overflow-x:hidden;}
 .bg-ai{background:linear-gradient(135deg,#0d1f3c,#1e3a8a,#0ea5e9);}
 .plogos{display:inline-flex;gap:.45rem;}
 .plogo.sm{width:44px;height:44px;border-radius:12px;}
+
+/* LIGHT HEADER with the new logo */
+nav{background:rgba(255,255,255,.96) !important;border-bottom:1px solid #e3eaf3 !important;box-shadow:0 2px 18px rgba(13,31,60,.06);}
+nav .logo-img{content:url("assets/logo-light-bg.png");height:46px !important;width:auto !important;filter:none !important;border-radius:0 !important;box-shadow:none !important;background:none !important;}
+nav .logo-side,nav .spark{display:none !important;}
+nav .nav-links a{color:#3a4f6e !important;}
+nav .nav-links a:hover,nav .nav-links a.active{color:#1565c0 !important;}
+nav .lang-btn{background:#f0f4f8 !important;border-color:#d0dcea !important;color:#1a2840 !important;}
+nav .lang-btn:hover{border-color:#1565c0 !important;color:#1565c0 !important;}
+.menu-btn{border-color:#d0dcea !important;background:#f0f4f8 !important;}
+.menu-btn span{background:#0d1f3c !important;}
+@media(max-width:900px){
+  nav .logo-img{height:38px !important;}
+  body.menu-open nav .nav-links{background:#fff !important;border-bottom:1px solid #e3eaf3 !important;box-shadow:0 20px 40px rgba(13,31,60,.12) !important;}
+  body.menu-open nav .nav-links a{color:#1a2840 !important;border-bottom-color:#eef2f7 !important;}
+}
 </style>
 </head>
 <body>
