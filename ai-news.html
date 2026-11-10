@@ -226,9 +226,12 @@ footer a{color:var(--gm);text-decoration:none;}
     link: "https://...", link2: "second link (optional)"
   },
 */
+/* The Monday of this week's AI Monday issue */
+var ISSUE = "2026-11-09";
+
 var POSTS = [
   {
-    id: "claude-personal-finance", date: "2026-11-10", featured: true, tag: "Claude",
+    id: "claude-personal-finance", date: "2026-11-05", featured: true, tag: "Claude",
     title_en: "Personal Finance: Claude now reads your bank account",
     title_he: "Personal Finance: קלוד נכנס לחשבון הבנק שלך",
     text_en: "Anthropic launched Personal Finance, a tool that connects Claude to your bank and credit cards, looks back up to two years and helps you see where your money goes. Beta, US only for now.",
@@ -273,7 +276,7 @@ var POSTS = [
 
 var isHe = false, filter = "all";
 function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
-function fmt(d){var dt=new Date(d+"T12:00:00");return dt.toLocaleDateString(isHe?"he-IL":"en-GB",{day:"numeric",month:"long",year:"numeric"});}
+function fmt(d){var x=d.split("-");return x[2]+"."+x[1]+"."+x[0];}
 function t(p,k){return isHe?(p[k+"_he"]||p[k+"_en"]):(p[k+"_en"]||p[k+"_he"]);}
 function doBox(p){var d=t(p,"do");if(!d||!d.length)return"";return '<div class="why"><b>'+(isHe?"מה אפשר לעשות עם זה":"What you can do with it")+'</b><ul>'+d.map(function(x){return"<li>"+esc(x)+"</li>";}).join("")+'</ul></div>';}
 function block(x){if(typeof x==="string")return"<p>"+esc(x)+"</p>";if(x.h)return"<h2>"+esc(x.h)+"</h2>";if(x.img)return'<img class="story-img" src="'+esc(x.img)+'" alt="'+esc(x.alt||"")+'" loading="lazy">';if(x.list)return"<ul>"+x.list.map(function(i){return"<li>"+esc(i)+"</li>";}).join("")+"</ul>";return"";}
@@ -298,7 +301,7 @@ function render(){
   document.getElementById("featured").innerHTML=feat?cardHTML(feat,true):"";
   var rest=shown.filter(function(p){return p!==feat;});
   document.getElementById("grid").innerHTML=rest.length||feat?rest.map(function(p){return cardHTML(p,false);}).join(""):'<div class="empty"><b>'+(isHe?"הסיפורים הראשונים בדרך":"The first stories are on the way")+'</b><span>'+(isHe?"AI Monday יוצא כל יום שני. כדאי לחזור לכאן בקרוב.":"AI Monday comes out every Monday. Check back soon.")+'</span></div>';
-  if(list.length){var d=new Date(list[0].date+"T12:00:00");var day=d.getDay();var mon=new Date(d);mon.setDate(d.getDate()-((day+6)%7));
+  document.getElementById("weekLabel").textContent=(isHe?"גיליון של יום שני ":"Issue of Monday ")+fmt(ISSUE);
     document.getElementById("weekLabel").textContent=(isHe?"שבוע של ":"Week of ")+mon.toLocaleDateString(isHe?"he-IL":"en-GB",{day:"numeric",month:"long",year:"numeric"});}
   showStoryFromHash();
 }
