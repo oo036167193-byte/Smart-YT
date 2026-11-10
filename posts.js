@@ -282,5 +282,45 @@ var POSTS = [
       {url: "https://prompt-motion.com/", en: "Prompt Motion", he: "Prompt Motion"},
       {url: "https://drive.google.com/file/d/1KjQFpSdjX_5DqUHWQHTzMlxyKnawekm5/view", en: "My video on Google Drive", he: "הסרטון שלי ב Google Drive"}
     ]
+  },
+  {
+    id: "binance-hack", date: "2026-11-03", tag: "Security",
+    image: "assets/stories/binance-hack.jpg",
+    title_en: "$6.3 billion stolen from Binance, and it started with a Google search",
+    title_he: "6.3 מיליארד דולר נגנבו מבינאנס, והכל התחיל בחיפוש בגוגל",
+    text_en: "Hackers stole about $6.34 billion from Binance. It did not start with clever hacking, but with a fake download and a fake job interview.",
+    text_he: "האקרים גנבו כ 6.34 מיליארד דולר מבינאנס. זה לא התחיל בפריצה מתוחכמת, אלא בהורדה מזויפת ובראיון עבודה מזויף.",
+    do_en: ["Only download apps from the official website, not from a Google result", "If a \"job interview\" asks you to download something, stop"],
+    do_he: ["להוריד אפליקציות רק מהאתר הרשמי, לא מתוצאה בגוגל", "אם \"ראיון עבודה\" מבקש להוריד משהו, לעצור"],
+    full_en: [
+      "The biggest crypto theft ever did not start with clever hacking. It started with a download and a fake job interview.",
+      "On 29 October, hackers stole about $6.34 billion from Binance, the biggest crypto exchange in the world. The FBI says North Korea was behind it. On 3 November Binance shared how it happened:",
+      {list: [
+        "June: An engineer searched Google for a popular AI coding tool and downloaded a fake version. Binance caught it and changed his computer, but the hackers already knew who was on his team.",
+        "September: Another engineer got a job offer on a real job website. After two video interviews, he was asked to download a \"test task\" to his work computer. It had a hidden virus inside.",
+        "20 October: From that computer, the hackers used Binance’s own internal AI tool to get into two more engineers’ computers. On one of them they found a key that could control the money system.",
+        "29 October: They used that key to send out the money. One wallet was emptied in under four minutes."
+      ]},
+      "The good news: Binance says it will cover the loss itself, not its customers. About $2.85 billion has already been frozen or stopped.",
+      {h: "What it means for us"},
+      "You don’t need to be a big company to learn from this. Only download apps from the official website, not from a Google result. And if a \"job interview\" asks you to download something, stop."
+    ],
+    full_he: [
+      "הגניבה הגדולה ביותר בעולם הקריפטו לא התחילה בפריצה מתוחכמת. היא התחילה בהורדה של קובץ ובראיון עבודה מזויף.",
+      "ב 29 באוקטובר האקרים גנבו כ 6.34 מיליארד דולר מבינאנס, בורסת הקריפטו הגדולה בעולם. לפי ה FBI, צפון קוריאה עומדת מאחורי זה. ב 3 בנובמבר בינאנס פרסמה איך זה קרה:",
+      {list: [
+        "יוני: מהנדס חיפש בגוגל כלי AI פופולרי לכתיבת קוד, והוריד גרסה מזויפת. בינאנס תפסה את זה והחליפה לו את המחשב, אבל ההאקרים כבר ידעו מי נמצא בצוות שלו.",
+        "ספטמבר: מהנדס אחר קיבל הצעת עבודה באתר דרושים אמיתי. אחרי שני ראיונות בווידאו, ביקשו ממנו להוריד \"משימת מבחן\" למחשב העבודה שלו. בתוכה הסתתר וירוס.",
+        "20 באוקטובר: מהמחשב הזה ההאקרים השתמשו בכלי ה AI הפנימי של בינאנס עצמה, ונכנסו למחשבים של עוד שני מהנדסים. באחד מהם הם מצאו מפתח שיכול לשלוט במערכת הכספים.",
+        "29 באוקטובר: הם השתמשו במפתח כדי להוציא את הכסף. ארנק אחד התרוקן בפחות מארבע דקות."
+      ]},
+      "החדשות הטובות: בינאנס אומרת שהיא תכסה את ההפסד בעצמה, ולא הלקוחות שלה. כ 2.85 מיליארד דולר כבר הוקפאו או נעצרו.",
+      {h: "מה זה אומר לנו"},
+      "לא צריך להיות חברה גדולה כדי ללמוד מזה. תורידו אפליקציות רק מהאתר הרשמי, לא מתוצאה בגוגל. ואם \"ראיון עבודה\" מבקש מכם להוריד משהו, תעצרו."
+    ],
+    links: [
+      {url: "https://www.gncrypto.news/news/binance-traces-6-34b-hack-six-month-cyber-campaign/", en: "How the hack happened", he: "איך הפריצה קרתה"},
+      {url: "https://www.theblock.co/news/business/2026-10-30-binance-hack-largest-crypto-hack-north-korea-432225", en: "Full timeline", he: "ציר הזמן המלא"}
+    ]
   }
 ];
