@@ -322,5 +322,38 @@ var POSTS = [
       {url: "https://www.gncrypto.news/news/binance-traces-6-34b-hack-six-month-cyber-campaign/", en: "How the hack happened", he: "איך הפריצה קרתה"},
       {url: "https://www.theblock.co/news/business/2026-10-30-binance-hack-largest-crypto-hack-north-korea-432225", en: "Full timeline", he: "ציר הזמן המלא"}
     ]
+  },
+  {
+    id: "uber-ai-agents", date: "2026-11-04", tag: "AI agents",
+    image: "assets/stories/uber-agents.jpg",
+    title_en: "Uber: AI agents booked only 4 rides out of 320 million",
+    title_he: "אובר: סוכני AI הזמינו רק 4 נסיעות מתוך 320 מיליון",
+    text_en: "Everyone talks about AI agents that will do everything for us. Uber just shared the real numbers, and they are tiny.",
+    text_he: "כולם מדברים על סוכני AI שיעשו הכל בשבילנו. אובר פרסמה עכשיו את המספרים האמיתיים, והם זעירים.",
+    do_en: ["Use AI agents for long, boring jobs", "For quick things you already do in a few taps, keep using the app"],
+    do_he: ["להשתמש בסוכני AI לעבודות ארוכות ומשעממות", "לדברים מהירים של כמה לחיצות, להמשיך עם האפליקציה"],
+    full_en: [
+      "Everyone talks about AI agents that will do everything for us. Uber just shared the real numbers.",
+      "In its busiest week of October, Uber and Uber Eats handled about 320 million rides and orders. How many came from AI agents?",
+      {list: ["Rides: 4", "Food orders: about 500"]},
+      "DoorDash had the same story: only a few hundred orders from AI agents, out of about a billion in three months.",
+      "Why so few? Uber’s CEO explained: booking a ride in the app takes about 50 seconds, and ordering your usual food takes about 90 seconds. An AI agent does not really save time here.",
+      "Uber still believes agents will grow, and says every big AI company is talking to them.",
+      {h: "What it means for us"},
+      "AI agents are great for long, boring jobs. For quick things you already do in a few taps, the app still wins."
+    ],
+    full_he: [
+      "כולם מדברים על סוכני AI שיעשו הכל בשבילנו. אובר פרסמה עכשיו את המספרים האמיתיים.",
+      "בשבוע העמוס ביותר שלה באוקטובר, אובר ו Uber Eats טיפלו בכ 320 מיליון נסיעות והזמנות. כמה מהן הגיעו מסוכני AI?",
+      {list: ["נסיעות: 4", "הזמנות אוכל: כ 500"]},
+      "גם ב DoorDash אותו סיפור: רק כמה מאות הזמנות מסוכני AI, מתוך כמיליארד בשלושה חודשים.",
+      "למה כל כך מעט? המנכ\"ל של אובר הסביר: להזמין נסיעה באפליקציה לוקח כ 50 שניות, ולהזמין את האוכל הקבוע כ 90 שניות. סוכן AI לא באמת חוסך כאן זמן.",
+      "אובר עדיין מאמינה שהסוכנים יגדלו, ואומרת שכל חברות ה AI הגדולות מדברות איתה.",
+      {h: "מה זה אומר לנו"},
+      "סוכני AI מצוינים לעבודות ארוכות ומשעממות. לדברים מהירים שאתה כבר עושה בכמה לחיצות, האפליקציה עדיין מנצחת."
+    ],
+    links: [
+      {url: "https://tech.yahoo.com/transportation/articles/almost-no-one-uses-ai-215601578.html", en: "TechCrunch via Yahoo", he: "TechCrunch דרך Yahoo"}
+    ]
   }
 ];
