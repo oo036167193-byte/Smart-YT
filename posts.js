@@ -355,5 +355,67 @@ var POSTS = [
     links: [
       {url: "https://tech.yahoo.com/transportation/articles/almost-no-one-uses-ai-215601578.html", en: "TechCrunch via Yahoo", he: "TechCrunch דרך Yahoo"}
     ]
+  },
+  {
+    id: "claude-fable-5-2", date: "2026-11-09", tag: "Claude",
+    icon: "assets/tools/claude.png",
+    image: "assets/stories/fable-5-2.jpg",
+    video: "FMbXUxn_nBw", videoAt: 1,
+    title_en: "Anthropic launches Claude Fable 5.2: strong, but not for every job",
+    title_he: "Anthropic משיקה את Claude Fable 5.2: חזק, אבל לא לכל משימה",
+    text_en: "Anthropic released Claude Fable 5.2, its most powerful public AI model. It can build a whole game from one prompt, but for everyday work Opus 5.5 is often just as good.",
+    text_he: "Anthropic השיקה את Claude Fable 5.2, מודל ה־AI הכי חזק שלה שפתוח לציבור. הוא יכול לבנות משחק שלם מפרומפט אחד, אבל לעבודה היומיומית Opus 5.5 לרוב טוב באותה מידה.",
+    do_en: ["Use Fable for big jobs: a project plan, a full website, a game or a design", "Use Opus 5.5 for everyday work, to save your limit", "On Pro? Try it at no extra cost until 16 November"],
+    do_he: ["להשתמש ב־Fable לעבודות גדולות: תכנון פרויקט, אתר שלם, משחק או עיצוב", "להשתמש ב־Opus 5.5 לעבודה היומיומית, כדי לשמור על המכסה", "במנוי Pro? לנסות בלי תוספת תשלום עד 16 בנובמבר"],
+    full_en: [
+      "On 9 November, Anthropic released Claude Fable 5.2, its most powerful public AI model. It is for paid users only (Pro, Max, Ultra, Team and Enterprise).",
+      {h: "What users are showing"},
+      {list: [
+        "A full game from one prompt. An Anthropic engineer gave it one short prompt. It worked alone for about 8 hours and built a 3D shooting game, with its own models, sounds and textures. The cost was about $550 in API prices.",
+        "It started a business. Ethan Mollick, a professor at Wharton, asked it to start a business that makes $20,000 a year. It looked at 22 ideas and chose one.",
+        "It hacked a keyboard. It turned a small USB keyboard into a game console with six games. There were no instructions online. It read the code and worked it out by itself.",
+        "Big maths. Anthropic says 1,000 Fable agents put the proof of Fermat’s Last Theorem into a form a computer can check, in 30 hours."
+      ]},
+      {h: "But it is not for everything"},
+      {list: [
+        "For normal coding, many users see little difference from Opus 5.5. One tester ran 30 coding tasks. Both models solved 26.",
+        "Where it is much better: planning, design, drawing and 3D.",
+        "It uses your limit fast. Fable can use only up to half of your weekly limit."
+      ]},
+      {h: "What can you do with it?"},
+      {list: [
+        "On the Pro plan? You can try it at no extra cost until 16 November.",
+        "Use Fable for big jobs: planning a project, a full website, a game or a design.",
+        "Use Opus 5.5 for everyday work, to save your limit.",
+        "Tip: tell it clearly what “finished” looks like."
+      ]}
+    ],
+    full_he: [
+      "ב־9 בנובמבר Anthropic השיקה את Claude Fable 5.2, מודל ה־AI הכי חזק שלה שפתוח לציבור. הוא זמין רק למנויים בתשלום (Pro, Max, Ultra, Team ו־Enterprise).",
+      {h: "מה משתמשים מראים"},
+      {list: [
+        "משחק שלם מפרומפט אחד. מהנדס ב־Anthropic נתן לו פרומפט קצר אחד. המודל עבד לבד בערך 8 שעות ובנה משחק יריות בתלת־ממד, כולל המודלים, הצלילים והטקסטורות. העלות הייתה בערך 550 דולר לפי מחירי API.",
+        "הוא הקים עסק. הפרופסור Ethan Mollick מוורטון ביקש ממנו להקים עסק שיכניס 20,000 דולר בשנה. המודל בדק 22 רעיונות ובחר אחד.",
+        "הוא \"פרץ\" מקלדת. הוא הפך מקלדת USB קטנה לקונסולת משחקים עם שישה משחקים. לא היו הוראות ברשת, הוא קרא את הקוד והבין לבד.",
+        "מתמטיקה גדולה. לפי Anthropic, 1,000 סוכני Fable העבירו את ההוכחה של המשפט האחרון של פרמה לצורה שמחשב יכול לבדוק, תוך 30 שעות."
+      ]},
+      {h: "אבל הוא לא לכל דבר"},
+      {list: [
+        "בקוד רגיל, הרבה משתמשים כמעט לא רואים הבדל מול Opus 5.5. בודק אחד הריץ 30 משימות קוד, ושני המודלים פתרו 26.",
+        "איפה הוא באמת טוב יותר: תכנון, עיצוב, ציור ותלת־ממד.",
+        "הוא גומר את המכסה מהר. Fable יכול לנצל לכל היותר חצי מהמכסה השבועית."
+      ]},
+      {h: "מה אפשר לעשות עם זה?"},
+      {list: [
+        "במנוי Pro? אפשר לנסות אותו בלי תוספת תשלום עד 16 בנובמבר.",
+        "להשתמש ב־Fable לעבודות גדולות: תכנון פרויקט, אתר שלם, משחק או עיצוב.",
+        "להשתמש ב־Opus 5.5 לעבודה היומיומית, כדי לשמור על המכסה.",
+        "טיפ: להגיד לו בבירור איך נראית העבודה כשהיא גמורה."
+      ]}
+    ],
+    links: [
+      {url: "https://www.anthropic.com/claude-fable-and-mythos-5-2", en: "anthropic.com", he: "anthropic.com"},
+      {url: "https://www.youtube.com/watch?v=FMbXUxn_nBw", en: "Watch the video", he: "צפו בסרטון"}
+    ]
   }
 ];
