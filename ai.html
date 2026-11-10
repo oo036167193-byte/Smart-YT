@@ -153,6 +153,9 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45
 /* keep the page from sliding sideways on phones */
 html,body{overflow-x:hidden;}
 @supports (overflow:clip){html,body{overflow-x:clip;}}
+
+/* respect "reduce motion" on the visitor's device */
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}}
 </style>
 </head>
 <body>

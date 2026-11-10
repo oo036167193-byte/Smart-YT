@@ -5,6 +5,8 @@
   function get(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
   function set(v){try{localStorage.setItem(KEY,v);}catch(e){}}
   function apply(v){if(window.gtag)gtag("consent","update",{analytics_storage:v==="yes"?"granted":"denied"});}
+  /* "Cookie settings" link: forget the choice, turn analytics off and show the bar again */
+  window.sytCookieSettings=function(){try{localStorage.removeItem(KEY);}catch(e){}apply("no");location.reload();};
   var saved=get(); if(saved){apply(saved);return;}
 
   var TXT={
