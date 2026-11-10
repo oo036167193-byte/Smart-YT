@@ -34,70 +34,47 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta{background:linear-gradient(135deg,var(--blue),var(--cy));color:#fff;padding:.55rem 1.4rem;border-radius:100px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:0 4px 15px rgba(33,150,243,.3);transition:all .2s;white-space:nowrap;}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(33,150,243,.5);}
 
-/* HERO — matches the AI Monday banner */
-.hero{position:relative;z-index:1;padding:140px 5vw 3rem;}
-.hero-card{max-width:1200px;margin:0 auto;position:relative;overflow:hidden;border-radius:22px;padding:3rem 3rem 2rem;background:radial-gradient(ellipse at 15% 0%,rgba(66,165,245,.25),transparent 55%),radial-gradient(ellipse at 100% 100%,rgba(0,180,255,.15),transparent 50%),linear-gradient(135deg,#0b2550,#081628 70%);border:1px solid rgba(66,165,245,.25);box-shadow:0 20px 60px rgba(0,0,0,.35);}
-.hero-top{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap;}
-.hero h1{font-size:clamp(3rem,8vw,5.5rem);font-weight:900;letter-spacing:-2px;line-height:1;direction:ltr;}
-.hero h1 .ai{background:linear-gradient(90deg,var(--bl),var(--cy));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-.bar{width:110px;height:5px;border-radius:5px;background:linear-gradient(90deg,var(--blue),var(--cy));margin:1rem 0 1.1rem;box-shadow:0 0 14px rgba(0,180,255,.6);}
-body.rtl .bar{margin-right:0;}
-body.rtl .hero h1{text-align:right;}
-.tagline{color:var(--gl);font-size:clamp(1rem,2vw,1.25rem);font-weight:600;}
-.brand{display:flex;flex-direction:column;align-items:flex-end;gap:.7rem;}
-body.rtl .brand{align-items:flex-start;}
-.brand img{height:90px;width:auto;filter:drop-shadow(0 0 14px rgba(0,180,255,.5));}
-.phone{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:800;font-size:1.05rem;direction:ltr;}
-.phone .ico{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cy));display:grid;place-items:center;}
-.chips{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.2rem;padding-top:1.5rem;border-top:1px solid rgba(66,165,245,.25);}
-.chip{background:#fff;color:#111;border-radius:100px;padding:.45rem 1.1rem;font-weight:800;font-size:.9rem;display:inline-flex;align-items:center;gap:.45rem;direction:ltr;}
-.chip i{width:10px;height:10px;border-radius:50%;display:inline-block;}
+/* HERO — the AI Monday GIF banner */
+.hero{position:relative;z-index:1;padding:110px 5vw 2.5rem;text-align:center;}
+.banner{display:block;width:100%;max-width:900px;height:auto;margin:0 auto;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 1px rgba(66,165,245,.25);}
 
-/* SECTION */
-.sec{position:relative;z-index:1;padding:2rem 5vw 5rem;}
-.inner{max-width:1200px;margin:0 auto;}
-.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem;}
-.stag{display:inline-block;background:rgba(33,150,243,.12);color:var(--cy);border:1px solid rgba(33,150,243,.25);padding:.3rem .9rem;border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;}
-.sh h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.5px;}
-.sh .week{color:var(--gm);font-size:.95rem;margin-top:.4rem;}
+/* SECTION — light, easy to read (same light palette as the home page) */
+.sec{position:relative;z-index:1;padding:3.5rem 5vw 5rem;background:#f0f4f8;color:#1a2840;}
+.inner{max-width:1100px;margin:0 auto;}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;}
+.stag{display:inline-block;background:rgba(21,101,192,.1);color:#1565c0;border:1px solid rgba(21,101,192,.25);padding:.3rem .9rem;border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.8rem;}
+.sh h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;letter-spacing:-.5px;color:#0d1f3c;}
+.sh .week{color:#4a6080;font-size:.95rem;margin-top:.4rem;}
 .filters{display:flex;gap:.5rem;flex-wrap:wrap;}
-.fbtn{background:rgba(255,255,255,.04);border:1px solid rgba(33,150,243,.2);color:var(--gm);padding:.4rem 1rem;border-radius:100px;font-size:.8rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;}
-.fbtn:hover,.fbtn.on{background:rgba(0,180,255,.15);border-color:var(--cy);color:#fff;}
+.fbtn{background:#fff;border:1px solid #d0dcea;color:#4a6080;padding:.45rem 1.05rem;border-radius:100px;font-size:.82rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;}
+.fbtn:hover{border-color:#1565c0;color:#1565c0;}
+.fbtn.on{background:#1565c0;border-color:#1565c0;color:#fff;}
 
 /* POSTS */
-.feat{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;background:rgba(255,255,255,.04);border:1px solid rgba(0,180,255,.3);border-radius:18px;padding:2.2rem;margin-bottom:1.6rem;position:relative;overflow:hidden;}
-.feat::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 0% 0%,rgba(0,180,255,.12),transparent 60%);pointer-events:none;}
-.feat h3{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:900;line-height:1.2;margin:.6rem 0 0;}
-.feat p{color:var(--gl);line-height:1.8;font-size:1rem;}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem;}
-.card{background:rgba(255,255,255,.04);border:1px solid rgba(33,150,243,.12);border-radius:var(--r);padding:1.6rem;display:flex;flex-direction:column;gap:.8rem;transition:transform .25s,border-color .25s,box-shadow .25s;}
-.card:hover{transform:translateY(-4px);border-color:rgba(0,180,255,.4);box-shadow:0 12px 30px rgba(0,0,0,.25);}
-.meta{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;font-size:.75rem;color:var(--gm);font-weight:600;}
-.tag{background:rgba(0,180,255,.12);color:var(--cy);border-radius:100px;padding:.2rem .7rem;font-weight:800;letter-spacing:.5px;}
-.card h3{font-size:1.12rem;font-weight:800;line-height:1.35;}
-.card p{color:var(--gm);font-size:.92rem;line-height:1.7;}
-.why{background:rgba(66,165,245,.08);border-inline-start:3px solid var(--cy);border-radius:8px;padding:.7rem .9rem;font-size:.86rem;line-height:1.6;color:var(--gl);}
-.why b{color:var(--cy);}
-.more{margin-top:auto;color:var(--cy);font-weight:700;font-size:.85rem;text-decoration:none;}
+.feat{display:grid;grid-template-columns:1fr 1.1fr;gap:2.2rem;background:#fff;border:1px solid #d0dcea;border-top:5px solid #00b4ff;border-radius:18px;padding:2.4rem;margin-bottom:1.8rem;box-shadow:0 10px 30px rgba(13,31,60,.08);}
+.feat h3{font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:900;line-height:1.25;margin:.7rem 0 0;color:#0d1f3c;}
+.feat p{color:#2a3d5c;line-height:1.85;font-size:1.05rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
+.card{background:#fff;border:1px solid #d0dcea;border-radius:var(--r);padding:1.7rem;display:flex;flex-direction:column;gap:.85rem;box-shadow:0 4px 14px rgba(13,31,60,.05);transition:transform .25s,box-shadow .25s,border-color .25s;}
+.card:hover{transform:translateY(-4px);border-color:#90c4f5;box-shadow:0 14px 30px rgba(13,31,60,.12);}
+.meta{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;font-size:.78rem;color:#6a7f9c;font-weight:600;}
+.tag{background:#e3f1fd;color:#1565c0;border-radius:100px;padding:.22rem .75rem;font-weight:800;letter-spacing:.3px;}
+.card h3{font-size:1.18rem;font-weight:800;line-height:1.4;color:#0d1f3c;}
+.card p{color:#3a4f6e;font-size:.97rem;line-height:1.75;}
+.why{background:#f3f8fe;border-inline-start:4px solid #00b4ff;border-radius:8px;padding:.8rem 1rem;font-size:.92rem;line-height:1.65;color:#1a2840;}
+.why b{color:#1565c0;}
+.more{margin-top:auto;color:#1565c0;font-weight:800;font-size:.88rem;text-decoration:none;}
 .more:hover{text-decoration:underline;}
-.empty{color:var(--gm);text-align:center;padding:3rem 0;}
-
-/* SUBSCRIBE */
-.sub{margin-top:3.5rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;background:linear-gradient(135deg,rgba(21,101,192,.35),rgba(0,180,255,.15));border:1px solid rgba(0,180,255,.3);border-radius:18px;padding:2rem 2.2rem;}
-.sub h3{font-size:1.4rem;font-weight:900;}
-.sub p{color:var(--gl);margin-top:.3rem;}
-.wa{background:#25D366;color:#fff;text-decoration:none;font-weight:800;padding:.8rem 1.6rem;border-radius:100px;box-shadow:0 6px 20px rgba(37,211,102,.35);white-space:nowrap;}
+.empty{color:#4a6080;text-align:center;padding:3rem 0;}
 
 footer{position:relative;z-index:1;border-top:1px solid rgba(33,150,243,.15);padding:2rem 5vw;color:rgba(255,255,255,.45);font-size:.85rem;text-align:center;}
 footer a{color:var(--gm);text-decoration:none;}
 
 @media(max-width:900px){
   nav{padding:.7rem 1rem;} .nav-links{display:none;} .logo-img{height:42px;} .nav-cta{display:none;}
-  .hero{padding:105px 1rem 2rem;} .hero-card{padding:2rem 1.4rem 1.5rem;}
-  .brand,body.rtl .brand{align-items:flex-start;} .brand img{height:64px;}
+  .hero{padding:90px .75rem 1.5rem;} .banner{border-radius:10px;}
   .feat{grid-template-columns:1fr;padding:1.6rem;}
   .sec{padding:1rem 1rem 4rem;} .grid{grid-template-columns:1fr;}
-  .sub{padding:1.6rem;}
 }
 </style>
 </head>
@@ -124,27 +101,7 @@ footer a{color:var(--gm);text-decoration:none;}
 </nav>
 
 <header class="hero">
-  <div class="hero-card">
-    <div class="hero-top">
-      <div>
-        <h1><span class="ai">AI</span> Monday</h1>
-        <div class="bar"></div>
-        <p class="tagline" data-en="The week's most interesting AI stories – by SmartYT" data-he="סיפורי ה-AI המעניינים של השבוע – מבית SmartYT">The week's most interesting AI stories – by SmartYT</p>
-      </div>
-      <div class="brand">
-        <img src="assets/logo.jpg" alt="Smart YT – Smart Business Solutions">
-        <a class="phone" href="tel:+447356042086"><span class="ico">☎</span>07356 042086</a>
-      </div>
-    </div>
-    <div class="chips">
-      <span class="chip"><i style="background:#10a37f"></i>ChatGPT</span>
-      <span class="chip"><i style="background:#4285F4"></i>Gemini</span>
-      <span class="chip"><i style="background:#d97757"></i>Claude</span>
-      <span class="chip"><i style="background:#6D00CC"></i>Make</span>
-      <span class="chip"><i style="background:#111"></i>Grok</span>
-      <span class="chip"><i style="background:#FF3D57"></i>monday.com</span>
-    </div>
-  </div>
+  <img class="banner" src="assets/ai-monday-banner.gif" width="600" height="178" alt="AI Monday – The week's most interesting AI stories – by SmartYT · 07356 042086">
 </header>
 
 <main class="sec">
@@ -161,13 +118,6 @@ footer a{color:var(--gm);text-decoration:none;}
     <div id="featured"></div>
     <div class="grid" id="grid"></div>
 
-    <div class="sub">
-      <div>
-        <h3 data-en="Get AI Monday every week" data-he="קבלו את AI Monday כל שבוע">Get AI Monday every week</h3>
-        <p data-en="Join on WhatsApp — one short message every Monday, no spam." data-he="הצטרפו בוואטסאפ — הודעה קצרה אחת בכל יום שני, בלי ספאם.">Join on WhatsApp — one short message every Monday, no spam.</p>
-      </div>
-      <a class="wa" target="_blank" rel="noopener" href="https://wa.me/447356042086?text=Hi%2C%20please%20add%20me%20to%20AI%20Monday" data-en="Join on WhatsApp" data-he="הצטרפות בוואטסאפ">Join on WhatsApp</a>
-    </div>
   </div>
 </main>
 
