@@ -34,9 +34,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta{background:linear-gradient(135deg,var(--blue),var(--cy));color:#fff;padding:.55rem 1.4rem;border-radius:100px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:0 4px 15px rgba(33,150,243,.3);transition:all .2s;white-space:nowrap;}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(33,150,243,.5);}
 
-/* HERO: the AI Monday banner (1100px wide, same width as the stories below) */
+/* HERO: the AI Monday banner (top part of the GIF) + a sharp row of tool logos.
+   Sizes are in cqw (percent of the banner width) so it looks the same on every screen. */
 .hero{position:relative;z-index:1;padding:110px 5vw 2.5rem;}
-.banner-img{display:block;width:100%;max-width:1100px;height:auto;margin:0 auto;border-radius:12px;box-shadow:0 14px 40px rgba(0,0,0,.45);}
+.banner{container-type:inline-size;max-width:1100px;margin:0 auto;border-radius:12px;overflow:hidden;background:#011033;box-shadow:0 14px 40px rgba(0,0,0,.45);direction:ltr;}
+.banner-top{aspect-ratio:1100/256;overflow:hidden;}
+.banner-top img{display:block;width:100%;height:auto;}
+.tools{display:flex;justify-content:space-between;align-items:center;gap:.6cqw;padding:1.7cqw 1.6cqw 1.9cqw;border-top:.3cqw solid #1a8bfc;}
+.tool{background:#fff;border-radius:10cqw;height:4cqw;padding:0 1.25cqw;display:inline-flex;align-items:center;gap:.7cqw;font-family:"Montserrat",sans-serif;font-weight:600;font-size:1.6cqw;color:#111;white-space:nowrap;box-shadow:0 .3cqw .9cqw rgba(0,0,0,.25);}
+.tool img{display:block;width:auto;}
+.tool .ic{height:2.2cqw;}
+.tool .rd{border-radius:.45cqw;}
+.tool .wm{height:1.65cqw;}
+.tool .mk{height:1.55cqw;}
+.tool .gk{height:2.1cqw;}
+.tool .nb{height:1.4cqw;}
 
 /* SECTION: light, easy to read (same light palette as the home page) */
 .sec{position:relative;z-index:1;padding:3.5rem 5vw 5rem;background:#f0f4f8;color:#1a2840;}
@@ -117,7 +129,18 @@ footer a{color:var(--gm);text-decoration:none;}
 </nav>
 
 <header class="hero">
-  <img class="banner-img" src="assets/ai-monday-banner.gif" width="1100" height="326" alt="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086">
+  <div class="banner">
+    <div class="banner-top"><img src="assets/ai-monday-banner.gif" width="1100" height="326" alt="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086"></div>
+    <div class="tools">
+      <span class="tool"><img class="ic" src="assets/tools/chatgpt.png" alt="">ChatGPT</span>
+      <span class="tool"><img class="wm" src="assets/tools/gemini.png" alt="Gemini"></span>
+      <span class="tool"><img class="ic rd" src="assets/tools/claude.png" alt="">Claude</span>
+      <span class="tool"><img class="mk" src="assets/tools/make.png" alt="make"></span>
+      <span class="tool"><img class="gk" src="assets/tools/grok.png" alt="Grok"></span>
+      <span class="tool"><img class="wm" src="assets/tools/monday.png" alt="monday.com"></span>
+      <span class="tool"><img class="nb" src="assets/tools/notebooklm.png" alt="NotebookLM"></span>
+    </div>
+  </div>
 </header>
 
 <main class="sec">
