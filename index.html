@@ -33,7 +33,7 @@ body.rtl .nav-links{flex-direction:row-reverse;}
 body.rtl .nav-right{flex-direction:row-reverse;}
 body.rtl .logo-side{margin-left:0;margin-right:.5rem;text-align:right;}
 body.rtl .nav-links a::after{left:auto;right:0;}
-body.rtl .wa-tooltip{right:auto;left:74px;}
+body.rtl .wa-tooltip{right:74px;left:auto;}
 
 /* HERO */
 body.rtl .badge{flex-direction:row-reverse;}
@@ -224,7 +224,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .b7{background:rgba(99,102,241,.1);}.b8{background:rgba(236,72,153,.1);}
 
 /* ── PLATFORMS ── */
-.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;}
 .pc{border-radius:var(--r);overflow:hidden;border:1px solid rgba(33,150,243,.15);transition:all .3s;cursor:default;}
 .pc:hover{transform:perspective(600px) rotateY(4deg) translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.4);border-color:rgba(33,150,243,.4);}
 .pb{height:145px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;}
@@ -763,6 +763,11 @@ html,body{overflow-x:hidden;}
 /* real logos on platform cards */
 .plogo{display:inline-flex;width:64px;height:64px;border-radius:16px;background:#fff;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.18);overflow:hidden;}
 .plogo img{width:78%;height:78%;object-fit:contain;display:block;}
+
+/* AI tools platform card */
+.bg-ai{background:linear-gradient(135deg,#0d1f3c,#1e3a8a,#0ea5e9);}
+.plogos{display:inline-flex;gap:.45rem;}
+.plogo.sm{width:44px;height:44px;border-radius:12px;}
 </style>
 </head>
 <body>
@@ -922,6 +927,7 @@ html,body{overflow-x:hidden;}
       <div class="pc fin"><div class="pb bg-mak"><div class="pem"><span class="plogo"><img src="assets/apps/make.png" alt="Make"></span></div><div class="pbt">Make (Integromat)</div><div class="pchips"><span class="pch">Scenarios</span><span class="pch">APIs</span></div></div><div class="pbody"><p data-en="The most powerful no-code automation platform. We build complex multi-app workflows that run 24/7." data-he="פלטפורמת האוטומציה ללא קוד החזקה ביותר. אנחנו בונים תהליכי עבודה מורכבים שרצים 24/7.">The most powerful no-code automation platform. We build complex multi-app workflows that run 24/7.</p></div></div>
       <div class="pc fin"><div class="pb bg-air"><div class="pem"><span class="plogo"><img src="assets/apps/airtable.png" alt="Airtable"></span></div><div class="pbt">Airtable</div><div class="pchips"><span class="pch">Bases</span><span class="pch">Forms</span></div></div><div class="pbody"><p data-en="Smart databases with automations and views. Replace messy spreadsheets with a structured system." data-he="מסדי נתונים חכמים עם אוטומציות ותצוגות. החלף גיליונות מבולגנים במערכת מסודרת.">Smart databases with automations and views. Replace messy spreadsheets with a structured system.</p></div></div>
       <div class="pc fin"><div class="pb bg-crm"><div class="pem"><svg class="ico" viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.6c2.6.2 4.4 2 5 4.9"/></svg></div><div class="pbt">CRM Systems</div><div class="pchips"><span class="pch">HubSpot</span><span class="pch">Pipedrive</span></div></div><div class="pbody"><p data-en="HubSpot, Salesforce, Pipedrive and more. We automate your entire sales pipeline end-to-end." data-he="HubSpot, Salesforce, Pipedrive ועוד. אנחנו מאטמטים את כל צינור המכירות שלך מקצה לקצה.">HubSpot, Salesforce, Pipedrive and more. We automate your entire sales pipeline end-to-end.</p></div></div>
+      <div class="pc fin"><div class="pb bg-ai"><div class="pem"><span class="plogos"><span class="plogo sm"><img src="assets/apps/chatgpt.png" alt="ChatGPT"></span><span class="plogo sm"><img src="assets/apps/claude.png" alt="Claude"></span><span class="plogo sm"><img src="assets/apps/gemini.png" alt="Gemini"></span></span></div><div class="pbt" data-en="AI Tools" data-he="כלי AI">AI Tools</div><div class="pchips"><span class="pch">Agents</span><span class="pch">Assistants</span></div></div><div class="pbody"><p data-en="ChatGPT, Claude, Gemini and more. We connect AI to your tools and build agents that do real work for your business." data-he="ChatGPT, Claude, Gemini ועוד. אנחנו מחברים את ה AI לכלים שלך ובונים סוכנים שעושים עבודה אמיתית בעסק.">ChatGPT, Claude, Gemini and more. We connect AI to your tools and build agents that do real work for your business.</p></div></div>
     </div>
   </div>
 </section>
