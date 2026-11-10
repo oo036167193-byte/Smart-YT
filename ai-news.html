@@ -70,7 +70,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .more:hover{text-decoration:underline;}
 .full-btn{background:#1565c0;color:#fff;border-radius:100px;padding:.5rem 1.1rem;}
 .full-btn:hover{background:#0d4fa0;text-decoration:none;}
-.empty{color:#4a6080;text-align:center;padding:3rem 0;}
+.empty{grid-column:1/-1;background:#fff;border:1px dashed #b9cbe2;border-radius:18px;color:#4a6080;text-align:center;padding:3.5rem 1.5rem;display:flex;flex-direction:column;gap:.6rem;}
+.empty b{font-size:1.35rem;color:#0d1f3c;}
 
 /* FULL STORY */
 .story{position:fixed;inset:0;z-index:300;background:rgba(6,15,30,.7);backdrop-filter:blur(6px);display:none;overflow-y:auto;padding:90px 1rem 3rem;}
@@ -151,69 +152,17 @@ footer a{color:var(--gm);text-decoration:none;}
    full_he = the full story, one paragraph per line (optional).
              If full_he is empty, the card only links to the source.
    ============================================================ */
+/* EXAMPLE (copy this block inside the [ ] below and fill it in):
+  {
+    id: "short-name", date: "2026-11-16", featured: true, tag: "Topic",
+    title_en: "", title_he: "",
+    text_en: "", text_he: "",
+    do_en: ["", ""], do_he: ["", ""],
+    full_en: [], full_he: [],
+    link: "https://..."
+  },
+*/
 var POSTS = [
-  {
-    id: "mistral-large-4", date: "2026-11-09", featured: true, tag: "Open models",
-    title_en: "Mistral gives away its biggest model yet",
-    title_he: "Mistral משחררת את המודל הכי גדול שלה בחינם",
-    text_en: "Mistral AI released Large 4, a model with 1 trillion parameters, as open weights. Anyone can download it and run it.",
-    text_he: "Mistral AI שחררה את Large 4, מודל עם טריליון פרמטרים, כמודל פתוח. כל אחד יכול להוריד ולהריץ אותו.",
-    do_en: ["Keep customer data inside the business and still use strong AI", "Cut monthly AI costs by running the model yourself", "Ask us to check if it fits your work"],
-    do_he: ["להשתמש ב-AI חזק בלי שהמידע של הלקוחות יוצא מהעסק", "לחסוך בעלויות חודשיות כשמריצים את המודל לבד", "לבדוק איתנו אם זה מתאים לעבודה שלכם"],
-    full_en: [
-      "On 9 November Mistral AI, the French AI company, released Large 4. It has 1 trillion parameters, which puts it among the biggest models anyone has ever given away.",
-      "Open weights means you can download the model and run it on your own servers or on a cloud server you rent. Nothing has to go through Mistral, and nobody else sees what you type into it.",
-      "It comes under a modified MIT licence. In simple terms you can use it in your business for free. The one exception: if you want to sell it to others as a paid online AI service, you need a separate commercial deal with Mistral.",
-      "A model this size still needs serious hardware, so most small businesses won't run it in the back office. But it shows where things are going. A year ago this level of AI was only available through the big paid services. Today you can own it."
-    ],
-    full_he: [
-      "ב-9 בנובמבר חברת ה-AI הצרפתית Mistral שחררה את Large 4. יש בו טריליון פרמטרים, וזה אחד המודלים הכי גדולים שמישהו אי פעם נתן בחינם.",
-      "מודל פתוח אומר שאפשר להוריד אותו ולהריץ על השרתים שלך או על שרת בענן שאתה שוכר. שום דבר לא עובר דרך Mistral, ואף אחד אחר לא רואה מה כותבים לו.",
-      "הוא יוצא ברישיון MIT מותאם. בפשטות, מותר להשתמש בו בעסק בחינם. החריג היחיד: מי שרוצה למכור אותו לאחרים כשירות AI בתשלום צריך הסכם מסחרי נפרד עם Mistral.",
-      "מודל בגודל כזה עדיין צריך חומרה רצינית, אז רוב העסקים הקטנים לא יריצו אותו במשרד. אבל זה מראה לאן הדברים הולכים. לפני שנה AI ברמה כזאת היה זמין רק דרך השירותים הגדולים בתשלום. היום אפשר שיהיה שלך."
-    ],
-    link: "https://mistral.ai/news/mistral-large-4-oss/"
-  },
-  {
-    id: "alexa-text-shopping", date: "2026-11-06", tag: "Shopping",
-    title_en: "You can now text Alexa to do your shopping",
-    title_he: "אפשר לשלוח הודעה לאלקסה והיא קונה בשבילך",
-    text_en: "Amazon started letting people shop by texting Alexa. For now it's invite only and US only.",
-    text_he: "אמזון התחילה לאפשר קניות בהודעות טקסט לאלקסה. כרגע רק בהזמנה ורק בארה\"ב.",
-    do_en: ["Write clear product names, sizes and prices so a bot can read them", "Make ordering possible in a few simple steps", "Think about taking orders by WhatsApp message too"],
-    do_he: ["לכתוב שמות מוצרים, מידות ומחירים ברורים כדי שגם בוט יבין", "לדאוג שאפשר להזמין בכמה צעדים פשוטים", "לחשוב על קבלת הזמנות גם בהודעת וואטסאפ"],
-    link: "https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/"
-  },
-  {
-    id: "openai-11b", date: "2026-11-06", tag: "OpenAI",
-    title_en: "OpenAI raises another $11 billion",
-    title_he: "OpenAI גייסה עוד 11 מיליארד דולר",
-    text_en: "According to reports, OpenAI raised $11B at a $1.25 trillion valuation. They were hoping for $30B, so the round is still open.",
-    text_he: "לפי הדיווחים OpenAI גייסה 11 מיליארד דולר לפי שווי של 1.25 טריליון. הם קיוו ל-30 מיליארד, אז הסבב עדיין פתוח.",
-    do_en: ["Expect new ChatGPT features soon", "Check every few weeks what was added to the tools you pay for"],
-    do_he: ["לצפות לפיצ'רים חדשים ב-ChatGPT בקרוב", "לבדוק כל כמה שבועות מה נוסף לכלים שאתם משלמים עליהם"],
-    link: "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
-  },
-  {
-    id: "fal-raise", date: "2026-11-04", tag: "Images & video",
-    title_en: "The company behind Canva's AI images raises $1.3 billion",
-    title_he: "החברה שמאחורי התמונות של Canva גייסה 1.3 מיליארד דולר",
-    text_en: "Fal makes AI images and video for companies like Adobe, Canva and Shopify. It just raised $1.3B and is now worth $16B.",
-    text_he: "Fal מייצרת תמונות ווידאו ב-AI לחברות כמו Adobe, Canva ו-Shopify. היא גייסה עכשיו 1.3 מיליארד דולר ושווה 16 מיליארד.",
-    do_en: ["Try the AI image tools inside Canva for your next advert", "Make short product videos without a studio"],
-    do_he: ["לנסות את כלי התמונות של ה-AI בתוך Canva למודעה הבאה", "להכין סרטוני מוצר קצרים בלי סטודיו"],
-    link: "https://tech.eu/2026/11/04/fal-doubles-valuation-to-16b-after-13b-series-f/"
-  },
-  {
-    id: "meta-conductor", date: "2026-11-04", tag: "Coding",
-    title_en: "Meta buys Conductor. The app closes on 20 November",
-    title_he: "Meta קנתה את Conductor. האפליקציה נסגרת ב-20 בנובמבר",
-    text_en: "Conductor lets you run Claude Code, Codex and Cursor side by side. Conductor Cloud shuts on 20 November and stored data will be deleted.",
-    text_he: "Conductor מאפשרת להריץ את Claude Code, Codex ו-Cursor ביחד. Conductor Cloud נסגרת ב-20 בנובמבר וכל המידע השמור יימחק.",
-    do_en: ["If you use Conductor, download your work before 20 November"],
-    do_he: ["אם אתם משתמשים ב-Conductor, תורידו את העבודה לפני 20 בנובמבר"],
-    link: "https://siliconangle.com/2026/11/04/meta-acquires-ai-coding-startup-conductor-whose-app-runs-several-coding-agents-at-once/"
-  }
 ];
 
 var isHe = false, filter = "all";
@@ -231,13 +180,13 @@ function cardHTML(p,big){
 function render(){
   var list=POSTS.slice().sort(function(a,b){return a.date<b.date?1:-1;});
   var tags=["all"];list.forEach(function(p){if(tags.indexOf(p.tag)<0)tags.push(p.tag);});
-  document.getElementById("filters").innerHTML=tags.map(function(g){return '<button class="fbtn'+(g===filter?" on":"")+'" data-t="'+esc(g)+'">'+(g==="all"?(isHe?"הכל":"All"):esc(g))+'</button>';}).join("");
+  document.getElementById("filters").innerHTML=list.length<2?"":tags.map(function(g){return '<button class="fbtn'+(g===filter?" on":"")+'" data-t="'+esc(g)+'">'+(g==="all"?(isHe?"הכל":"All"):esc(g))+'</button>';}).join("");
   document.querySelectorAll(".fbtn").forEach(function(b){b.onclick=function(){filter=b.getAttribute("data-t");render();};});
   var shown=filter==="all"?list:list.filter(function(p){return p.tag===filter;});
   var feat=filter==="all"?(shown.filter(function(p){return p.featured;})[0]||shown[0]):null;
   document.getElementById("featured").innerHTML=feat?cardHTML(feat,true):"";
   var rest=shown.filter(function(p){return p!==feat;});
-  document.getElementById("grid").innerHTML=rest.length||feat?rest.map(function(p){return cardHTML(p,false);}).join(""):'<p class="empty">'+(isHe?"אין עדיין כתבות":"No stories yet")+'</p>';
+  document.getElementById("grid").innerHTML=rest.length||feat?rest.map(function(p){return cardHTML(p,false);}).join(""):'<div class="empty"><b>'+(isHe?"הסיפורים הראשונים בדרך":"The first stories are on the way")+'</b><span>'+(isHe?"AI Monday יוצא כל יום שני. כדאי לחזור לכאן בקרוב.":"AI Monday comes out every Monday. Check back soon.")+'</span></div>';
   if(list.length){var d=new Date(list[0].date+"T12:00:00");var day=d.getDay();var mon=new Date(d);mon.setDate(d.getDate()-((day+6)%7));
     document.getElementById("weekLabel").textContent=(isHe?"שבוע של ":"Week of ")+mon.toLocaleDateString(isHe?"he-IL":"en-GB",{day:"numeric",month:"long",year:"numeric"});}
   showStoryFromHash();
