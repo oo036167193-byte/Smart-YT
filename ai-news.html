@@ -34,9 +34,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-cta{background:linear-gradient(135deg,var(--blue),var(--cy));color:#fff;padding:.55rem 1.4rem;border-radius:100px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:0 4px 15px rgba(33,150,243,.3);transition:all .2s;white-space:nowrap;}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(33,150,243,.5);}
 
-/* HERO: the AI Monday banner exactly as supplied, shown at its real size so it stays sharp */
-.hero{position:relative;z-index:1;padding:110px 1rem 2.5rem;text-align:center;}
-.banner-img{display:block;width:600px;max-width:100%;height:auto;margin:0 auto;border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,.45);}
+/* HERO: the AI Monday banner exactly as supplied, same width as the stories below */
+.hero{position:relative;z-index:1;padding:110px 5vw 2.5rem;text-align:center;}
+.banner-img{display:block;width:100%;max-width:1100px;height:auto;margin:0 auto;border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,.45);}
 
 /* SECTION: light, easy to read (same light palette as the home page) */
 .sec{position:relative;z-index:1;padding:3.5rem 5vw 5rem;background:#f0f4f8;color:#1a2840;}
@@ -101,7 +101,10 @@ footer a{color:var(--gm);text-decoration:none;}
 </nav>
 
 <header class="hero">
-  <img class="banner-img" src="assets/ai-monday-banner.gif" width="600" height="178" alt="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086">
+  <video class="banner-img" autoplay muted loop playsinline poster="assets/ai-monday-banner.jpg" width="1200" height="356" aria-label="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086">
+    <source src="assets/ai-monday-banner.mp4" type="video/mp4">
+    <img src="assets/ai-monday-banner.gif" width="600" height="178" alt="AI Monday. The week's most interesting AI stories by SmartYT. 07356 042086">
+  </video>
 </header>
 
 <main class="sec">
