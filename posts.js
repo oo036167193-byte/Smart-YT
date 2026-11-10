@@ -239,5 +239,48 @@ var POSTS = [
       {url: "https://www.youtube.com/watch?v=Ew2Jzsr3kB4", en: "Watch the keynote", he: "צפו בהרצאה המרכזית"},
       {url: "https://www.make.com/blog/waves26-the-glass-box-for-the-agentic-era", en: "Everything Make announced", he: "כל מה ש Make הכריזה"}
     ]
+  },
+  {
+    id: "prompt-motion", date: "2026-11-10", tag: "Claude",
+    icon: "assets/tools/claude.png",
+    image: "assets/stories/prompt-motion.jpg",
+    title_en: "Anyone can now make animations that took video editors hours",
+    title_he: "כל אחד יכול היום ליצור אנימציה שלקחה לעורך וידאו שעות",
+    text_en: "Claude can make short animated videos from code. Prompt Motion is a free site with hundreds of them, each with the exact prompt that made it.",
+    text_he: "קלוד יודע ליצור סרטוני אנימציה קצרים מקוד. Prompt Motion הוא אתר חינמי עם מאות כאלה, וליד כל אחד הפרומפט המדויק שיצר אותו.",
+    do_en: ["Find a video you like and copy its prompt", "Ask Claude to change the colours, text and style for your business", "Save hours of trying and fixing"],
+    do_he: ["למצוא סרטון שאוהבים ולהעתיק את הפרומפט", "לבקש מקלוד להתאים צבעים, ניסוח וסגנון לעסק", "לחסוך שעות של ניסיונות ותיקונים"],
+    full_en: [
+      "Claude can make beautiful animations and short videos. It does not film anything. It writes code that draws every frame, and the computer turns it into a video. This works great for ads, product videos and explainers.",
+      {h: "A video I made with Claude"},
+      {embed: "https://drive.google.com/file/d/1KjQFpSdjX_5DqUHWQHTzMlxyKnawekm5/preview"},
+      "But there is a problem. When you start an animation from nothing, it can take hours. You ask, you look, you change, you ask again. Every change costs time and tokens.",
+      "So I found a very useful website: Prompt Motion. It’s free, and it has hundreds of short videos made with Claude, with the exact prompt next to each one.",
+      {h: "How to use it"},
+      {list: ["Look through the videos and find one you like", "Copy its prompt", "Take it to Claude and ask it to change the colours, the text and the style to fit your business"]},
+      "You start from something that already works, so you skip most of the trying and fixing.",
+      {h: "Good to know"},
+      "The videos on the site were made with Claude Opus 5.5. If you use the free plan or a different AI model, your result may look different.",
+      {h: "What it means for us"},
+      "You see the result before you start. This saves a lot of time and a lot of tokens."
+    ],
+    full_he: [
+      "קלוד יודע לעשות אנימציות וסרטונים קצרים יפים מאוד. הוא לא מצלם כלום, אלא כותב קוד שמצייר כל פריים, והמחשב הופך את זה לסרטון. זה עובד מצוין לפרסומות, סרטוני מוצר והסברים.",
+      {h: "סרטון שעשיתי עם קלוד"},
+      {embed: "https://drive.google.com/file/d/1KjQFpSdjX_5DqUHWQHTzMlxyKnawekm5/preview"},
+      "אבל יש בעיה. כשמתחילים אנימציה מאפס, זה יכול לקחת שעות. מבקשים, מסתכלים, משנים, מבקשים שוב, וכל שינוי עולה זמן וטוקנים.",
+      "לכן מצאתי אתר מאוד שימושי: Prompt Motion. האתר חינמי, ויש בו מאות סרטונים קצרים שנעשו עם קלוד, וליד כל אחד מופיע בדיוק הפרומפט שיצר אותו.",
+      {h: "איך משתמשים"},
+      {list: ["עוברים על הסרטונים ומוצאים אחד שאוהבים", "מעתיקים את הפרומפט", "לוקחים אותו לקלוד ומבקשים להתאים את הצבעים, הניסוח והסגנון לעסק שלך"]},
+      "מתחילים ממשהו שכבר עובד, וככה מדלגים על רוב הניסיונות והתיקונים.",
+      {h: "חשוב לדעת"},
+      "הסרטונים באתר נעשו עם Claude Opus 5.5. מי שמשתמש בגרסה החינמית או במודל אחר, יכול לקבל תוצאה שונה.",
+      {h: "מה זה אומר לנו"},
+      "רואים את התוצאה עוד לפני שמתחילים. זה חוסך הרבה מאוד זמן והרבה מאוד טוקנים."
+    ],
+    links: [
+      {url: "https://prompt-motion.com/", en: "Prompt Motion", he: "Prompt Motion"},
+      {url: "https://drive.google.com/file/d/1KjQFpSdjX_5DqUHWQHTzMlxyKnawekm5/view", en: "My video on Google Drive", he: "הסרטון שלי ב Google Drive"}
+    ]
   }
 ];
