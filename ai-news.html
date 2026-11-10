@@ -97,6 +97,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .story-box h1{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:900;line-height:1.25;color:#0d1f3c;margin:.8rem 0 1.4rem;}
 .story-box p{font-size:1.06rem;line-height:1.9;color:#2a3d5c;margin-bottom:1.1rem;}
 .story-box .why{margin:1.6rem 0;font-size:1rem;}
+.story-box h2{font-size:1.2rem;font-weight:800;color:#1565c0;margin:1.6rem 0 .6rem;}
+.story-box ul{margin:0 0 1.1rem;padding-inline-start:1.3rem;}
+.story-box li{font-size:1.04rem;line-height:1.8;color:#2a3d5c;margin:.2rem 0;}
+.video{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;margin:1.4rem 0 1.6rem;background:#000;}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.srcs{display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center;border-top:1px solid #d0dcea;padding-top:1rem;margin-top:1.6rem;font-size:.9rem;}
+.srcs b{color:#4a6080;}
 .story-close{position:absolute;top:1rem;inset-inline-end:1rem;width:40px;height:40px;border-radius:50%;border:1px solid #d0dcea;background:#f0f4f8;color:#1a2840;font-size:1.3rem;cursor:pointer;}
 @media(max-width:900px){.story-box{padding:2rem 1.3rem;}}
 
@@ -209,11 +216,50 @@ footer a{color:var(--gm);text-decoration:none;}
     title_en: "", title_he: "",
     text_en: "", text_he: "",
     do_en: ["", ""], do_he: ["", ""],
-    full_en: [], full_he: [],
-    link: "https://..."
+    full_en: ["paragraph", {h: "sub heading"}, {list: ["point", "point"]}], full_he: [],
+    video: "YouTube video id (optional)",
+    link: "https://...", link2: "second link (optional)"
   },
 */
 var POSTS = [
+  {
+    id: "claude-personal-finance", date: "2026-11-10", featured: true, tag: "Claude",
+    title_en: "Personal Finance: Claude now reads your bank account",
+    title_he: "Personal Finance: קלוד נכנס לחשבון הבנק שלך",
+    text_en: "Anthropic launched Personal Finance, a tool that connects Claude to your bank and credit cards, looks back up to two years and helps you see where your money goes. Beta, US only for now.",
+    text_he: "אנטרופיק השיקה את Personal Finance, כלי שמחבר את Claude לחשבון הבנק ולכרטיסי האשראי, רואה עד שנתיים אחורה ועוזר להבין לאן הולך הכסף. כרגע בטא, רק בארה\"ב.",
+    do_en: ["Spot duplicate charges and unexpected fees", "Keep track of subscriptions", "See how much is left until payday"],
+    do_he: ["לזהות חיובים כפולים ועמלות לא צפויות", "לעקוב אחרי מנויים ותשלומים קבועים", "לראות כמה כסף נשאר עד המשכורת"],
+    video: "UTubvRLX2j4",
+    full_en: [
+      "In the AI world, where we’ve already given up much of our privacy, AI is making its way into everything, especially the things people have no time or patience for.",
+      "On 5 November Anthropic officially launched a new tool called Personal Finance. It connects to your bank and credit card accounts through Plaid, so Claude never sees your bank password. It can look back up to two years and becomes your personal money assistant.",
+      {h: "What you can do with it"},
+      {list: ["Ask where your money went", "Build your own dashboard", "Spot duplicate charges and unexpected fees", "Keep track of subscriptions and recurring payments", "See how much is left until your next payday", "Get a spending summary by category"]},
+      {h: "What it can’t do"},
+      "It can’t move money (read only), and it doesn’t invest for you.",
+      "Chats inside Personal Finance are not used by Anthropic to train its models.",
+      "Right now it’s a beta, US only, on the Pro, Max and Ultra plans.",
+      {h: "How do you get to it?"},
+      "Once Personal Finance shows up in Claude’s sidebar, click it, connect your first account and ask a question.",
+      "I think this can save a lot of money, but it’s worth asking yourself whether you’re comfortable connecting AI to your bank accounts."
+    ],
+    full_he: [
+      "בעולם ה AI, שבו כבר ויתרנו על הרבה מהפרטיות שלנו, ה AI נכנס לכל מקום, ובמיוחד לדברים שלבני אדם אין כוח או חשק להתעסק איתם.",
+      "ב 5 בנובמבר השיקה אנטרופיק באופן רשמי כלי חדש בשם Personal Finance. הכלי מתחבר לחשבון הבנק ולכרטיסי האשראי שלך דרך Plaid, כך שאין לו גישה לסיסמה של הבנק. הוא יכול לראות עד שנתיים אחורה, והוא העוזר הפיננסי האישי שלך.",
+      {h: "מה אפשר לעשות איתו"},
+      {list: ["לשאול לאן הלך הכסף", "לבנות דשבורד אישי", "לזהות חיובים כפולים ועמלות לא צפויות", "לעקוב אחרי מנויים ותשלומים קבועים", "לראות כמה כסף נשאר עד המשכורת הבאה", "לקבל סיכום הוצאות לפי קטגוריות"]},
+      {h: "מה הוא לא עושה"},
+      "הוא לא יכול להזיז כסף (קריאה בלבד), והוא לא משקיע בשבילך.",
+      "השיחות בתוך Personal Finance לא משמשות את אנטרופיק לאימון המודלים.",
+      "כרגע זו גרסת בטא, רק בארה\"ב, במסלולי Pro, Max ו Ultra.",
+      {h: "איך מגיעים לזה?"},
+      "כשמופיעה הכניסה Personal Finance בסרגל הצד של Claude, לוחצים, מחברים חשבון ראשון ושואלים שאלה.",
+      "לדעתי אפשר לחסוך הרבה כסף עם הכלי הזה, אבל כדאי לחשוב אם אתם מרגישים בנוח לחבר AI לחשבונות הבנק שלכם."
+    ],
+    link: "https://support.claude.com/en/articles/18185620-use-personal-finance-in-claude",
+    link2: "https://techcrunch.com/"
+  }
 ];
 
 var isHe = false, filter = "all";
@@ -221,6 +267,10 @@ function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&
 function fmt(d){var dt=new Date(d+"T12:00:00");return dt.toLocaleDateString(isHe?"he-IL":"en-GB",{day:"numeric",month:"long",year:"numeric"});}
 function t(p,k){return isHe?(p[k+"_he"]||p[k+"_en"]):(p[k+"_en"]||p[k+"_he"]);}
 function doBox(p){var d=t(p,"do");if(!d||!d.length)return"";return '<div class="why"><b>'+(isHe?"מה אפשר לעשות עם זה":"What you can do with it")+'</b><ul>'+d.map(function(x){return"<li>"+esc(x)+"</li>";}).join("")+'</ul></div>';}
+function block(x){if(typeof x==="string")return"<p>"+esc(x)+"</p>";if(x.h)return"<h2>"+esc(x.h)+"</h2>";if(x.list)return"<ul>"+x.list.map(function(i){return"<li>"+esc(i)+"</li>";}).join("")+"</ul>";return"";}
+function videoHTML(p){return p.video?'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/'+esc(p.video)+'" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>':"";}
+function host(u){try{return new URL(u).hostname.replace(/^www\./,"");}catch(e){return"";}}
+function allLinks(p){return [p.link,p.link2].filter(Boolean).map(function(u){return '<a class="more" target="_blank" rel="noopener" href="'+esc(u)+'">'+esc(host(u))+(isHe?" ←":" →")+'</a>';}).join("");}
 function srcLink(p){return p.link?'<a class="more" target="_blank" rel="noopener" href="'+esc(p.link)+'">'+(isHe?"למקור ←":"Source →")+'</a>':"";}
 function linksHTML(p){var f=t(p,"full");var full=f&&f.length?'<button class="more full-btn" onclick="openStory(\''+p.id+'\')">'+(isHe?"לסיפור המלא":"Full story")+'</button>':"";return '<div class="links">'+full+srcLink(p)+'</div>';}
 function meta(p){return '<div class="meta"><span class="tag">'+esc(p.tag)+'</span><span>'+fmt(p.date)+'</span></div>';}
@@ -248,7 +298,8 @@ function showStoryFromHash(){
   var m=location.hash.match(/story=([\w-]+)/);var el=document.getElementById("story");
   var p=m&&POSTS.filter(function(x){return x.id===m[1];})[0];
   if(!p||!t(p,"full")){el.classList.remove("open");document.body.style.overflow="";return;}
-  document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+t(p,"full").map(function(x){return"<p>"+esc(x)+"</p>";}).join("")+doBox(p)+'<div class="links">'+srcLink(p)+'</div>';
+  var f=t(p,"full");var half=Math.ceil(f.length/3);
+  document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+f.slice(0,2).map(block).join("")+videoHTML(p)+f.slice(2).map(block).join("")+'<div class="srcs"><b>'+(isHe?"מקורות":"Sources")+'</b>'+allLinks(p)+'</div>';
   el.classList.add("open");el.scrollTop=0;document.body.style.overflow="hidden";
 }
 window.addEventListener("hashchange",showStoryFromHash);
