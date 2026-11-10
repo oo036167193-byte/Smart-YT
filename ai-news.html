@@ -271,6 +271,48 @@ var POSTS = [
     ],
     link: "https://support.claude.com/en/articles/18185620-use-personal-finance-in-claude",
     link2: "https://www.engadget.com/2307936/now-claude-can-help-with-your-finances-too/"
+  },
+  {
+    id: "claude-dreaming-memory", date: "2026-11-06", tag: "Claude",
+    icon: "assets/tools/claude.png",
+    image: "assets/stories/agent-memory.jpg",
+    title_en: "Claude “dreams”: how AI agents learn from their own mistakes",
+    title_he: "קלוד \"חולם\": איך סוכני AI לומדים מהטעויות של עצמם",
+    text_en: "Anthropic shared how Claude remembers between sessions, and a process called dreaming where it goes over its notes, fixes mistakes and tidies up its memory.",
+    text_he: "אנטרופיק שיתפה איך קלוד זוכר בין שיחה לשיחה, ותהליך שנקרא dreaming שבו הוא עובר על ההערות שלו, מתקן טעויות ומסדר את הזיכרון.",
+    do_en: ["Build agents that learn how you work", "Let the agent decide what to remember instead of piling on instructions", "Developers can try it in Claude Managed Agents"],
+    do_he: ["לבנות סוכנים שלומדים איך אתם עובדים", "לתת לסוכן להחליט לבד מה לזכור, במקום להעמיס הוראות", "מפתחים יכולים לנסות את זה ב Claude Managed Agents"],
+    full_en: [
+      "Every time you open a new chat, the AI starts from zero. Memory is what lets an AI agent learn from experience, and Anthropic just shared how it works inside Claude.",
+      "On 6 November Anthropic published a research post called “The components of agent memory”. It explains how Claude keeps what it learns between sessions, and a process called dreaming: between sessions Claude goes back over its logs, fixes wrong notes, writes new ones and tidies up its memory. Just like our brain sorts out the day while we sleep.",
+      {h: "What they found"},
+      {list: [
+        "Less is more: in a Pokémon game test, an older model saved 413 memory files and won 1 badge. Claude Fable 5 saved only 9 files and won 4.",
+        "Dreaming fixes mistakes: Claude wrote down a wrong location in the game and kept getting stuck. After dreaming it caught the error and moved on.",
+        "It builds a wiki: on 350,000 internal company files, the score using the wiki alone went from 13% to 48% after 128 rounds of dreaming.",
+        "Don’t over instruct: strong models did better when left to decide for themselves what to remember."
+      ]},
+      {h: "What it means for us"},
+      "The agents we build are getting better at learning how we work, and the longer they run, the smarter they get.",
+      {h: "Who can use it?"},
+      "Dreaming is available for developers in Claude Managed Agents (introduced as a research preview in May)."
+    ],
+    full_he: [
+      "בכל פעם שפותחים שיחה חדשה, ה AI מתחיל מאפס. הזיכרון הוא מה שמאפשר לסוכן AI ללמוד מניסיון, ועכשיו אנטרופיק שיתפה איך זה עובד אצל קלוד.",
+      "ב 6 בנובמבר פרסמה אנטרופיק פוסט מחקר בשם \"The components of agent memory\". הוא מסביר איך קלוד שומר את מה שהוא לומד בין שיחה לשיחה, ותהליך שנקרא dreaming (חלימה): בין שיחה לשיחה קלוד עובר על היומנים שלו, מתקן הערות שגויות, כותב חדשות ומסדר את הזיכרון. בדיוק כמו שהמוח שלנו מסדר את היום בזמן שאנחנו ישנים.",
+      {h: "מה הם גילו"},
+      {list: [
+        "פחות זה יותר: במבחן של משחק פוקימון, מודל ישן שמר 413 קבצי זיכרון וזכה בתג אחד. Claude Fable 5 שמר רק 9 קבצים וזכה ב 4.",
+        "ה dreaming מתקן טעויות: קלוד רשם מיקום שגוי במשחק ונתקע שוב ושוב. אחרי תהליך החלימה הוא תפס את הטעות והתקדם.",
+        "הוא בונה ויקי: על 350,000 קבצים פנימיים של חברה, הציון מהוויקי בלבד עלה מ 13% ל 48% אחרי 128 סבבים של dreaming.",
+        "לא להגזים בהוראות: מודלים חזקים הצליחו יותר כשנתנו להם להחליט לבד מה לזכור."
+      ]},
+      {h: "מה זה אומר לנו"},
+      "הסוכנים שאנחנו בונים משתפרים בללמוד איך אנחנו עובדים, וככל שהם רצים יותר זמן, הם נהיים חכמים יותר.",
+      {h: "מי יכול להשתמש בזה?"},
+      "ה dreaming זמין למפתחים ב Claude Managed Agents (הוצג כ research preview במאי)."
+    ],
+    link: "https://anthropic.com/research/components-of-agent-memory"
   }
 ];
 
