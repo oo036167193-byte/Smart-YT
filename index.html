@@ -784,6 +784,13 @@ nav .lang-btn:hover{border-color:#1565c0 !important;color:#1565c0 !important;}
   body.menu-open nav .nav-links{background:#fff !important;border-bottom:1px solid #e3eaf3 !important;box-shadow:0 20px 40px rgba(13,31,60,.12) !important;}
   body.menu-open nav .nav-links a{color:#1a2840 !important;border-bottom-color:#eef2f7 !important;}
 }
+
+/* show the moving hero panel on phones too */
+@media(max-width:900px){.tv{display:block !important;height:330px;margin-top:.5rem;}.ts{padding:1rem .6rem;}.ts .tn{font-size:1.45rem;}.ts .tl{font-size:.62rem;letter-spacing:.5px;}}
+
+/* moving strip runs the same way in Hebrew */
+.touter,.ttrack{direction:ltr;}
+.ttrack .tn{unicode-bidi:plaintext;}
 </style>
 </head>
 <body>
@@ -805,6 +812,7 @@ nav .lang-btn:hover{border-color:#1565c0 !important;color:#1565c0 !important;}
     </div>
   </div>
   <ul class="nav-links">
+    <li><a href="/" data-en="Home" data-he="בית" class="active">Home</a></li>
     <li><a href="#services" data-en="Services" data-he="שירותים">Services</a></li>
     <li><a href="#platforms" data-en="Platforms" data-he="פלטפורמות">Platforms</a></li>
     <li><a href="#how" data-en="How It Works" data-he="איך זה עובד">How It Works</a></li>
@@ -1297,12 +1305,12 @@ if (ns) {
   }
   function getPos() {
     for (var t=0;t<20;t++) {
-      var p = 8+Math.random()*80;
+      var p = 6+Math.random()*(ns.offsetWidth<500?66:80);
       var ok = true;
       for (var i=0;i<active.length;i++) { if (Math.abs(active[i].pos-p)<22){ok=false;break;} }
       if (ok) return p;
     }
-    return 8+Math.random()*80;
+    return 6+Math.random()*(ns.offsetWidth<500?66:80);
   }
   function spawnNode() {
     if (active.length>=MAX) return;
