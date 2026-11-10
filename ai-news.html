@@ -351,6 +351,53 @@ var POSTS = [
     ],
     link: "https://thenextweb.com/news/tencent-yao-shunyu-ai-biology-risk-hy4",
     link2: "https://www.scmp.com/tech/big-tech/article/3373697/ai-will-soon-master-biology-unleashing-new-safety-risks-tencent-ai-chief-warns"
+  },
+  {
+    id: "monday-q3-ai", date: "2026-11-09", tag: "monday.com",
+    icon: "assets/tools/monday-icon.png",
+    image: "assets/stories/monday-q3.jpg",
+    video: "WUj318KELK8", videoAt: 4,
+    title_en: "monday.com goes all in on AI: $36 million and 6 million agent interactions",
+    title_he: "monday.com הולכת עד הסוף עם AI: 36 מיליון דולר ו 6 מיליון שיחות עם סוכנים",
+    text_en: "monday.com reported $377.5 million in quarterly revenue. Its AI products already bring in $36 million a year, and its agents passed 6 million interactions.",
+    text_he: "monday.com דיווחה על הכנסות של 377.5 מיליון דולר ברבעון. מוצרי ה AI שלה כבר מכניסים 36 מיליון דולר בשנה, והסוכנים שלה עברו 6 מיליון אינטראקציות.",
+    do_en: ["Start learning monday agents now", "Try vibe and AI credits on your boards"],
+    do_he: ["להתחיל ללמוד את הסוכנים של monday כבר עכשיו", "לנסות את vibe וקרדיטי ה AI על הבורדים שלכם"],
+    full_en: [
+      "monday.com, the work platform many of us use every day, is turning itself into an AI company, and the latest numbers show how fast it’s happening.",
+      "On 9 November monday.com reported its third quarter results:",
+      {list: [
+        "Revenue: $377.5 million, up 19% from last year",
+        "AI products (AI credits, agents and vibe) now bring in $36 million a year",
+        "monday agents passed 6 million interactions in less than two quarters",
+        "Record profit margin"
+      ]},
+      "The two co CEOs, Roy Mann and Eran Zinman, said the company is going through a fundamental change to become AI first. They admitted that a change this big brings some short term bumps, and the outlook for next quarter shows slower growth of about 14%.",
+      {h: "What it means for us"},
+      "monday is no longer just boards and columns. Agents, vibe and AI credits are becoming the heart of the product, and anyone working on monday should start learning how to use them now.",
+      {h: "My take"},
+      "Even a company like monday.com understands where the whole world is heading. To stay relevant, they’re putting AI first."
+    ],
+    full_he: [
+      "monday.com, פלטפורמת העבודה שרבים מאיתנו עובדים איתה כל יום, הופכת את עצמה לחברת AI, והמספרים האחרונים מראים כמה מהר זה קורה.",
+      "ב 9 בנובמבר פרסמה monday.com את תוצאות הרבעון השלישי:",
+      {list: [
+        "הכנסות: 377.5 מיליון דולר, עלייה של 19% מהשנה שעברה",
+        "מוצרי ה AI (קרדיטים, סוכנים ו vibe) מכניסים כבר 36 מיליון דולר בשנה",
+        "הסוכנים של monday עברו 6 מיליון אינטראקציות בפחות משני רבעונים",
+        "שולי רווח שיא"
+      ]},
+      "שני המנכ\"לים, רועי מן וערן זינמן, אמרו שהחברה עוברת שינוי יסודי כדי להפוך ל AI first. הם הודו ששינוי בגודל כזה מביא קשיים בטווח הקצר, והתחזית לרבעון הבא מראה צמיחה איטית יותר, בערך 14%.",
+      {h: "מה זה אומר לנו"},
+      "monday היא כבר לא רק בורדים ועמודות. הסוכנים, ה vibe וקרדיטי ה AI הופכים ללב המוצר, ומי שעובד עם monday כדאי שיתחיל ללמוד להשתמש בהם כבר עכשיו.",
+      {h: "דעתי"},
+      "אפילו חברה כמו monday.com מבינה לאן כל העולם הולך, וכדי להישאר רלוונטיים הם דוחפים את ה AI ראשון."
+    ],
+    links: [
+      {url: "https://www.sec.gov/Archives/edgar/data/0001845338/000117891326005085/exhibit_99-1.htm", en: "Q3 2026 results", he: "תוצאות הרבעון השלישי"},
+      {url: "https://www.youtube.com/watch?v=WUj318KELK8", en: "Watch the earnings call", he: "צפו בשיחת המשקיעים"},
+      {url: "https://s29.q4cdn.com/881027206/files/content_files/Q3-26-Investor-Slides.pdf", en: "Investor presentation", he: "מצגת למשקיעים"}
+    ]
   }
 ];
 
@@ -362,8 +409,8 @@ function doBox(p){var d=t(p,"do");if(!d||!d.length)return"";return '<div class="
 function block(x){if(typeof x==="string")return"<p>"+esc(x)+"</p>";if(x.h)return"<h2>"+esc(x.h)+"</h2>";if(x.img)return'<img class="story-img" src="'+esc(x.img)+'" alt="'+esc(x.alt||"")+'" loading="lazy">';if(x.list)return"<ul>"+x.list.map(function(i){return"<li>"+esc(i)+"</li>";}).join("")+"</ul>";return"";}
 function videoHTML(p){return p.video?'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/'+esc(p.video)+'" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>':"";}
 function host(u){try{return new URL(u).hostname.replace(/^www\./,"");}catch(e){return"";}}
-function allLinks(p){return [p.link,p.link2].filter(Boolean).map(function(u){return '<a class="more" target="_blank" rel="noopener" href="'+esc(u)+'">'+esc(host(u))+(isHe?" ←":" →")+'</a>';}).join("");}
-function srcLink(p){return p.link?'<a class="more" target="_blank" rel="noopener" href="'+esc(p.link)+'">'+(isHe?"למקור ←":"Source →")+'</a>':"";}
+function allLinks(p){if(p.links)return p.links.map(function(l){return '<a class="more" target="_blank" rel="noopener" href="'+esc(l.url)+'">'+esc(isHe?(l.he||l.en):(l.en||l.he))+(isHe?" ←":" →")+'</a>';}).join("");return [p.link,p.link2].filter(Boolean).map(function(u){return '<a class="more" target="_blank" rel="noopener" href="'+esc(u)+'">'+esc(host(u))+(isHe?" ←":" →")+'</a>';}).join("");}
+function srcLink(p){if(!p.link&&p.links)p.link=p.links[0].url;return p.link?'<a class="more" target="_blank" rel="noopener" href="'+esc(p.link)+'">'+(isHe?"למקור ←":"Source →")+'</a>':"";}
 function linksHTML(p){var f=t(p,"full");var full=f&&f.length?'<button class="more full-btn" onclick="openStory(\''+p.id+'\')">'+(isHe?"לסיפור המלא":"Full story")+'</button>':"";return '<div class="links">'+full+srcLink(p)+'</div>';}
 function meta(p){return '<div class="meta">'+(p.icon?'<img class="post-ic" src="'+esc(p.icon)+'" alt="">':'')+'<span class="tag">'+esc(p.tag)+'</span><span>'+fmt(p.date)+'</span></div>';}
 function cardHTML(p,big){
@@ -391,7 +438,7 @@ function showStoryFromHash(){
   var p=m&&POSTS.filter(function(x){return x.id===m[1];})[0];
   if(!p||!t(p,"full")){el.classList.remove("open");document.body.style.overflow="";return;}
   var f=t(p,"full");var half=Math.ceil(f.length/3);
-  document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+(p.image?'<img class="story-img" src="'+esc(p.image)+'" alt="">':'')+f.slice(0,2).map(block).join("")+videoHTML(p)+f.slice(2).map(block).join("")+'<div class="srcs"><b>'+(isHe?"מקורות":"Sources")+'</b>'+allLinks(p)+'</div>';
+  document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+(p.image?'<img class="story-img" src="'+esc(p.image)+'" alt="">':'')+f.slice(0,(p.videoAt||2)).map(block).join("")+videoHTML(p)+f.slice(p.videoAt||2).map(block).join("")+'<div class="srcs"><b>'+(isHe?"מקורות":"Sources")+'</b>'+allLinks(p)+'</div>';
   el.classList.add("open");el.scrollTop=0;document.body.style.overflow="hidden";
 }
 window.addEventListener("hashchange",showStoryFromHash);
