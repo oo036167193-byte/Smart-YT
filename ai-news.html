@@ -97,6 +97,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .story-box h1{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:900;line-height:1.25;color:#0d1f3c;margin:.8rem 0 1.4rem;}
 .story-box p{font-size:1.06rem;line-height:1.9;color:#2a3d5c;margin-bottom:1.1rem;}
 .story-box .why{margin:1.6rem 0;font-size:1rem;}
+.post-ic{width:22px;height:22px;border-radius:6px;display:block;}
+.post-img{display:block;width:100%;height:auto;border-radius:12px;margin-top:1.2rem;border:1px solid #e3eaf5;}
+.card .post-img{margin:0 0 .3rem;}
+.story-img{display:block;width:100%;height:auto;border-radius:12px;margin:1.2rem 0 1.4rem;border:1px solid #e3eaf5;}
 .story-box h2{font-size:1.2rem;font-weight:800;color:#1565c0;margin:1.6rem 0 .6rem;}
 .story-box ul{margin:0 0 1.1rem;padding-inline-start:1.3rem;}
 .story-box li{font-size:1.04rem;line-height:1.8;color:#2a3d5c;margin:.2rem 0;}
@@ -216,7 +220,8 @@ footer a{color:var(--gm);text-decoration:none;}
     title_en: "", title_he: "",
     text_en: "", text_he: "",
     do_en: ["", ""], do_he: ["", ""],
-    full_en: ["paragraph", {h: "sub heading"}, {list: ["point", "point"]}], full_he: [],
+    full_en: ["paragraph", {h: "sub heading"}, {list: ["point", "point"]}, {img: "assets/stories/picture.png"}], full_he: [],
+    icon: "assets/tools/claude.png (optional)", image: "assets/stories/picture.jpg (optional)",
     video: "YouTube video id (optional)",
     link: "https://...", link2: "second link (optional)"
   },
@@ -230,12 +235,15 @@ var POSTS = [
     text_he: "אנטרופיק השיקה את Personal Finance, כלי שמחבר את Claude לחשבון הבנק ולכרטיסי האשראי, רואה עד שנתיים אחורה ועוזר להבין לאן הולך הכסף. כרגע בטא, רק בארה\"ב.",
     do_en: ["Spot duplicate charges and unexpected fees", "Keep track of subscriptions", "See how much is left until payday"],
     do_he: ["לזהות חיובים כפולים ועמלות לא צפויות", "לעקוב אחרי מנויים ותשלומים קבועים", "לראות כמה כסף נשאר עד המשכורת"],
+    icon: "assets/tools/claude.png",
+    image: "assets/stories/pf-app.jpg",
     video: "UTubvRLX2j4",
     full_en: [
       "In the AI world, where we’ve already given up much of our privacy, AI is making its way into everything, especially the things people have no time or patience for.",
       "On 5 November Anthropic officially launched a new tool called Personal Finance. It connects to your bank and credit card accounts through Plaid, so Claude never sees your bank password. It can look back up to two years and becomes your personal money assistant.",
       {h: "What you can do with it"},
       {list: ["Ask where your money went", "Build your own dashboard", "Spot duplicate charges and unexpected fees", "Keep track of subscriptions and recurring payments", "See how much is left until your next payday", "Get a spending summary by category"]},
+      {img: "assets/stories/pf-chat.png", alt: "Claude answering: where did my money go this month"},
       {h: "What it can’t do"},
       "It can’t move money (read only), and it doesn’t invest for you.",
       "Chats inside Personal Finance are not used by Anthropic to train its models.",
@@ -249,6 +257,7 @@ var POSTS = [
       "ב 5 בנובמבר השיקה אנטרופיק באופן רשמי כלי חדש בשם Personal Finance. הכלי מתחבר לחשבון הבנק ולכרטיסי האשראי שלך דרך Plaid, כך שאין לו גישה לסיסמה של הבנק. הוא יכול לראות עד שנתיים אחורה, והוא העוזר הפיננסי האישי שלך.",
       {h: "מה אפשר לעשות איתו"},
       {list: ["לשאול לאן הלך הכסף", "לבנות דשבורד אישי", "לזהות חיובים כפולים ועמלות לא צפויות", "לעקוב אחרי מנויים ותשלומים קבועים", "לראות כמה כסף נשאר עד המשכורת הבאה", "לקבל סיכום הוצאות לפי קטגוריות"]},
+      {img: "assets/stories/pf-chat.png", alt: "Claude עונה: לאן הלך הכסף החודש"},
       {h: "מה הוא לא עושה"},
       "הוא לא יכול להזיז כסף (קריאה בלבד), והוא לא משקיע בשבילך.",
       "השיחות בתוך Personal Finance לא משמשות את אנטרופיק לאימון המודלים.",
@@ -267,16 +276,17 @@ function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&
 function fmt(d){var dt=new Date(d+"T12:00:00");return dt.toLocaleDateString(isHe?"he-IL":"en-GB",{day:"numeric",month:"long",year:"numeric"});}
 function t(p,k){return isHe?(p[k+"_he"]||p[k+"_en"]):(p[k+"_en"]||p[k+"_he"]);}
 function doBox(p){var d=t(p,"do");if(!d||!d.length)return"";return '<div class="why"><b>'+(isHe?"מה אפשר לעשות עם זה":"What you can do with it")+'</b><ul>'+d.map(function(x){return"<li>"+esc(x)+"</li>";}).join("")+'</ul></div>';}
-function block(x){if(typeof x==="string")return"<p>"+esc(x)+"</p>";if(x.h)return"<h2>"+esc(x.h)+"</h2>";if(x.list)return"<ul>"+x.list.map(function(i){return"<li>"+esc(i)+"</li>";}).join("")+"</ul>";return"";}
+function block(x){if(typeof x==="string")return"<p>"+esc(x)+"</p>";if(x.h)return"<h2>"+esc(x.h)+"</h2>";if(x.img)return'<img class="story-img" src="'+esc(x.img)+'" alt="'+esc(x.alt||"")+'" loading="lazy">';if(x.list)return"<ul>"+x.list.map(function(i){return"<li>"+esc(i)+"</li>";}).join("")+"</ul>";return"";}
 function videoHTML(p){return p.video?'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/'+esc(p.video)+'" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>':"";}
 function host(u){try{return new URL(u).hostname.replace(/^www\./,"");}catch(e){return"";}}
 function allLinks(p){return [p.link,p.link2].filter(Boolean).map(function(u){return '<a class="more" target="_blank" rel="noopener" href="'+esc(u)+'">'+esc(host(u))+(isHe?" ←":" →")+'</a>';}).join("");}
 function srcLink(p){return p.link?'<a class="more" target="_blank" rel="noopener" href="'+esc(p.link)+'">'+(isHe?"למקור ←":"Source →")+'</a>':"";}
 function linksHTML(p){var f=t(p,"full");var full=f&&f.length?'<button class="more full-btn" onclick="openStory(\''+p.id+'\')">'+(isHe?"לסיפור המלא":"Full story")+'</button>':"";return '<div class="links">'+full+srcLink(p)+'</div>';}
-function meta(p){return '<div class="meta"><span class="tag">'+esc(p.tag)+'</span><span>'+fmt(p.date)+'</span></div>';}
+function meta(p){return '<div class="meta">'+(p.icon?'<img class="post-ic" src="'+esc(p.icon)+'" alt="">':'')+'<span class="tag">'+esc(p.tag)+'</span><span>'+fmt(p.date)+'</span></div>';}
 function cardHTML(p,big){
-  if(big) return '<article class="feat"><div>'+meta(p)+'<h3>'+esc(t(p,"title"))+'</h3></div><div style="display:flex;flex-direction:column;gap:1rem"><p>'+esc(t(p,"text"))+'</p>'+doBox(p)+linksHTML(p)+'</div></article>';
-  return '<article class="card">'+meta(p)+'<h3>'+esc(t(p,"title"))+'</h3><p>'+esc(t(p,"text"))+'</p>'+doBox(p)+linksHTML(p)+'</article>';
+  var pic=p.image?'<img class="post-img" src="'+esc(p.image)+'" alt="" loading="lazy">':'';
+  if(big) return '<article class="feat"><div>'+meta(p)+'<h3>'+esc(t(p,"title"))+'</h3>'+pic+'</div><div style="display:flex;flex-direction:column;gap:1rem"><p>'+esc(t(p,"text"))+'</p>'+doBox(p)+linksHTML(p)+'</div></article>';
+  return '<article class="card">'+pic+meta(p)+'<h3>'+esc(t(p,"title"))+'</h3><p>'+esc(t(p,"text"))+'</p>'+doBox(p)+linksHTML(p)+'</article>';
 }
 function render(){
   var list=POSTS.slice().sort(function(a,b){return a.date<b.date?1:-1;});
@@ -299,7 +309,7 @@ function showStoryFromHash(){
   var p=m&&POSTS.filter(function(x){return x.id===m[1];})[0];
   if(!p||!t(p,"full")){el.classList.remove("open");document.body.style.overflow="";return;}
   var f=t(p,"full");var half=Math.ceil(f.length/3);
-  document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+f.slice(0,2).map(block).join("")+videoHTML(p)+f.slice(2).map(block).join("")+'<div class="srcs"><b>'+(isHe?"מקורות":"Sources")+'</b>'+allLinks(p)+'</div>';
+  document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+(p.image?'<img class="story-img" src="'+esc(p.image)+'" alt="">':'')+f.slice(0,2).map(block).join("")+videoHTML(p)+f.slice(2).map(block).join("")+'<div class="srcs"><b>'+(isHe?"מקורות":"Sources")+'</b>'+allLinks(p)+'</div>';
   el.classList.add("open");el.scrollTop=0;document.body.style.overflow="hidden";
 }
 window.addEventListener("hashchange",showStoryFromHash);
