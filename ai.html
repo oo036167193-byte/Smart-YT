@@ -268,7 +268,7 @@ nav .logo-wrap{text-decoration:none;cursor:pointer;}
   <p><span data-en="© 2026 Smart YT · Smart Business Solutions · London, UK" data-he="© 2026 Smart YT · פתרונות עסקיים חכמים · לונדון">© 2026 Smart YT · Smart Business Solutions · London, UK</span> · <a href="index.html" data-en="Back to home" data-he="חזרה לדף הבית">Back to home</a></p>
 </footer>
 
-<script src="posts.js?v=12"></script>
+<script src="posts.js?v=13"></script>
 <script>
 
 
@@ -292,12 +292,12 @@ function cardHTML(p,big){
   return '<article class="card">'+pic+meta(p)+'<h3>'+esc(t(p,"title"))+'</h3><p>'+esc(t(p,"text"))+'</p>'+doBox(p)+linksHTML(p)+'</article>';
 }
 function render(){
-  var list=POSTS.slice().sort(function(a,b){return a.date<b.date?1:-1;});
+  var list=POSTS.map(function(p,i){p._i=i;return p;}).sort(function(a,b){return a.date===b.date?a._i-b._i:(a.date<b.date?1:-1);});
   var tags=["all"];list.forEach(function(p){if(tags.indexOf(p.tag)<0)tags.push(p.tag);});
   document.getElementById("filters").innerHTML=list.length<2?"":tags.map(function(g){return '<button class="fbtn'+(g===filter?" on":"")+'" data-t="'+esc(g)+'">'+(g==="all"?(isHe?"הכל":"All"):esc(g))+'</button>';}).join("");
   document.querySelectorAll(".fbtn").forEach(function(b){b.onclick=function(){filter=b.getAttribute("data-t");render();};});
   var shown=filter==="all"?list:list.filter(function(p){return p.tag===filter;});
-  var feat=filter==="all"?(shown.filter(function(p){return p.featured;})[0]||shown[0]):null;
+  var feat=filter==="all"?shown[0]:null;
   document.getElementById("featured").innerHTML=feat?cardHTML(feat,true):"";
   var rest=shown.filter(function(p){return p!==feat;});
   document.getElementById("grid").innerHTML=rest.length||feat?rest.map(function(p){return cardHTML(p,false);}).join(""):'<div class="empty"><b>'+(isHe?"הסיפורים הראשונים בדרך":"The first stories are on the way")+'</b><span>'+(isHe?"AI Monday יוצא כל יום שני. כדאי לחזור לכאן בקרוב.":"AI Monday comes out every Monday. Check back soon.")+'</span></div>';

@@ -1,7 +1,7 @@
 /* AI Monday stories. Used by the AI page (/ai) and the home page. */
 /* ============================================================
    AI MONDAY POSTS. To add a story, copy one block and edit it.
-   Newest first. "featured": true = the big card at the top.
+   Newest first. The newest story (by date) is always the big card at the top.
    id      = short name in English, used for the story link
    do_he   = what you can do with it (list of short points)
    full_he = the full story, one paragraph per line (optional).
@@ -83,7 +83,7 @@ var POSTS = [
     ]
   },
   {
-    id: "claude-personal-finance", date: "2026-11-05", featured: true, tag: "Claude",
+    id: "claude-personal-finance", date: "2026-11-05", tag: "Claude",
     title_en: "Personal Finance: Claude now reads your bank account",
     title_he: "Personal Finance: קלוד נכנס לחשבון הבנק שלך",
     text_en: "Anthropic launched Personal Finance, a tool that connects Claude to your bank and credit cards, looks back up to two years and helps you see where your money goes. Beta, US only for now.",
