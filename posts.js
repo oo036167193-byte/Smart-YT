@@ -24,6 +24,62 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "claude-new-work-tools", date: "2026-11-10", tag: "Claude",
+    icon: "assets/tools/claude.png",
+    image: "assets/stories/claude-new-tools.jpg",
+    video: "YewAJPawE7I",
+    title_en: "Anthropic doesn’t sleep: four new tools in one day",
+    title_he: "אנטרופיק לא ישנים בלילה: ארבעה כלים חדשים ביום אחד",
+    text_en: "Just before going public on Wall Street, Anthropic launched a whole set of work tools: meetings, spreadsheets, whiteboards and business data, all inside Claude.",
+    text_he: "רגע לפני הכניסה לבורסה, אנטרופיק השיקה סדרה שלמה של כלי עבודה: פגישות, טבלאות, לוחות רעיונות ונתונים עסקיים, הכל בתוך קלוד.",
+    do_en: ["Dump a messy project plan into Whiteboards and get a clean plan to send a client", "Ask Sheets for a budget or tracker and send it on to monday.com, Airtable or Excel", "Let Claude join your Google Meet calls and give you notes and action items"],
+    do_he: ["לזרוק אפיון פרויקט מבולגן ל Whiteboards ולקבל אפיון מסודר לשלוח ללקוח", "לבקש מ Sheets תקציב או טבלת מעקב ולהעביר ל monday.com, Airtable או אקסל", "לתת לקלוד להצטרף לפגישות Google Meet ולקבל סיכום ומשימות"],
+    full_en: [
+      "Anthropic is about to go public on Wall Street, with shares expected to start trading on 19 or 20 November. And yesterday they launched a whole set of work tools. This time it’s not just another chat. It’s meetings, spreadsheets, whiteboards and business data, all inside Claude.",
+      {h: "What you can make in Claude now"},
+      "When you open Claude, under “Make something new” you now see six types: Docs, Slides, Sheets (beta), Design, Data and Whiteboard (beta).",
+      {h: "1. Claude Whiteboards: a shared board for ideas"},
+      "Throw in all your messy ideas, and Claude sorts them into a clear board with timelines and who does what. Your team can work on it together, then turn it into a document or a slide deck, or move it to Miro or Lucid.",
+      "For automation people: when you plan a project for a client, just dump everything in (where Airtable sits, which webhook catches the data, how it all moves in Make), and Claude turns it into a clean plan you can send.",
+      "Available: beta, all paid plans.",
+      {h: "2. Claude Meetings: Claude joins your Google Meet calls"},
+      "Claude joins the call as a visible participant and posts a message in the chat so everyone knows. It follows the talk, answers questions, pulls info from your connected apps, and at the end gives you notes and action items. Guests from outside your company need admin approval.",
+      "Available: beta, Team and Enterprise only. For now it works only with Google Meet, not with Zoom.",
+      {h: "3. Claude Sheets: smart spreadsheets"},
+      "Ask for a budget or a tracker, and Claude builds the spreadsheet with you: tabs, formulas and formatting. You can export it to Excel or CSV, or keep working on it in Airtable, Asana, Smartsheet or monday.com.",
+      "Available: beta, all paid plans.",
+      {h: "4. Claude Data: business data and dashboards"},
+      "This is the new name for Claude Dashboards, and it’s now fully launched. It connects to systems like Snowflake and Salesforce, so you can ask questions about your company’s numbers and get reports and dashboards, without writing code.",
+      "Available: all paid plans.",
+      {h: "What it means for us"},
+      "Claude is turning into a full office suite, and it’s going straight at Microsoft and Google. On the day of the launch, Microsoft’s shares dropped about 3%."
+    ],
+    full_he: [
+      "אנטרופיק עומדת להיכנס לבורסה בוול סטריט, והמניות צפויות להתחיל להיסחר ב 19 או 20 בנובמבר. ואתמול הם השיקו סדרה שלמה של כלי עבודה. הפעם זה לא עוד צ'אט בצד, אלא פגישות, טבלאות, לוחות רעיונות ונתונים עסקיים, הכל בתוך קלוד.",
+      {h: "מה אפשר ליצור בקלוד עכשיו"},
+      "כשפותחים את קלוד, תחת “Make something new” יש עכשיו שישה סוגים: Docs, Slides, Sheets (בטא), Design, Data ו Whiteboard (בטא).",
+      {h: "1. Claude Whiteboards: לוח משותף לרעיונות"},
+      "זורקים את כל הרעיונות המבולגנים, וקלוד מסדר אותם בלוח ברור עם לוחות זמנים ומי אחראי על מה. הצוות יכול לעבוד עליו ביחד, ובסוף להפוך אותו למסמך או מצגת, או להעביר ל Miro או Lucid.",
+      "לאנשי אוטומציה: כשאתה בונה אפיון פרויקט ללקוח, פשוט זורק הכל (איפה יושב Airtable, איזה Webhook תופס את המידע, ואיך הכל זז ב Make), וקלוד בונה לך אפיון מסודר שאפשר לשלוח.",
+      "זמינות: בטא, כל המסלולים בתשלום.",
+      {h: "2. Claude Meetings: קלוד מצטרף לפגישות Google Meet"},
+      "קלוד נכנס לשיחה כמשתתף גלוי ומודיע על עצמו בצ'אט, כדי שכולם יידעו. הוא עוקב אחרי השיחה, עונה על שאלות, שולף מידע מהמערכות המחוברות, ובסוף נותן סיכום ומשימות להמשך. אורחים מחוץ לחברה דורשים אישור של מנהל.",
+      "זמינות: בטא, רק Team ו Enterprise. בשלב הזה זה עובד רק דרך Google Meet, לא דרך Zoom.",
+      {h: "3. Claude Sheets: טבלאות חכמות"},
+      "מבקשים תקציב או טבלת מעקב, וקלוד בונה איתך את הגיליון: טאבים, נוסחאות ועיצוב. אפשר לייצא לאקסל או CSV, או להמשיך לעבוד עליו ב Airtable, Asana, Smartsheet או monday.com.",
+      "זמינות: בטא, כל המסלולים בתשלום.",
+      {h: "4. Claude Data: נתונים עסקיים ודשבורדים"},
+      "זה השם החדש של Claude Dashboards, ועכשיו הוא הושק באופן מלא. הוא מתחבר למערכות כמו Snowflake ו Salesforce, כך שאפשר לשאול שאלות על המספרים של החברה ולקבל דוחות ודשבורדים, בלי לכתוב קוד.",
+      "זמינות: כל המסלולים בתשלום.",
+      {h: "מה זה אומר לנו"},
+      "קלוד הופך לחבילת משרד מלאה, והוא הולך ישר מול מיקרוסופט וגוגל. ביום ההשקה המניה של מיקרוסופט ירדה בכ 3%."
+    ],
+    links: [
+      {url: "https://claude.com/resources/articles/sheets-whiteboards-data", en: "Read on Claude.com", he: "לקריאה ב Claude.com"},
+      {url: "https://www.unite.ai/anthropic-announces-claude-meetings-with-a-google-meet-whiteboard-beta/", en: "Read on Unite.AI", he: "לקריאה ב Unite.AI"}
+    ]
+  },
+  {
     id: "claude-personal-finance", date: "2026-11-05", featured: true, tag: "Claude",
     title_en: "Personal Finance: Claude now reads your bank account",
     title_he: "Personal Finance: קלוד נכנס לחשבון הבנק שלך",
