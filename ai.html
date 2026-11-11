@@ -268,7 +268,7 @@ nav .logo-wrap{text-decoration:none;cursor:pointer;}
   <p><span data-en="© 2026 Smart YT · Smart Business Solutions · London, UK" data-he="© 2026 Smart YT · פתרונות עסקיים חכמים · לונדון">© 2026 Smart YT · Smart Business Solutions · London, UK</span> · <a href="index.html" data-en="Back to home" data-he="חזרה לדף הבית">Back to home</a></p>
 </footer>
 
-<script src="posts.js?v=9"></script>
+<script src="posts.js?v=10"></script>
 <script>
 
 
@@ -311,7 +311,7 @@ function showStoryFromHash(){
   var p=m&&POSTS.filter(function(x){return x.id===m[1];})[0];
   if(!p||!t(p,"full")){el.classList.remove("open");document.getElementById("storyBox").innerHTML="";document.body.style.overflow="";return;}
   var f=t(p,"full");var half=Math.ceil(f.length/3);
-  document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+(p.image?'<img class="story-img" src="'+esc(p.image)+'" alt="">':'')+f.slice(0,(p.videoAt||2)).map(block).join("")+videoHTML(p)+f.slice(p.videoAt||2).map(block).join("")+'<div class="srcs"><b>'+(isHe?"מקורות":"Sources")+'</b>'+allLinks(p)+'</div>';
+  document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+(p.image&&p.storyImage!==false?'<img class="story-img" src="'+esc(p.image)+'" alt="">':'')+f.slice(0,(p.videoAt||2)).map(block).join("")+videoHTML(p)+f.slice(p.videoAt||2).map(block).join("")+'<div class="srcs"><b>'+(isHe?"מקורות":"Sources")+'</b>'+allLinks(p)+'</div>';
   if(window.gtag)gtag("event","story_open",{story_id:p.id,story_title:p.title_en});
   el.classList.add("open");el.scrollTop=0;document.body.style.overflow="hidden";
 }
