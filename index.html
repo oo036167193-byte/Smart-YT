@@ -1525,9 +1525,8 @@ function renderAiHome(){
   function e(x){return String(x||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
   function tt(p,k){var v=he?(p[k+"_he"]||p[k+"_en"]):(p[k+"_en"]||p[k+"_he"]);return he?String(v).replace(/:\s/g,":\u200F "):v;}
   function d(x){var a=x.split("-");return a[2]+"."+a[1]+"."+a[0];}
-  /* 2 newest stories + 1 older story picked at random, so the home page changes on every visit */
-  var all=POSTS.slice().sort(function(a,b){return a.date<b.date?1:-1;});
-  if(!window._aiPick){var older=all.slice(2);window._aiPick=all.slice(0,2).concat(older.length?[older[Math.floor(Math.random()*older.length)]]:[]);}
+  /* 3 stories picked at random from all of them, in random order, so the home page changes on every visit */
+  if(!window._aiPick){var all=POSTS.slice();for(var i=all.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=all[i];all[i]=all[j];all[j]=t;}window._aiPick=all.slice(0,3);}
   var list=window._aiPick;
   if(!list.length){document.getElementById("ai-monday").style.display="none";return;}
   g.innerHTML=list.map(function(p){
