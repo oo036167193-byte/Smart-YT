@@ -54,7 +54,7 @@ var POSTS = [
       "This is the new name for Claude Dashboards, and it’s now fully launched. It connects to systems like Snowflake and Salesforce, so you can ask questions about your company’s numbers and get reports and dashboards, without writing code.",
       "Available: all paid plans.",
       {h: "What it means for us"},
-      "Claude is turning into a full office suite, and it’s going straight at Microsoft and Google. On the day of the launch, Microsoft’s shares dropped about 3%."
+      "Claude is turning into a full office suite, and it’s going straight at Microsoft and Google. They’re here to stay, and they’re only going to grow."
     ],
     full_he: [
       "אנטרופיק עומדת להיכנס לבורסה בוול סטריט, והמניות צפויות להתחיל להיסחר ב 19 או 20 בנובמבר. ואתמול הם השיקו סדרה שלמה של כלי עבודה. הפעם זה לא עוד צ'אט בצד, אלא פגישות, טבלאות, לוחות רעיונות ונתונים עסקיים, הכל בתוך קלוד.",
@@ -75,7 +75,7 @@ var POSTS = [
       "זה השם החדש של Claude Dashboards, ועכשיו הוא הושק באופן מלא. הוא מתחבר למערכות כמו Snowflake ו Salesforce, כך שאפשר לשאול שאלות על המספרים של החברה ולקבל דוחות ודשבורדים, בלי לכתוב קוד.",
       "זמינות: כל המסלולים בתשלום.",
       {h: "מה זה אומר לנו"},
-      "קלוד הופך לחבילת משרד מלאה, והוא הולך ישר מול מיקרוסופט וגוגל. ביום ההשקה המניה של מיקרוסופט ירדה בכ 3%."
+      "קלוד הופך לחבילת משרד מלאה, והוא הולך ישר מול מיקרוסופט וגוגל. הם כאן כדי להישאר, ורק לגדול."
     ],
     links: [
       {url: "https://claude.com/resources/articles/sheets-whiteboards-data", en: "Read on Claude.com", he: "לקריאה ב Claude.com"},
