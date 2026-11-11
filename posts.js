@@ -38,7 +38,7 @@ var POSTS = [
     full_en: [
       "Anthropic is about to go public on Wall Street, with shares expected to start trading on 19 or 20 November. And yesterday they launched a whole set of work tools. This time it’s not just another chat. It’s meetings, spreadsheets, whiteboards and business data, all inside Claude.",
       {h: "What you can make in Claude now"},
-      "In Claude’s Artifacts area, under “Make something new”, you now see six types: Docs, Slides, Sheets (beta), Design, Data and Whiteboard (beta).",
+      "In Claude’s Artifacts area you now see six types: Docs, Slides, Sheets (beta), Design, Data and Whiteboard (beta).",
       {img: "assets/stories/claude-new-tools-strip.png", alt: "Docs, Slides, Sheets, Design, Data and Whiteboard in Claude Artifacts"},
       {h: "1. Claude Whiteboards: a shared board for ideas"},
       "Throw in all your messy ideas, and Claude sorts them into a clear board with timelines and who does what. Your team can work on it together, then turn it into a document or a slide deck, or move it to Miro or Lucid.",
@@ -59,7 +59,7 @@ var POSTS = [
     full_he: [
       "אנטרופיק עומדת להיכנס לבורסה בוול סטריט, והמניות צפויות להתחיל להיסחר ב 19 או 20 בנובמבר. ואתמול הם השיקו סדרה שלמה של כלי עבודה. הפעם זה לא עוד צ'אט בצד, אלא פגישות, טבלאות, לוחות רעיונות ונתונים עסקיים, הכל בתוך קלוד.",
       {h: "מה אפשר ליצור בקלוד עכשיו"},
-      "בקלוד, באזור ה Artifacts, בחלק של Make something new, יש עכשיו שישה סוגים: Docs, Slides, Sheets (בטא), Design, Data ו Whiteboard (בטא).",
+      "בקלוד, באזור ה Artifacts יש עכשיו שישה סוגים: Docs, Slides, Sheets (בטא), Design, Data ו Whiteboard (בטא).",
       {img: "assets/stories/claude-new-tools-strip.png", alt: "Docs, Slides, Sheets, Design, Data ו Whiteboard ב Artifacts של קלוד"},
       {h: "1. Claude Whiteboards: לוח משותף לרעיונות"},
       "זורקים את כל הרעיונות המבולגנים, וקלוד מסדר אותם בלוח ברור עם לוחות זמנים ומי אחראי על מה. הצוות יכול לעבוד עליו ביחד, ובסוף להפוך אותו למסמך או מצגת, או להעביר ל Miro או Lucid.",
