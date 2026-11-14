@@ -24,6 +24,61 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "chatgpt-claim-business", date: "2026-11-10", tag: "ChatGPT",
+    icon: "assets/tools/chatgpt.png",
+    image: "assets/stories/chatgpt-business.jpg",
+    title_en: "ChatGPT now lets you claim your business, with a blue tick",
+    title_he: "ChatGPT מאפשר עכשיו לרשום את העסק שלך, עם וי כחול",
+    text_en: "More and more people ask ChatGPT which shop or service to choose. Now businesses can claim a verified profile inside ChatGPT, so it knows the real facts about them.",
+    text_he: "יותר ויותר אנשים שואלים את ChatGPT איזו חנות או איזה שירות לבחור. עכשיו עסקים יכולים לתבוע פרופיל מאומת בתוך ChatGPT, כדי שהוא יידע את העובדות האמיתיות עליהם.",
+    do_en: ["Claim your business and get a verified profile with a blue tick", "Keep your details, prices and stock up to date", "See how often ChatGPT mentions you and how many people click to your site"],
+    do_he: ["לתבוע את העסק ולקבל פרופיל מאומת עם וי כחול", "לעדכן פרטים, מחירים ומה יש במלאי", "לראות כמה פעמים ChatGPT מזכיר אותך וכמה אנשים נכנסים לאתר שלך"],
+    full_en: [
+      "More and more people ask ChatGPT things like \"Which shop do you recommend?\" or \"Who is good for this job?\". So you want ChatGPT to know the real facts about your business, not guesses.",
+      "On 10 November OpenAI launched a beta called Businesses in ChatGPT. ChatGPT has about 1.2 billion users every week, and now businesses can have their own place inside it.",
+      {h: "What you can do"},
+      {list: [
+        "Claim your business: get a verified profile with a blue tick. It’s free.",
+        "Keep it up to date: add your details, prices and what’s in stock.",
+        "See the numbers: how often ChatGPT mentions you, and how many people click to your website.",
+        "Business Agent: your own AI helper inside ChatGPT that answers customers’ questions about your products, using your own information."
+      ]},
+      {h: "Good to know"},
+      {list: [
+        "Any business where ChatGPT is available can claim a profile, so UK businesses too.",
+        "The Business Agent is only for online shops and online services in the US for now.",
+        "Your business does not see people’s private chats.",
+        "You can pay to promote your agent as an ad, but OpenAI says paying does not change how often ChatGPT recommends you."
+      ]},
+      {h: "What it means for us"},
+      "Just like you made sure your business shows up on Google, now it’s time to make sure ChatGPT knows the right things about you."
+    ],
+    full_he: [
+      "יותר ויותר אנשים שואלים את ChatGPT שאלות כמו \"איזו חנות אתה ממליץ?\" או \"מי טוב לעבודה הזאת?\". אז אתה רוצה ש ChatGPT יידע את העובדות האמיתיות על העסק שלך, לא ניחושים.",
+      "ב 10 בנובמבר השיקה OpenAI בטא בשם Businesses in ChatGPT. ל ChatGPT יש כ 1.2 מיליארד משתמשים בכל שבוע, ועכשיו לעסקים יש מקום משלהם בתוכו.",
+      {h: "מה אפשר לעשות"},
+      {list: [
+        "לתבוע את העסק: לקבל פרופיל מאומת עם וי כחול. זה חינם.",
+        "לעדכן: להוסיף פרטים, מחירים ומה יש במלאי.",
+        "לראות מספרים: כמה פעמים ChatGPT מזכיר אותך, וכמה אנשים נכנסים לאתר שלך.",
+        "Business Agent: עוזר AI משלך בתוך ChatGPT, שעונה ללקוחות על שאלות לגבי המוצרים שלך, לפי המידע שאתה נותן."
+      ]},
+      {h: "חשוב לדעת"},
+      {list: [
+        "כל עסק במקום שבו ChatGPT זמין יכול לתבוע פרופיל, כלומר גם עסקים בבריטניה.",
+        "ה Business Agent בינתיים רק לחנויות ושירותים אונליין בארה\"ב.",
+        "העסק לא רואה את השיחות הפרטיות של האנשים.",
+        "אפשר לשלם כדי לקדם את הסוכן כפרסומת, אבל OpenAI אומרת שתשלום לא משנה כמה פעמים ChatGPT ממליץ עליך."
+      ]},
+      {h: "מה זה אומר לנו"},
+      "בדיוק כמו שדאגת שהעסק שלך יופיע בגוגל, עכשיו הגיע הזמן לדאוג ש ChatGPT יידע עליך את הדברים הנכונים."
+    ],
+    links: [
+      {url: "https://thenextweb.com/news/openai-businesses-in-chatgpt-business-agents", en: "Read on The Next Web", he: "לקריאה ב The Next Web"},
+      {url: "https://openai.com/index/introducing-businesses-chatgpt/", en: "OpenAI announcement", he: "ההודעה של OpenAI"}
+    ]
+  },
+  {
     id: "claude-new-work-tools", date: "2026-11-10", tag: "Claude",
     icon: "assets/tools/claude.png",
     image: "assets/stories/claude-new-tools.jpg",
