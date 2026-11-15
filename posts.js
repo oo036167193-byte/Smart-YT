@@ -26,7 +26,8 @@ var POSTS = [
   {
     id: "chatgpt-claim-business", date: "2026-11-10", tag: "ChatGPT",
     icon: "assets/tools/chatgpt.png",
-    image: "assets/stories/chatgpt-business.jpg",
+    image: "assets/stories/chatgpt-business-claim.jpg",
+    video: "zwBsACDrgM4", video_he: "tJb5PKp5Epg", videoAt: 9,
     title_en: "ChatGPT now lets you claim your business, with a blue tick",
     title_he: "ChatGPT מאפשר עכשיו לרשום את העסק שלך, עם וי כחול",
     text_en: "More and more people ask ChatGPT which shop or service to choose. Now businesses can claim a verified profile inside ChatGPT, so it knows the real facts about them.",
@@ -43,6 +44,7 @@ var POSTS = [
         "See the numbers: how often ChatGPT mentions you, and how many people click to your website.",
         "Business Agent: your own AI helper inside ChatGPT that answers customers’ questions about your products, using your own information."
       ]},
+      {img: "assets/stories/chatgpt-business-insights.jpg", alt: "Business insights in ChatGPT: mentions, profile views and website clicks"},
       {h: "Good to know"},
       {list: [
         "Any business where ChatGPT is available can claim a profile, so UK businesses too.",
@@ -50,6 +52,8 @@ var POSTS = [
         "Your business does not see people’s private chats.",
         "You can pay to promote your agent as an ad, but OpenAI says paying does not change how often ChatGPT recommends you."
       ]},
+      {h: "How to claim your business"},
+      "Go to the Business Hub in ChatGPT, using the link below, and claim your business. This video shows you how, step by step.",
       {h: "What it means for us"},
       "Just like you made sure your business shows up on Google, now it’s time to make sure ChatGPT knows the right things about you."
     ],
@@ -63,6 +67,7 @@ var POSTS = [
         "לראות מספרים: כמה פעמים ChatGPT מזכיר אותך, וכמה אנשים נכנסים לאתר שלך.",
         "Business Agent: עוזר AI משלך בתוך ChatGPT, שעונה ללקוחות על שאלות לגבי המוצרים שלך, לפי המידע שאתה נותן."
       ]},
+      {img: "assets/stories/chatgpt-business-insights.jpg", alt: "נתוני העסק ב ChatGPT: אזכורים, צפיות בפרופיל וכניסות לאתר"},
       {h: "חשוב לדעת"},
       {list: [
         "כל עסק במקום שבו ChatGPT זמין יכול לתבוע פרופיל, כלומר גם עסקים בבריטניה.",
@@ -70,10 +75,13 @@ var POSTS = [
         "העסק לא רואה את השיחות הפרטיות של האנשים.",
         "אפשר לשלם כדי לקדם את הסוכן כפרסומת, אבל OpenAI אומרת שתשלום לא משנה כמה פעמים ChatGPT ממליץ עליך."
       ]},
+      {h: "איך רושמים את העסק"},
+      "נכנסים ל Business Hub של ChatGPT בקישור למטה, ותובעים את העסק. בסרטון הזה רואים צעד אחר צעד איך עושים את זה.",
       {h: "מה זה אומר לנו"},
       "בדיוק כמו שדאגת שהעסק שלך יופיע בגוגל, עכשיו הגיע הזמן לדאוג ש ChatGPT יידע עליך את הדברים הנכונים."
     ],
     links: [
+      {url: "https://chatgpt.com/business-hub", en: "Claim your business on ChatGPT", he: "לרשום את העסק ב ChatGPT"},
       {url: "https://thenextweb.com/news/openai-businesses-in-chatgpt-business-agents", en: "Read on The Next Web", he: "לקריאה ב The Next Web"},
       {url: "https://openai.com/index/introducing-businesses-chatgpt/", en: "OpenAI announcement", he: "ההודעה של OpenAI"}
     ]
