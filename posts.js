@@ -44,7 +44,7 @@ var POSTS = [
         "It won’t work on sites that block AI agents, like Amazon."
       ]},
       {h: "Who can use it"},
-      "For now only ChatGPT Pro users in the US, aged 18 and up, through OpenAI’s “dots” agents. It was built with American Express, Mastercard and Visa.",
+      "Right now it’s only for Pro users in the US, with an American card. You need to be 18 or over, and it works through OpenAI’s “dots” agents. It was built with American Express, Mastercard and Visa.",
       {h: "What it means for us"},
       "Last week we saw that AI agents booked only 4 Uber rides. Now the big card companies are building the payment side. Agents that shop for us are coming, step by step."
     ],
@@ -59,7 +59,7 @@ var POSTS = [
         "זה לא יעבוד באתרים שחוסמים סוכני AI, כמו אמזון."
       ]},
       {h: "למי זה זמין"},
-      "בינתיים רק למנויי ChatGPT Pro בארה\"ב, מגיל 18, דרך סוכני ה dots של OpenAI. נבנה בשיתוף American Express, Mastercard ו Visa.",
+      "כרגע זה רק למנויי Pro בארה\"ב, עם כרטיס אמריקאי. צריך להיות מגיל 18, וזה עובד דרך סוכני ה dots של OpenAI. נבנה בשיתוף American Express, Mastercard ו Visa.",
       {h: "מה זה אומר לנו"},
       "בשבוע שעבר ראינו שסוכני AI הזמינו רק 4 נסיעות באובר. עכשיו חברות האשראי הגדולות בונות את צד התשלום. סוכנים שקונים בשבילנו בדרך, צעד אחרי צעד."
     ],
