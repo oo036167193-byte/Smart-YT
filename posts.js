@@ -24,6 +24,50 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "chatgpt-wallet", date: "2026-11-13", tag: "ChatGPT",
+    icon: "assets/tools/chatgpt.png",
+    image: "assets/stories/chatgpt-wallet-cover.jpg",
+    title_en: "ChatGPT Wallet: your AI agent can now pay for you",
+    title_he: "ChatGPT Wallet: הסוכן של OpenAI יכול עכשיו לשלם בשבילך",
+    text_en: "You add your credit card once. Then your AI agent finds the product, fills the cart and gets the payment ready. You approve every purchase with your fingerprint or Face ID.",
+    text_he: "מוסיפים כרטיס אשראי פעם אחת, והסוכן מוצא את המוצר, ממלא את העגלה ומכין את התשלום. כל קנייה מאשרים בטביעת אצבע או Face ID.",
+    do_en: ["Let the agent find the product and fill the cart for you", "Check the items, price and card, then approve with your fingerprint or Face ID", "Keep your card’s points and rewards, and still dispute a charge if needed"],
+    do_he: ["לתת לסוכן למצוא את המוצר ולמלא את העגלה", "לבדוק פריטים, סכום וכרטיס, ולאשר בטביעת אצבע או Face ID", "לשמור על הנקודות וההטבות של הכרטיס, ועדיין לבטל עסקה אם צריך"],
+    full_en: [
+      "On 13 November OpenAI announced ChatGPT Wallet. You add your credit card once. Then your AI agent finds the product, fills the cart and gets the payment ready.",
+      "Before every purchase you check the items, the price and the card, and you approve with your fingerprint or Face ID. The agent and the shop never see your real card number.",
+      {img: "assets/stories/chatgpt-wallet-approve.jpg", alt: "Approving a purchase with ChatGPT Wallet"},
+      {h: "Good to know"},
+      {list: [
+        "You keep your card’s points and rewards, and you can still dispute a charge if something goes wrong.",
+        "Credit cards only, not debit cards.",
+        "It won’t work on sites that block AI agents, like Amazon."
+      ]},
+      {h: "Who can use it"},
+      "For now only ChatGPT Pro users in the US, aged 18 and up, through OpenAI’s “dots” agents. It was built with American Express, Mastercard and Visa.",
+      {h: "What it means for us"},
+      "Last week we saw that AI agents booked only 4 Uber rides. Now the big card companies are building the payment side. Agents that shop for us are coming, step by step."
+    ],
+    full_he: [
+      "ב 13 בנובמבר הכריזה OpenAI על ChatGPT Wallet. מוסיפים כרטיס אשראי פעם אחת, והסוכן מוצא את המוצר, ממלא את העגלה ומכין את התשלום.",
+      "לפני כל קנייה אתה בודק את הפריטים, הסכום והכרטיס, ומאשר בטביעת אצבע או Face ID. הסוכן והחנות לא רואים את מספר הכרטיס האמיתי.",
+      {img: "assets/stories/chatgpt-wallet-approve.jpg", alt: "אישור קנייה ב ChatGPT Wallet"},
+      {h: "חשוב לדעת"},
+      {list: [
+        "הנקודות וההטבות של הכרטיס נשארות, ואפשר עדיין לבטל עסקה אם משהו לא בסדר.",
+        "רק כרטיסי אשראי, לא דביט.",
+        "זה לא יעבוד באתרים שחוסמים סוכני AI, כמו אמזון."
+      ]},
+      {h: "למי זה זמין"},
+      "בינתיים רק למנויי ChatGPT Pro בארה\"ב, מגיל 18, דרך סוכני ה dots של OpenAI. נבנה בשיתוף American Express, Mastercard ו Visa.",
+      {h: "מה זה אומר לנו"},
+      "בשבוע שעבר ראינו שסוכני AI הזמינו רק 4 נסיעות באובר. עכשיו חברות האשראי הגדולות בונות את צד התשלום. סוכנים שקונים בשבילנו בדרך, צעד אחרי צעד."
+    ],
+    links: [
+      {url: "https://thefederal.com/category/business/explained-chatgpt-wallet-open-ai-262931", en: "Read on The Federal", he: "לקריאה ב The Federal"}
+    ]
+  },
+  {
     id: "chatgpt-claim-business", date: "2026-11-10", tag: "ChatGPT",
     icon: "assets/tools/chatgpt.png",
     image: "assets/stories/chatgpt-business-claim.jpg",
