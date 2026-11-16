@@ -24,6 +24,50 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "google-ask-maps-uk", date: "2026-11-16", tag: "Google",
+    icon: "assets/apps/gemini.png",
+    image: "assets/stories/google-ask-maps.jpg",
+    video: "5PPiXyAV-Ro",
+    title_en: "The biggest Google Maps update in 10 years just arrived in the UK",
+    title_he: "העדכון הכי גדול של גוגל מפות ב 10 שנים הגיע לבריטניה",
+    text_en: "Ask Maps is a smart chat inside Google Maps, powered by Gemini. It answers questions a normal map never could, plans trips for you, and is now coming to the UK.",
+    text_he: "Ask Maps הוא צ'אט חכם בתוך גוגל מפות, שעובד עם Gemini. הוא עונה על שאלות שמפה רגילה לא ידעה, מתכנן לך טיולים, ועכשיו הוא מגיע לבריטניה.",
+    do_en: ["Ask anything about anywhere, like where to charge your phone right now", "Get a day by day trip plan with numbered pins on the map", "Search your saved places just by asking"],
+    do_he: ["לשאול כל דבר על כל מקום, למשל איפה להטעין את הטלפון עכשיו", "לקבל תוכנית טיול יום אחרי יום עם סיכות ממוספרות על המפה", "לחפש במקומות השמורים שלך פשוט בשאלה"],
+    full_en: [
+      "Google calls Ask Maps the biggest update to Google Maps in over ten years. It’s a smart chat inside Maps, powered by Gemini, and it can answer questions a normal map never could. It started in the US, and now it’s coming to the UK and more than 30 countries across Europe.",
+      "Ask Maps knows over 300 million places, with reviews from more than 500 million people, and it learns what you like.",
+      {h: "What you can ask"},
+      {list: [
+        "Anything about anywhere: “Where can I charge my phone right now?” or “Find me a park near me that’s open tonight”.",
+        "Plan a trip for you: ask for a day out or a three day trip, and you get a plan day by day, with numbered pins on the map and tips about weather and parking for each stop. You can share it with family, or send it to Google Docs on a computer.",
+        "Search your saved places: no more scrolling through hundreds of saved spots. Just ask “Which of my saved places has room for five people in the next 30 minutes?”"
+      ]},
+      {h: "Good to know"},
+      "It’s rolling out slowly, so if you don’t see it yet, update the Google Maps app and give it a few days. In the US it can even find appointments and call businesses for you, but that part is not in the UK yet.",
+      {h: "What it means for us"},
+      "Google Maps is turning from a map into an assistant. Next time you plan a day out, try asking Maps first."
+    ],
+    full_he: [
+      "גוגל קוראת ל Ask Maps העדכון הכי גדול של גוגל מפות ביותר מעשר שנים. זה צ'אט חכם בתוך המפות, שעובד עם Gemini, והוא יודע לענות על שאלות שמפה רגילה אף פעם לא ידעה. הוא התחיל בארה\"ב, ועכשיו הוא מגיע לבריטניה וליותר מ 30 מדינות באירופה.",
+      "Ask Maps מכיר יותר מ 300 מיליון מקומות, עם ביקורות מיותר מ 500 מיליון אנשים, והוא לומד מה אתה אוהב.",
+      {h: "מה אפשר לשאול"},
+      {list: [
+        "כל דבר על כל מקום: \"איפה אפשר להטעין את הטלפון עכשיו?\" או \"תמצא לי פארק קרוב שפתוח הערב\".",
+        "לתכנן טיול בשבילך: מבקשים יום טיול או טיול של שלושה ימים, ומקבלים תוכנית יום אחרי יום, עם סיכות ממוספרות על המפה וטיפים על מזג אוויר וחניה לכל עצירה. אפשר לשתף עם המשפחה, או להעביר ל Google Docs במחשב.",
+        "לחפש במקומות השמורים שלך: בלי לגלול בין מאות מקומות. פשוט שואלים \"איזה מהמקומות ששמרתי יש בו מקום לחמישה אנשים בחצי השעה הקרובה?\""
+      ]},
+      {h: "חשוב לדעת"},
+      "זה נפתח בהדרגה, אז אם עוד לא רואים את זה, כדאי לעדכן את אפליקציית גוגל מפות ולחכות כמה ימים. בארה\"ב הוא אפילו מוצא תורים ומתקשר לעסקים בשבילך, אבל החלק הזה עוד לא הגיע לבריטניה.",
+      {h: "מה זה אומר לנו"},
+      "גוגל מפות הופך ממפה לעוזר. בפעם הבאה שאתם מתכננים יום טיול, תנסו לשאול את המפות קודם."
+    ],
+    links: [
+      {url: "https://blog.google/products-and-platforms/products/maps/ask-maps-holiday-travel-features-2026/", en: "Read on the Google blog", he: "לקריאה בבלוג של גוגל"},
+      {url: "https://www.youtube.com/watch?v=5PPiXyAV-Ro", en: "Watch on YouTube", he: "לצפייה ביוטיוב"}
+    ]
+  },
+  {
     id: "chatgpt-wallet", date: "2026-11-13", tag: "ChatGPT",
     icon: "assets/tools/chatgpt.png",
     image: "assets/stories/chatgpt-wallet-cover.jpg",
