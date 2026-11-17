@@ -24,6 +24,52 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "apple-health-ai-study", date: "2026-11-15", tag: "Apple",
+    icon: "assets/tools/health-heart.png",
+    image: "assets/stories/apple-health-ai-study.jpg",
+    title_en: "Apple tests AI that answers health questions, using real medical sources",
+    title_he: "אפל בודקת AI שעונה על שאלות בריאות, ממקורות רפואיים אמיתיים",
+    text_en: "Apple has launched a new study app with OpenEvidence. You ask a health question, and the answer comes from trusted medical journals, written in simple words.",
+    text_he: "אפל השיקה אפליקציית מחקר חדשה יחד עם OpenEvidence. שואלים שאלה על בריאות, והתשובה מגיעה מכתבי עת רפואיים אמינים, במילים פשוטות.",
+    do_en: ["Ask a health question and get an answer from trusted medical journals", "Share sleep, activity or heart rate data for more personal answers", "Get ready for a doctor’s visit"],
+    do_he: ["לשאול שאלה על בריאות ולקבל תשובה מכתבי עת רפואיים אמינים", "לשתף נתוני שינה, פעילות או דופק כדי לקבל תשובות אישיות יותר", "להתכונן לביקור אצל רופא"],
+    full_en: [
+      "Millions of people already ask ChatGPT and Claude about their health. OpenAI says people ask it over 300 million health questions every week. Now Apple wants to find out how to do this the right way.",
+      "Apple has launched a new study app, together with OpenEvidence, a company that builds AI for doctors. You ask a health question, and the answer comes from trusted medical journals, written in simple words.",
+      {h: "How it works"},
+      {list: [
+        "You can rate each answer and fill in a short survey every month.",
+        "If you want, you can share data from your Apple Health app, like sleep, activity or heart rate, to get more personal answers.",
+        "It can help you get ready for a doctor’s visit, and points you to a doctor if something sounds worrying."
+      ]},
+      {h: "Privacy"},
+      "Apple says the data is made anonymous, is not used to train AI, and the questions and answers are deleted after 24 hours.",
+      {h: "Who can join"},
+      "Only in the US, aged 21 and over, with iPhone 15 or newer. Apple wants up to 200,000 people, for more than a year.",
+      {h: "What it means for us"},
+      "Everyone else rushed out health chatbots. Apple is doing it slowly, with a study first. When it comes to health, being careful matters."
+    ],
+    full_he: [
+      "מיליוני אנשים כבר שואלים את ChatGPT וקלוד על הבריאות שלהם. OpenAI אומרת שאנשים שואלים אותה יותר מ 300 מיליון שאלות בריאות בכל שבוע. עכשיו אפל רוצה לבדוק איך עושים את זה נכון.",
+      "אפל השיקה אפליקציית מחקר חדשה, יחד עם OpenEvidence, חברה שבונה AI לרופאים. שואלים שאלה על בריאות, והתשובה מגיעה מכתבי עת רפואיים אמינים, במילים פשוטות.",
+      {h: "איך זה עובד"},
+      {list: [
+        "אפשר לדרג כל תשובה ולמלא סקר קצר כל חודש.",
+        "אם רוצים, אפשר לשתף נתונים מאפליקציית הבריאות של אפל, כמו שינה, פעילות או דופק, כדי לקבל תשובות אישיות יותר.",
+        "היא עוזרת להתכונן לביקור אצל רופא, ומפנה לרופא אם משהו נשמע מדאיג."
+      ]},
+      {h: "פרטיות"},
+      "אפל אומרת שהמידע הופך לאנונימי, לא משמש לאימון AI, והשאלות והתשובות נמחקות אחרי 24 שעות.",
+      {h: "מי יכול להצטרף"},
+      "רק בארה\"ב, מגיל 21, עם אייפון 15 ומעלה. אפל רוצה עד 200,000 משתתפים, ליותר משנה.",
+      {h: "מה זה אומר לנו"},
+      "כולם מיהרו להוציא צ'טבוטים לבריאות. אפל עושה את זה לאט, קודם עם מחקר. כשמדובר בבריאות, זהירות זה דבר חשוב."
+    ],
+    links: [
+      {url: "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/", en: "Read on TechCrunch", he: "לקריאה ב TechCrunch"}
+    ]
+  },
+  {
     id: "google-search-hydrogen", date: "2026-11-12", tag: "Google",
     icon: "assets/apps/gemini.png",
     image: "assets/stories/google-hydrogen-search.jpg",
