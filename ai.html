@@ -251,8 +251,7 @@ nav .logo-wrap{text-decoration:none;cursor:pointer;}
       <div>
         <span class="stag" data-en="This week" data-he="השבוע">This week</span>
         <h2 data-en="This week in AI" data-he="מה קרה השבוע ב-AI">This week in AI</h2>
-        <p class="week" id="weekLabel"></p>
-      </div>
+        </div>
       <div class="filters" id="filters"></div>
     </div>
 
@@ -301,7 +300,6 @@ function render(){
   document.getElementById("featured").innerHTML=feat?cardHTML(feat,true):"";
   var rest=shown.filter(function(p){return p!==feat;});
   document.getElementById("grid").innerHTML=rest.length||feat?rest.map(function(p){return cardHTML(p,false);}).join(""):'<div class="empty"><b>'+(isHe?"הסיפורים הראשונים בדרך":"The first stories are on the way")+'</b><span>'+(isHe?"AI Monday יוצא כל יום שני. כדאי לחזור לכאן בקרוב.":"AI Monday comes out every Monday. Check back soon.")+'</span></div>';
-  document.getElementById("weekLabel").textContent=(isHe?"גיליון של יום שני ":"Issue of Monday ")+fmt(ISSUE);
   showStoryFromHash();
 }
 function openStory(id){location.hash="story="+id;}
