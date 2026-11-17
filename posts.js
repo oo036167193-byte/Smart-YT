@@ -26,7 +26,7 @@ var POSTS = [
   {
     id: "nvidia-without-huang", date: "2026-11-17", tag: "Nvidia",
     icon: "assets/tools/nvidia-chip.png",
-    image: "assets/stories/nvidia-new-chapter.jpg",
+    image: "assets/stories/nvidia-huang.jpg",
     title_en: "Nvidia without Jensen Huang: tonight we find out what happens next",
     title_he: "נבידיה בלי ג'נסן הואנג: הלילה נדע מה הלאה",
     text_en: "Jensen Huang, who started Nvidia 33 years ago, resigned last Thursday. Tonight Nvidia shares its results for the first time without him at the top.",
