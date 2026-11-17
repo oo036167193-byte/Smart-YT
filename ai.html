@@ -268,7 +268,7 @@ nav .logo-wrap{text-decoration:none;cursor:pointer;}
   <p><span data-en="© 2026 Smart YT · Smart Business Solutions · London, UK" data-he="© 2026 Smart YT · פתרונות עסקיים חכמים · לונדון">© 2026 Smart YT · Smart Business Solutions · London, UK</span> · <a href="index.html" data-en="Back to home" data-he="חזרה לדף הבית">Back to home</a></p>
 </footer>
 
-<script src="posts.js?v=20"></script>
+<script src="posts.js?v=21"></script>
 <script>
 
 
@@ -278,12 +278,12 @@ function fmt(d){var x=d.split("-");return x[2]+"."+x[1]+"."+x[0];}
 /* In Hebrew, a right-to-left mark after ":" keeps numbers and English words in the right order (e.g. "AI: 36") */
 function rtlFix(v){if(!isHe)return v;if(typeof v==="string")return v.replace(/:\s/g,":\u200F ");if(Array.isArray(v))return v.map(rtlFix);if(v&&v.list)return {list:v.list.map(rtlFix)};if(v&&v.h)return {h:rtlFix(v.h)};return v;}
 function t(p,k){return rtlFix(isHe?(p[k+"_he"]||p[k+"_en"]):(p[k+"_en"]||p[k+"_he"]));}
-function doBox(p){var d=t(p,"do");if(!d||!d.length)return"";return '<div class="why"><b>'+(isHe?"מה אפשר לעשות עם זה":"What you can do with it")+'</b><ul>'+d.map(function(x){return"<li>"+esc(x)+"</li>";}).join("")+'</ul></div>';}
+function doBox(p){var d=t(p,"do");if(!d||!d.length)return"";return '<div class="why"><b>'+esc(t(p,"do_title")||(isHe?"מה אפשר לעשות עם זה":"What you can do with it"))+'</b><ul>'+d.map(function(x){return"<li>"+esc(x)+"</li>";}).join("")+'</ul></div>';}
 function block(x){if(typeof x==="string")return"<p>"+esc(x)+"</p>";if(x.h)return"<h2>"+esc(x.h)+"</h2>";if(x.embed)return '<div class="video"><iframe src="'+esc(x.embed)+'" title="Video" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>';if(x.img)return'<img class="story-img" src="'+esc(x.img)+'" alt="'+esc(x.alt||"")+'" loading="lazy">';if(x.list)return"<ul>"+x.list.map(function(i){return"<li>"+esc(i)+"</li>";}).join("")+"</ul>";return"";}
 function videoHTML(p){var v=(isHe&&p.video_he)||p.video;return v?'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/'+esc(v)+'" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>':"";}
 function host(u){try{return new URL(u).hostname.replace(/^www\./,"");}catch(e){return"";}}
 function allLinks(p){if(p.links)return p.links.map(function(l){return '<a class="more" target="_blank" rel="noopener" href="'+esc(l.url)+'">'+esc(isHe?(l.he||l.en):(l.en||l.he))+(isHe?" ←":" →")+'</a>';}).join("");return [p.link,p.link2].filter(Boolean).map(function(u){return '<a class="more" target="_blank" rel="noopener" href="'+esc(u)+'">'+esc(host(u))+(isHe?" ←":" →")+'</a>';}).join("");}
-function srcLink(p){if(!p.link&&p.links)p.link=p.links[0].url;return p.link?'<a class="more" target="_blank" rel="noopener" href="'+esc(p.link)+'">'+(isHe?"למקור ←":"Source →")+'</a>':"";}
+function srcLink(p){if(!p.link&&p.links&&p.links.length)p.link=p.links[0].url;return p.link?'<a class="more" target="_blank" rel="noopener" href="'+esc(p.link)+'">'+(isHe?"למקור ←":"Source →")+'</a>':"";}
 function linksHTML(p){var f=t(p,"full");var full=f&&f.length?'<button class="more full-btn" onclick="openStory(\''+p.id+'\')">'+(isHe?"לסיפור המלא":"Full story")+'</button>':"";return '<div class="links">'+full+srcLink(p)+'</div>';}
 function meta(p){return '<div class="meta">'+(p.icon?'<img class="post-ic" src="'+esc(p.icon)+'" alt="">':'')+'<span class="tag">'+esc(p.tag)+'</span><span>'+fmt(p.date)+'</span></div>';}
 function cardHTML(p,big){
@@ -311,7 +311,7 @@ function showStoryFromHash(){
   var p=m&&POSTS.filter(function(x){return x.id===m[1];})[0];
   if(!p||!t(p,"full")){el.classList.remove("open");document.getElementById("storyBox").innerHTML="";document.body.style.overflow="";return;}
   var f=t(p,"full");var half=Math.ceil(f.length/3);
-  document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+(p.image&&p.storyImage!==false?'<img class="story-img" src="'+esc(p.image)+'" alt="">':'')+f.slice(0,(p.videoAt||2)).map(block).join("")+videoHTML(p)+f.slice(p.videoAt||2).map(block).join("")+'<div class="srcs"><b>'+(isHe?"מקורות":"Sources")+'</b>'+allLinks(p)+'</div>';
+  document.getElementById("storyBox").innerHTML='<button class="story-close" onclick="closeStory()" aria-label="Close">×</button>'+meta(p)+'<h1>'+esc(t(p,"title"))+'</h1>'+(p.image&&p.storyImage!==false?'<img class="story-img" src="'+esc(p.image)+'" alt="">':'')+f.slice(0,(p.videoAt||2)).map(block).join("")+videoHTML(p)+f.slice(p.videoAt||2).map(block).join("")+(allLinks(p)?'<div class="srcs"><b>'+(isHe?"מקורות":"Sources")+'</b>'+allLinks(p)+'</div>':'');
   if(window.gtag)gtag("event","story_open",{story_id:p.id,story_title:p.title_en});
   el.classList.add("open");el.scrollTop=0;document.body.style.overflow="hidden";
 }

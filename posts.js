@@ -24,6 +24,46 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "nvidia-without-huang", date: "2026-11-17", tag: "Nvidia",
+    icon: "assets/tools/nvidia-chip.png",
+    image: "assets/stories/nvidia-new-chapter.jpg",
+    title_en: "Nvidia without Jensen Huang: tonight we find out what happens next",
+    title_he: "נבידיה בלי ג'נסן הואנג: הלילה נדע מה הלאה",
+    text_en: "Jensen Huang, who started Nvidia 33 years ago, resigned last Thursday. Tonight Nvidia shares its results for the first time without him at the top.",
+    text_he: "ג'נסן הואנג, שהקים את נבידיה לפני 33 שנה, התפטר ביום חמישי שעבר. הלילה נבידיה מפרסמת תוצאות בפעם הראשונה בלי הואנג בראשה.",
+    do_en: ["Colette Kress, head of finance, is now the temporary CEO", "The board is looking for a permanent CEO", "The results come out tonight, at about 10pm UK time"],
+    do_he: ["קולט קרס, סמנכ\"לית הכספים, היא עכשיו המנכ\"לית הזמנית", "הדירקטוריון מחפש מנכ\"ל קבוע", "התוצאות יוצאות הלילה, בערך ב 22:00 שעון בריטניה"],
+    do_title_en: "What happened",
+    do_title_he: "מה קרה",
+    full_en: [
+      "After a stormy week of news reports, Jensen Huang, who started Nvidia 33 years ago and ran it ever since, resigned last Thursday.",
+      "Nvidia makes the chips that almost the whole AI world runs on. ChatGPT, Claude, Gemini, they all need Nvidia’s chips. So when its leader suddenly leaves, everyone pays attention.",
+      {h: "What happened"},
+      {list: [
+        "Colette Kress, Nvidia’s head of finance, is now the temporary CEO.",
+        "The board is looking for a permanent CEO, from inside or outside the company.",
+        "Nvidia’s share price dropped after the news."
+      ]},
+      "Today Nvidia shares its results for the last three months, the first time without Huang at the top. The numbers come out tonight, at about 10pm UK time.",
+      {h: "What it means for us"},
+      "The whole AI industry depends on one company. Tonight we’ll see if Nvidia can keep going strong without the man who built it."
+    ],
+    full_he: [
+      "אחרי שבוע סוער של דיווחים בתקשורת, ג'נסן הואנג, שהקים את נבידיה לפני 33 שנה וניהל אותה מאז, התפטר ביום חמישי שעבר.",
+      "נבידיה מייצרת את השבבים שעליהם עובד כמעט כל עולם ה AI. ChatGPT, קלוד, Gemini, כולם צריכים את השבבים של נבידיה. אז כשהמנהיג שלה עוזב פתאום, כולם שמים לב.",
+      {h: "מה קרה"},
+      {list: [
+        "קולט קרס, סמנכ\"לית הכספים של נבידיה, היא עכשיו המנכ\"לית הזמנית.",
+        "הדירקטוריון מחפש מנכ\"ל קבוע, מתוך החברה או מבחוץ.",
+        "מניית נבידיה ירדה אחרי החדשות."
+      ]},
+      "היום נבידיה מפרסמת את התוצאות של שלושת החודשים האחרונים, הפעם הראשונה בלי הואנג בראשה. המספרים יוצאים הלילה, בערך ב 22:00 שעון בריטניה.",
+      {h: "מה זה אומר לנו"},
+      "כל תעשיית ה AI תלויה בחברה אחת. הלילה נראה אם נבידיה יכולה להמשיך חזק בלי האיש שבנה אותה."
+    ],
+    links: []
+  },
+  {
     id: "google-ask-maps-uk", date: "2026-11-16", tag: "Google",
     icon: "assets/apps/gemini.png",
     image: "assets/stories/google-ask-maps.jpg",
