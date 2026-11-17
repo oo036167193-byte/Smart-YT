@@ -24,6 +24,50 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "google-search-hydrogen", date: "2026-11-12", tag: "Google",
+    icon: "assets/apps/gemini.png",
+    image: "assets/stories/google-hydrogen-search.jpg",
+    title_en: "Google now understands you even when you ask in a mess",
+    title_he: "גוגל מבין אותך עכשיו גם כשאתה שואל בבלגן",
+    text_en: "You don’t need to write the “right” words in Google anymore. Just ask the way you think, with all the details, and even with spelling mistakes.",
+    text_he: "כבר לא צריך לכתוב בגוגל את המילים \"הנכונות\". פשוט שואלים כמו שחושבים, עם כל הפרטים, ואפילו עם שגיאות כתיב.",
+    do_en: ["Ask a long question with a few parts and get an answer to each part", "Type badly, it still understands you", "Get clearer answers with pictures, tables and comparisons"],
+    do_he: ["לשאול שאלה ארוכה עם כמה חלקים ולקבל תשובה על כל חלק", "להקליד לא טוב, והוא עדיין מבין", "לקבל תשובות ברורות עם תמונות, טבלאות והשוואות"],
+    full_en: [
+      "You don’t need to write the “right” words in Google anymore. Just ask the way you think, with all the details, and even with spelling mistakes.",
+      "On 12 November Google added its new AI model, Gemini 4 Hydrogen, to Google Search. Google calls it the biggest model upgrade to Search ever. It’s free, for everyone, all over the world.",
+      {h: "What gets better"},
+      {list: [
+        "Long questions: you can ask a question with a few parts and very exact needs, and it answers each part.",
+        "Typing mistakes: it understands you even when you type badly.",
+        "More websites: it breaks your question into smaller searches, so it finds good sites you would have missed.",
+        "Clearer answers: more pictures, tables and side by side comparisons."
+      ]},
+      {h: "How to try it"},
+      "Open Google, tap AI Mode, and ask a long question, like you would ask a friend.",
+      {h: "What it means for us"},
+      "Searching is changing. Instead of guessing short keywords, you just talk to Google."
+    ],
+    full_he: [
+      "כבר לא צריך לכתוב בגוגל את המילים \"הנכונות\". פשוט שואלים כמו שחושבים, עם כל הפרטים, ואפילו עם שגיאות כתיב.",
+      "ב 12 בנובמבר הכניסה גוגל את מודל ה AI החדש שלה, Gemini 4 Hydrogen, לחיפוש של גוגל. גוגל קוראת לזה שדרוג המודל הגדול ביותר בחיפוש אי פעם. זה חינם, לכולם, בכל העולם.",
+      {h: "מה משתפר"},
+      {list: [
+        "שאלות ארוכות: אפשר לשאול שאלה עם כמה חלקים ודרישות מדויקות, והוא עונה על כל חלק.",
+        "שגיאות הקלדה: הוא מבין אותך גם כשאתה מקליד לא טוב.",
+        "יותר אתרים: הוא מפרק את השאלה לכמה חיפושים קטנים, וכך מוצא אתרים טובים שהיית מפספס.",
+        "תשובות ברורות יותר: יותר תמונות, טבלאות והשוואות זו לצד זו."
+      ]},
+      {h: "איך לנסות"},
+      "פותחים את גוגל, לוחצים על AI Mode, ושואלים שאלה ארוכה, כמו ששואלים חבר.",
+      {h: "מה זה אומר לנו"},
+      "החיפוש משתנה. במקום לנחש מילות מפתח קצרות, פשוט מדברים עם גוגל."
+    ],
+    links: [
+      {url: "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/", en: "Read on the Google blog", he: "לקריאה בבלוג של גוגל"}
+    ]
+  },
+  {
     id: "nvidia-without-huang", date: "2026-11-17", tag: "Nvidia",
     icon: "assets/tools/nvidia-chip.png",
     image: "assets/stories/nvidia-huang.jpg",
