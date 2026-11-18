@@ -896,10 +896,16 @@ body.rtl #faq .fq{text-align:right;}
 @media(max-width:900px){.abh{grid-template-columns:minmax(0,1fr);gap:2rem;}.abh-card{max-width:340px;margin:0 auto;width:100%;}}
 
 /* HERO hard rule */
-.hero-rule{display:flex;gap:.9rem;align-items:flex-start;margin:1.4rem 0 1.2rem;padding:1rem 1.2rem;border-radius:16px;background:rgba(0,144,248,.1);border:1px solid rgba(0,180,255,.35);border-inline-start:4px solid #00b4ff;max-width:560px;}
-.hr-ic{width:38px;height:38px;border-radius:11px;background:rgba(0,180,255,.18);color:#5BB8FF;display:grid;place-items:center;flex-shrink:0;}
-.hero-rule p{margin:0;color:#dce8f7;font-size:1rem;line-height:1.6;}
-.hero-rule b{color:#fff;}
+.hero-rule{position:relative;margin:1.6rem 0 2rem;padding:1.3rem 1.4rem 1.3rem;border-radius:20px;max-width:560px;background:linear-gradient(135deg,rgba(255,184,77,.16),rgba(255,122,89,.06)) padding-box,linear-gradient(#0a1a33,#0a1a33) padding-box,linear-gradient(135deg,#FFC861,#FF7A59) border-box;border:1.5px solid transparent;box-shadow:0 18px 40px -18px rgba(255,150,70,.45);animation:fu .6s .35s ease both;}
+.hero-rule::after{content:"";position:absolute;inset:-1px;border-radius:20px;box-shadow:0 0 0 0 rgba(255,184,77,.45);animation:hrPulse 2.8s ease-out 1.2s infinite;pointer-events:none;}
+@keyframes hrPulse{0%{box-shadow:0 0 0 0 rgba(255,184,77,.45)}70%{box-shadow:0 0 0 12px rgba(255,184,77,0)}100%{box-shadow:0 0 0 0 rgba(255,184,77,0)}}
+@media (prefers-reduced-motion:reduce){.hero-rule::after{animation:none;}}
+.hr-badge{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#FFC861,#FF8A5B);color:#2b1400;font-weight:800;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;padding:.35rem .9rem .35rem .4rem;border-radius:100px;margin-bottom:.8rem;}
+body.rtl .hr-badge{letter-spacing:0;padding:.35rem .4rem .35rem .9rem;font-size:.85rem;}
+.hr-coin{width:24px;height:24px;border-radius:50%;background:#2b1400;color:#FFC861;display:grid;place-items:center;font-size:.85rem;font-weight:900;}
+.hero-rule p{margin:0;color:#fff;font-size:1.08rem;line-height:1.6;font-weight:600;}
+.hero-rule em{font-style:normal;color:#FFC861;}
+body.rtl .hero-rule p{text-align:right;}
 </style>
 </head>
 <body>
@@ -945,8 +951,10 @@ body.rtl #faq .fq{text-align:right;}
       <div class="badge"><span class="dot"></span><span data-en="Business Automation Experts" data-he="מומחי אוטומציה עסקית">Business Automation Experts</span></div>
       <h1 data-en="Any App. Any Tool. <span class='grad'>Fully Automated.</span>" data-he="כל אפליקציה. כל כלי. <span class='grad'>אוטומציה מלאה.</span>">Any App. Any Tool. <span class="grad">Fully Automated.</span></h1>
       <p class="hero-sub" data-en="Smart YT builds custom automations for any tool your business uses, removing manual work and saving you real time and money." data-he="Smart YT בונה אוטומציות מותאמות אישית לכל כלי שהעסק שלך משתמש בו, מבטלת עבודה ידנית וחוסכת זמן וכסף אמיתיים.">Smart YT builds custom automations for any tool your business uses, removing manual work and saving you real time and money.</p>
-      <div class="hero-rule"><span class="hr-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></span><p><b data-en="Our one hard rule:" data-he="כלל הברזל שלנו:">Our one hard rule:</b> <span data-en="if an automation won’t bring you more money or save you hours you can turn into profit, we don’t build it." data-he="אם אוטומציה לא מכניסה לך כסף או חוסכת לך שעות שאפשר לתרגם לרווח, אנחנו לא בונים אותה.">if an automation won’t bring you more money or save you hours you can turn into profit, we don’t build it.</span></p></div>
-      <p class="hero-sub3" data-en="If you've done something more than once, that's a sign it should be automated." data-he="כל דבר שעשית יותר מפעם אחת בעסק שלך, זה סימן שצריך לעשות לו אוטומציה.">If you've done something more than once, that's a sign it should be automated.</p>
+      <div class="hero-rule">
+        <div class="hr-badge"><span class="hr-coin">£</span><span data-en="Our one hard rule" data-he="כלל הברזל שלנו">Our one hard rule</span></div>
+        <p data-en="If an automation won’t bring you <em>more money</em> or save you <em>hours you can turn into profit</em>, we don’t build it." data-he="אם אוטומציה לא מכניסה לך <em>כסף</em> או חוסכת לך <em>שעות שאפשר לתרגם לרווח</em>, אנחנו לא בונים אותה.">If an automation won’t bring you <em>more money</em> or save you <em>hours you can turn into profit</em>, we don’t build it.</p>
+      </div>
       <div class="hero-btns">
         <a href="#contact" class="btn-p" data-en="Get a Free Consultation" data-he="קבל ייעוץ חינם">Get a Free Consultation</a>
         <a href="#services" class="btn-o" data-en="See Our Services" data-he="ראה שירותים">See Our Services</a>
