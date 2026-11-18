@@ -24,6 +24,54 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "modern-web-guidance", date: "2026-11-10", tag: "Google",
+    icon: "assets/tools/web-code.png",
+    image: "assets/stories/modern-web-guidance.jpg",
+    video: "bo3i0FzDUYo", videoAt: 4,
+    title_en: "Big news for anyone building websites with AI",
+    title_he: "בשורה ענקית לבוני אתרים ודפי נחיתה עם AI",
+    text_en: "AI builds websites the old way, because it learned from pages written 5 to 15 years ago. Modern Web Guidance is a free skill from the Chrome team that teaches it how websites are built today.",
+    text_he: "ה AI בונה אתרים בשיטות ישנות, כי הוא למד מדפים שנכתבו לפני 5 עד 15 שנה. Modern Web Guidance הוא סקיל חינמי של צוות Chrome שמלמד אותו איך בונים אתרים היום.",
+    do_en: ["Install it in your AI coding tool with one command", "Get faster, smoother websites on mobile", "Get less bloated code, with accessibility and security built in"],
+    do_he: ["להתקין אותו בכלי ה AI שלכם בפקודה אחת", "לקבל אתרים מהירים וחלקים יותר בנייד", "לקבל פחות קוד מנופח, עם נגישות ואבטחה מובנות"],
+    full_en: [
+      "Here’s the most annoying thing about building a website with AI: the design and code often feel old. That’s because AI learned from billions of web pages, and most of them were written 5 to 15 years ago.",
+      "Now the Chrome team, together with Edge, Firefox and MDN, released Modern Web Guidance. It’s a free skill you install in your AI coding tool, and it teaches the AI how websites are built today.",
+      {h: "What you get"},
+      {list: [
+        "More up to date websites: the AI uses today’s methods, not old tricks.",
+        "Fast and smooth on mobile: instead of heavy code that lags on the phone, it uses what the browser can already do.",
+        "Fewer bugs in different browsers: the code fits the browsers you need, with a backup for older ones.",
+        "Less bloated code: no heavy extra libraries just for a popup.",
+        "Accessibility and security built in: in Google’s tests, the AI followed modern best practices 37 points more often."
+      ]},
+      {h: "What it means for us"},
+      "If you build websites or landing pages with AI, install this before your next project. One command and your AI is up to date.",
+      {h: "How to install"},
+      {install: [{"name": "Any AI coding tool", "cmds": ["npx modern-web-guidance@latest install"], "note": "One command, and it updates itself.", "rec": true}, {"name": "Claude Code", "cmds": ["claude plugin marketplace add GoogleChrome/modern-web-guidance\nclaude plugin install modern-web-guidance@googlechrome"]}, {"name": "Codex", "cmds": ["codex plugin marketplace add GoogleChrome/modern-web-guidance\ncodex plugin add modern-web-guidance@googlechrome"]}, {"name": "Gemini CLI", "cmds": ["gemini extensions install https://github.com/GoogleChrome/modern-web-guidance --auto-update"]}, {"name": "Antigravity CLI", "cmds": ["agy plugin install https://github.com/GoogleChrome/modern-web-guidance"], "note": "In the Antigravity app: Settings, Customizations, Build with Google Plugins."}, {"name": "GitHub Copilot CLI", "cmds": ["/plugin marketplace add GoogleChrome/modern-web-guidance", "/plugin install modern-web-guidance@googlechrome"], "note": "Two steps, one after the other."}, {"name": "GitHub CLI", "cmds": ["gh skill install GoogleChrome/modern-web-guidance"]}, {"name": "npx skills", "cmds": ["npx skills add GoogleChrome/modern-web-guidance"]}, {"name": "Grok", "cmds": ["grok plugin install https://github.com/GoogleChrome/modern-web-guidance --trust"]}, {"name": "Goose", "cmds": ["goose plugin install https://github.com/GoogleChrome/modern-web-guidance --auto-update"]}, {"name": "Kimi Code", "cmds": ["/plugins install https://github.com/GoogleChrome/modern-web-guidance"]}, {"name": "JetBrains WebStorm", "cmds": [], "note": "No command needed: Settings, AI Assistant, Skills, pick Modern Web Guidance and click Install."}]}
+    ],
+    full_he: [
+      "הבעיה הכי מעצבנת כשבונים אתר עם AI: העיצוב והקוד מרגישים ישנים. הסיבה היא שה AI למד ממיליארדי דפים באינטרנט, ורובם נכתבו לפני 5 עד 15 שנה.",
+      "עכשיו צוות Chrome, יחד עם Edge, Firefox ו MDN, הוציא את Modern Web Guidance. זה סקיל חינמי שמתקינים בכלי ה AI שבונה לכם קוד, והוא מלמד את ה AI איך בונים אתרים היום.",
+      {h: "מה מקבלים"},
+      {list: [
+        "אתרים מעודכנים יותר: ה AI משתמש בשיטות של היום, לא בטריקים ישנים.",
+        "מהיר וחלק בנייד: במקום קוד כבד שמקרטע בטלפון, הוא משתמש ביכולות שכבר קיימות בדפדפן.",
+        "פחות באגים בדפדפנים שונים: הקוד מותאם לדפדפנים שצריך, עם גיבוי לדפדפנים ישנים.",
+        "פחות קוד מנופח: בלי ספריות חיצוניות כבדות רק בשביל חלון קופץ.",
+        "נגישות ואבטחה מובנות: בבדיקות של גוגל, ה AI עמד בכללי העבודה המודרניים ב 37 נקודות אחוז יותר."
+      ]},
+      {h: "מה זה אומר לנו"},
+      "אם אתם בונים אתרים או דפי נחיתה עם AI, תתקינו את זה לפני הפרויקט הבא. פקודה אחת, וה AI שלכם מעודכן.",
+      {h: "איך מתקינים"},
+      {install: [{"name": "כל כלי AI לבניית קוד", "cmds": ["npx modern-web-guidance@latest install"], "note": "פקודה אחת, והיא מתעדכנת לבד.", "rec": true}, {"name": "Claude Code", "cmds": ["claude plugin marketplace add GoogleChrome/modern-web-guidance\nclaude plugin install modern-web-guidance@googlechrome"]}, {"name": "Codex", "cmds": ["codex plugin marketplace add GoogleChrome/modern-web-guidance\ncodex plugin add modern-web-guidance@googlechrome"]}, {"name": "Gemini CLI", "cmds": ["gemini extensions install https://github.com/GoogleChrome/modern-web-guidance --auto-update"]}, {"name": "Antigravity CLI", "cmds": ["agy plugin install https://github.com/GoogleChrome/modern-web-guidance"], "note": "אפשר גם בתוך אפליקציית Antigravity, דרך Settings, Customizations ו Build with Google Plugins, בלי פקודה."}, {"name": "GitHub Copilot CLI", "cmds": ["/plugin marketplace add GoogleChrome/modern-web-guidance", "/plugin install modern-web-guidance@googlechrome"], "note": "שני שלבים, אחד אחרי השני."}, {"name": "GitHub CLI", "cmds": ["gh skill install GoogleChrome/modern-web-guidance"]}, {"name": "npx skills", "cmds": ["npx skills add GoogleChrome/modern-web-guidance"]}, {"name": "Grok", "cmds": ["grok plugin install https://github.com/GoogleChrome/modern-web-guidance --trust"]}, {"name": "Goose", "cmds": ["goose plugin install https://github.com/GoogleChrome/modern-web-guidance --auto-update"]}, {"name": "Kimi Code", "cmds": ["/plugins install https://github.com/GoogleChrome/modern-web-guidance"]}, {"name": "JetBrains WebStorm", "cmds": [], "note": "בלי פקודה: נכנסים ל Settings, AI Assistant, Skills, בוחרים Modern Web Guidance ולוחצים על Install להתקנה."}]}
+    ],
+    links: [
+      {url: "https://developer.chrome.com/docs/modern-web-guidance/get-started#installation", en: "How to install", he: "איך מתקינים"},
+      {url: "https://developer.chrome.com/blog/modern-web-guidance-v1", en: "Chrome blog", he: "הבלוג של Chrome"}
+    ]
+  },
+  {
     id: "gpt-6-2-astra-sol", date: "2026-11-17", tag: "ChatGPT",
     icon: "assets/tools/chatgpt.png",
     image: "assets/stories/gpt-6-2-astra-sol.jpg",
