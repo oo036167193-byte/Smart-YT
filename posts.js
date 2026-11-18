@@ -24,6 +24,61 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "gpt-6-2-astra-sol", date: "2026-11-17", tag: "ChatGPT",
+    icon: "assets/tools/chatgpt.png",
+    image: "assets/stories/gpt-6-2-astra-sol.jpg",
+    video: "tKoDPOrLMX0", videoAt: 3,
+    title_en: "OpenAI’s new models make work that looks less like AI",
+    title_he: "המודלים החדשים של OpenAI עושים עבודה שנראית פחות כמו AI",
+    text_en: "You know when a document or a slide deck screams “AI made this”? OpenAI says its new models, GPT‑6.2 Astra and Sol, fix that.",
+    text_he: "מכירים את זה שמסמך או מצגת צועקים \"AI עשה את זה\"? OpenAI אומרת שהמודלים החדשים שלה, GPT‑6.2 Astra ו Sol, מתקנים את זה.",
+    do_en: ["Give it your template or a screenshot of a slide and it copies your layout, colours and fonts", "Get shorter, clearer writing with less waffle", "Do more within your plan before you hit the limit"],
+    do_he: ["לתת לו את התבנית שלכם או צילום מסך של שקופית, והוא מעתיק את הפריסה, הצבעים והגופנים", "לקבל כתיבה קצרה וברורה יותר, עם פחות מילים מיותרות", "לעשות יותר במסגרת המנוי לפני שמגיעים למגבלה"],
+    full_en: [
+      "You know when a document or a slide deck screams “AI made this”? OpenAI says its new models fix that.",
+      "OpenAI has launched two new models:",
+      {list: [
+        "GPT‑6.2 Astra: its strongest model, for the hardest projects.",
+        "GPT‑6.2 Sol: faster and cheaper, for everyday work. Many people at OpenAI use it as their main model."
+      ]},
+      {h: "What’s better"},
+      {list: [
+        "Slides, spreadsheets and documents look more professional and less like AI. Give it your template, or even just a screenshot of a slide, and it copies your layout, colours and fonts.",
+        "Shorter, clearer writing, with less waffle.",
+        "Better websites and 3D, even small games you can play in the browser.",
+        "Uses less, so you can do more within your plan before you hit the limit."
+      ]},
+      "OpenAI says Astra beat Claude Fable 5.2 on a test of real professional work, at a small part of the cost. Keep in mind: these are OpenAI’s own tests.",
+      {h: "Who can use it"},
+      "From today, for ChatGPT Plus, Pro, Enterprise and Edu users, in ChatGPT Work and Codex.",
+      {h: "What it means for us"},
+      "The race between OpenAI, Anthropic and Google is now about who makes work that looks like a human made it. Good for all of us."
+    ],
+    full_he: [
+      "מכירים את זה שמסמך או מצגת צועקים \"AI עשה את זה\"? OpenAI אומרת שהמודלים החדשים שלה מתקנים את זה.",
+      "OpenAI השיקה שני מודלים חדשים:",
+      {list: [
+        "GPT‑6.2 Astra: המודל הכי חזק שלה, לפרויקטים הכי קשים.",
+        "GPT‑6.2 Sol: מהיר וזול יותר, לעבודה יומיומית. הרבה עובדים ב OpenAI משתמשים בו כמודל הראשי שלהם."
+      ]},
+      {h: "מה השתפר"},
+      {list: [
+        "מצגות, גיליונות ומסמכים נראים מקצועיים יותר ופחות כמו AI. נותנים לו את התבנית שלכם, או אפילו רק צילום מסך של שקופית, והוא מעתיק את הפריסה, הצבעים והגופנים.",
+        "כתיבה קצרה וברורה יותר, עם פחות מילים מיותרות.",
+        "אתרים ותלת ממד טובים יותר, אפילו משחקים קטנים שאפשר לשחק בדפדפן.",
+        "משתמש בפחות, אז אפשר לעשות יותר במסגרת המנוי לפני שמגיעים למגבלה."
+      ]},
+      "OpenAI אומרת ש Astra ניצח את Claude Fable 5.2 במבחן של עבודה מקצועית אמיתית, בחלק קטן מהמחיר. חשוב לזכור: אלה מבחנים של OpenAI עצמה.",
+      {h: "למי זה זמין"},
+      "מהיום, למשתמשי ChatGPT Plus, Pro, Enterprise ו Edu, ב ChatGPT Work וב Codex.",
+      {h: "מה זה אומר לנו"},
+      "המירוץ בין OpenAI, אנטרופיק וגוגל הוא עכשיו על מי עושה עבודה שנראית כאילו בן אדם עשה אותה. טוב לכולנו."
+    ],
+    links: [
+      {url: "https://openai.com/index/introducing-gpt-6-2-astra-sol/", en: "OpenAI announcement", he: "ההודעה של OpenAI"}
+    ]
+  },
+  {
     id: "apple-health-ai-study", date: "2026-11-15", tag: "Apple",
     icon: "assets/tools/health-heart.png",
     image: "assets/stories/apple-health-ai-study.jpg",
