@@ -25,7 +25,7 @@ var ISSUE = "2026-11-09";
 var POSTS = [
   {
     id: "modern-web-guidance", date: "2026-11-10", tag: "Google",
-    icon: "assets/tools/web-code.png",
+    icon: "assets/tools/chrome.png",
     image: "assets/stories/modern-web-guidance.jpg",
     video: "bo3i0FzDUYo", videoAt: 4,
     title_en: "Big news for anyone building websites with AI",
