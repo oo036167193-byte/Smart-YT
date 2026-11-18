@@ -878,6 +878,22 @@ body.rtl #faq .fq{text-align:right;}
 #contact .fg input::placeholder,#contact .fg textarea::placeholder{color:#8A9BB4;}
 #contact .fg select option{color:#0d1f3c;}
 @media(max-width:900px){#contact .cgrid{padding:1.6rem;border-radius:24px;}#contact .cfbox{padding:1.4rem;}}
+
+/* ABOUT (home) */
+.abh{display:grid;grid-template-columns:320px minmax(0,1fr);gap:3.5rem;align-items:center;}
+.abh-card{background:#fff;border:1px solid #dbe5f1;border-radius:28px;padding:2.2rem 1.6rem;text-align:center;box-shadow:0 24px 50px -30px rgba(11,31,68,.35);display:flex;flex-direction:column;align-items:center;gap:.35rem;}
+.abh-logo{width:120px;height:120px;border-radius:28px;background:#f4f9ff;display:grid;place-items:center;padding:14px;margin-bottom:.8rem;}
+.abh-logo img{width:100%;height:auto;}
+.abh-card strong{font-size:1.25rem;color:#0d1f3c;}
+.abh-card span{color:#56698A;font-size:.92rem;}
+.abh-tools{display:flex;gap:.6rem;margin-top:1rem;}
+.abh-tools img{width:40px;height:40px;border-radius:10px;background:#fff;border:1px solid #e3ebf5;padding:6px;object-fit:contain;}
+.abh-text h2{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:900;line-height:1.15;color:var(--light-text);margin-bottom:1.2rem;}
+.abh-text p{color:var(--light-sub);font-size:1.05rem;line-height:1.8;}
+.abh-rule{margin-top:1.1rem;padding:1rem 1.2rem;border-radius:14px;background:#e6f1ff;color:#0d3a7a !important;font-weight:700;border-inline-start:4px solid #0090F8;}
+.abh-btn{display:inline-block;margin-top:1.6rem;background:linear-gradient(135deg,#1565c0,#00b4ff);color:#fff;padding:.85rem 1.7rem;border-radius:100px;font-weight:700;text-decoration:none;box-shadow:0 10px 24px -10px rgba(21,101,192,.7);transition:transform .2s;}
+.abh-btn:hover{transform:translateY(-2px);}
+@media(max-width:900px){.abh{grid-template-columns:minmax(0,1fr);gap:2rem;}.abh-card{max-width:340px;margin:0 auto;width:100%;}}
 </style>
 </head>
 <body>
@@ -1090,6 +1106,27 @@ body.rtl #faq .fq{text-align:right;}
           <div class="wm"><span class="wn">24/7</span><div class="wl" data-en="Always running" data-he="רץ תמיד">Always running</div></div>
           <div class="wm"><span class="wn">120h</span><div class="wl" data-en="Saved monthly" data-he="נחסך בחודש">Saved monthly</div></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec sec-light" id="about">
+  <div class="inner">
+    <div class="abh fin">
+      <div class="abh-card">
+        <div class="abh-logo"><img src="assets/logo-light-bg.png" alt="Smart YT"></div>
+        <strong data-en="Yoel Teichman" data-he="יואל טייכמן">Yoel Teichman</strong>
+        <span data-en="Founder of SmartYT" data-he="המייסד של SmartYT">Founder of SmartYT</span>
+        <div class="abh-tools"><img src="assets/apps/make.png" alt="Make"><img src="assets/apps/monday.png" alt="monday.com"></div>
+      </div>
+      <div class="abh-text">
+        <span class="stag" data-en="ABOUT" data-he="אודות">ABOUT</span>
+        <h2 data-en="Nice to meet you, I’m <span class='grad'>Yoel Teichman</span>" data-he="נעים להכיר, אני <span class='grad'>יואל טייכמן</span>">Nice to meet you, I’m <span class="grad">Yoel Teichman</span></h2>
+        <p data-en="I didn’t get into automation from reading books or watching presentations. I got into it because I was stuck deep in the trenches, chasing payments and sending reminders by hand every single day." data-he="הגעתי לתחום הזה לא מספרים ולא מתיאוריות, אלא מהשטח. מצאתי את עצמי מבזבז שעות כל יום על אותן משימות מעצבנות, כמו לרדוף אחרי תשלומים ולשלוח תזכורות.">I didn’t get into automation from reading books or watching presentations.</p>
+        <p class="abh-rule" data-en="My one hard rule: if an automation doesn’t make you more money or save you hours, I won’t build it." data-he="כלל הברזל שלי: אם אוטומציה לא מייצרת לך יותר כסף או חוסכת לך שעות, אני לא אבנה אותה.">My one hard rule: if an automation doesn’t make you more money or save you hours, I won’t build it.</p>
+        <a class="abh-btn" href="/about" data-en="Read my full story →" data-he="לסיפור המלא ←">Read my full story →</a>
       </div>
     </div>
   </div>
