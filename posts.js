@@ -24,6 +24,68 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "anthropic-ipo", date: "2026-11-19", tag: "Claude",
+    icon: "assets/apps/claude.png",
+    image: "assets/stories/anthropic-ipo.jpg",
+    title_en: "The biggest stock market debut ever: the company behind Claude goes public today",
+    title_he: "ההנפקה הגדולה בהיסטוריה: החברה שמאחורי קלוד נכנסת היום לבורסה",
+    text_en: "No company has ever raised this much money on Wall Street. Today Anthropic, the company that makes Claude, starts trading on the Nasdaq under the name ANT.",
+    text_he: "אף חברה לא גייסה אי פעם כל כך הרבה כסף בוול סטריט. היום אנטרופיק, החברה שמייצרת את קלוד, מתחילה להיסחר בנאסד\"ק תחת השם ANT.",
+    do_en: ["$83 a share, above the planned $70 to $78", "$81.3 billion raised, a new record", "Worth about $1.5 trillion"],
+    do_he: ["83 דולר למניה, מעל הטווח המתוכנן של 70 עד 78", "81.3 מיליארד דולר גויסו, שיא חדש", "שווי של כ 1.5 טריליון דולר"],
+    do_title_en: "The numbers",
+    do_title_he: "המספרים",
+    full_en: [
+      "No company has ever raised this much money on Wall Street. Today Anthropic, the company that makes Claude, starts trading on the Nasdaq under the name ANT.",
+      {h: "The numbers"},
+      {list: [
+        "$83 a share, higher than the $70 to $78 it planned.",
+        "$81.3 billion raised, more than the SpaceX record from June.",
+        "Worth about $1.5 trillion.",
+        "It’s the first of the big AI model companies to go public."
+      ]},
+      {h: "Why investors want in"},
+      {list: [
+        "Anthropic earns money at a pace of about $81 billion a year, $10 billion more than just a month earlier.",
+        "Companies paying it over $100,000 a year jumped from about 1,500 to more than 11,900 in less than a year.",
+        "Much of the growth comes from Claude Code, its AI tool for writing software."
+      ]},
+      {h: "But it’s not all easy"},
+      {list: [
+        "It still loses money, because it spends billions on the huge computers that run AI.",
+        "It has promised to spend about $900 billion on computing power in the coming years."
+      ]},
+      {h: "My take"},
+      "I think that now that Anthropic is a public company, with investors watching every three months, we may start to see more limits on the models it lets us use, and maybe higher prices. We’ll keep an eye on it."
+    ],
+    full_he: [
+      "אף חברה לא גייסה אי פעם כל כך הרבה כסף בוול סטריט. היום אנטרופיק, החברה שמייצרת את קלוד, מתחילה להיסחר בנאסד\"ק תחת השם ANT.",
+      {h: "המספרים"},
+      {list: [
+        "83 דולר למניה, יותר מהטווח של 70 עד 78 שתכננה.",
+        "81.3 מיליארד דולר גויסו, יותר משיא ההנפקה של ספייס אקס מיוני.",
+        "שווי של כ 1.5 טריליון דולר.",
+        "זו הראשונה מבין חברות מודלי ה AI הגדולות שנכנסת לבורסה."
+      ]},
+      {h: "למה המשקיעים רוצים להיכנס"},
+      {list: [
+        "אנטרופיק מכניסה כסף בקצב של כ 81 מיליארד דולר בשנה, 10 מיליארד יותר מחודש לפני כן.",
+        "מספר החברות שמשלמות לה יותר מ 100 אלף דולר בשנה קפץ מכ 1,500 ליותר מ 11,900 בפחות משנה.",
+        "הרבה מהצמיחה מגיעה מ Claude Code, כלי ה AI שלה לכתיבת תוכנה."
+      ]},
+      {h: "אבל זה לא הכל פשוט"},
+      {list: [
+        "היא עדיין מפסידה כסף, כי היא מוציאה מיליארדים על המחשבים הענקיים שמריצים את ה AI.",
+        "היא התחייבה להוציא כ 900 מיליארד דולר על כוח מחשוב בשנים הקרובות."
+      ]},
+      {h: "דעתי"},
+      "אני חושב שעכשיו, כשאנטרופיק היא חברה ציבורית והמשקיעים בודקים אותה כל שלושה חודשים, ייתכן שנתחיל לראות יותר הגבלות על המודלים שהיא מאפשרת לנו להשתמש בהם, ואולי גם מחירים גבוהים יותר. נעקוב אחרי זה."
+    ],
+    links: [
+      {url: "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html", en: "Read on CNBC", he: "לקריאה ב CNBC"}
+    ]
+  },
+  {
     id: "modern-web-guidance", date: "2026-11-10", tag: "Google",
     icon: "assets/tools/chrome.png",
     image: "assets/stories/modern-web-guidance.jpg",
