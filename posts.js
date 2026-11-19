@@ -31,8 +31,8 @@ var POSTS = [
     title_he: "ההנפקה הגדולה בהיסטוריה: החברה שמאחורי קלוד נכנסת היום לבורסה",
     text_en: "No company has ever raised this much money on Wall Street. Today Anthropic, the company that makes Claude, starts trading on the Nasdaq under the name ANT.",
     text_he: "אף חברה לא גייסה אי פעם כל כך הרבה כסף בוול סטריט. היום אנטרופיק, החברה שמייצרת את קלוד, מתחילה להיסחר בנאסד\"ק תחת השם ANT.",
-    do_en: ["$83 a share, above the planned $70 to $78", "$81.3 billion raised, a new record", "Worth about $1.5 trillion"],
-    do_he: ["83 דולר למניה, מעל הטווח המתוכנן של 70 עד 78", "81.3 מיליארד דולר גויסו, שיא חדש", "שווי של כ 1.5 טריליון דולר"],
+    do_en: ["$83 a share, above the planned $70 to $78", "$81.3 billion raised, more than SpaceX’s $75 billion, the record until now", "Worth about $1.5 trillion"],
+    do_he: ["83 דולר למניה, מעל הטווח המתוכנן של 70 עד 78", "81.3 מיליארד דולר גויסו, יותר מ 75 המיליארד של ספייס אקס, שהיה השיא עד עכשיו", "שווי של כ 1.5 טריליון דולר"],
     do_title_en: "The numbers",
     do_title_he: "המספרים",
     full_en: [
@@ -40,7 +40,7 @@ var POSTS = [
       {h: "The numbers"},
       {list: [
         "$83 a share, higher than the $70 to $78 it planned.",
-        "$81.3 billion raised, more than the SpaceX record from June.",
+        "$81.3 billion raised, more than SpaceX’s $75 billion from June, the record until now.",
         "Worth about $1.5 trillion.",
         "It’s the first of the big AI model companies to go public."
       ]},
@@ -63,7 +63,7 @@ var POSTS = [
       {h: "המספרים"},
       {list: [
         "83 דולר למניה, יותר מהטווח של 70 עד 78 שתכננה.",
-        "81.3 מיליארד דולר גויסו, יותר משיא ההנפקה של ספייס אקס מיוני.",
+        "81.3 מיליארד דולר גויסו, יותר מ 75 המיליארד של ספייס אקס מיוני, שהיה השיא עד עכשיו.",
         "שווי של כ 1.5 טריליון דולר.",
         "זו הראשונה מבין חברות מודלי ה AI הגדולות שנכנסת לבורסה."
       ]},
