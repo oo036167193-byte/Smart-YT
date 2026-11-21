@@ -24,6 +24,66 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "lovable-apps-exposed", date: "2026-11-21", tag: "Security",
+    icon: "assets/tools/lovable.png",
+    image: "assets/stories/lovable-exposed-data.jpg",
+    title_en: "Built an app with AI? Your customers’ data might be open to everyone",
+    title_he: "בניתם אפליקציה עם AI? ייתכן שהמידע של הלקוחות שלכם פתוח לכולם",
+    text_en: "Researchers checked about 159,000 apps built with Lovable. In around 7,400 of them, they could see people’s email addresses without logging in.",
+    text_he: "חוקרים בדקו כ 159,000 אפליקציות שנבנו ב Lovable. בכ 7,400 מהן הם יכלו לראות כתובות מייל של אנשים, בלי להתחבר בכלל.",
+    do_en: ["Open your app in a private window, without logging in", "Make two test accounts and check one can’t see the other", "Ask the AI to lock every table in your database"],
+    do_he: ["לפתוח את האפליקציה בחלון פרטי, בלי להתחבר", "לפתוח שני חשבונות לבדיקה ולוודא שאחד לא רואה את השני", "לבקש מה AI לנעול כל טבלה במאגר הנתונים"],
+    do_title_en: "3 checks to do today",
+    do_title_he: "3 בדיקות לעשות היום",
+    full_en: [
+      "AI tools like Lovable let anyone build a website or an app just by describing it. No coding needed. But there’s one thing the AI doesn’t always do for you: lock the doors.",
+      "Security company Crissy Field from Hamburg, together with the German newspaper Handelsblatt, checked about 159,000 apps built with Lovable. In around 7,400 of them, they could see records with people’s email addresses without logging in.",
+      {h: "What they found open to anyone"},
+      {list: [
+        "A forum with over 80,000 profiles: names, emails and birthdays.",
+        "Event and restaurant apps with tens of thousands of orders, including phone numbers, addresses and payment details.",
+        "Over 1,000 passport details.",
+        "Contracts, invoices, private photos and WhatsApp messages."
+      ]},
+      {img: "assets/stories/lovable-app.jpg", alt: "Lovable app on a phone"},
+      "Lovable said this is a known setup problem across the industry, not only on its platform. But its terms say the person who builds the app is responsible for keeping the data safe, not Lovable.",
+      {h: "3 simple checks you can do today"},
+      {list: [
+        "Open your app like a stranger. Open it in a private window (incognito), without logging in. Can you see anything that should be private, like customer names, orders or messages? If yes, stop and fix it.",
+        "Make two test accounts. Log in as the first one and try to find the second one’s details. One customer should never see another customer’s data.",
+        "Ask the AI to lock the database. Write to Lovable (or your AI tool): “Check that every table in my database is locked so each user can only see their own data.” In Supabase this is called Row Level Security, and it must be on for every table."
+      ]},
+      "But this is only a first check. Before you put real customer data in your app, have someone who really knows security look at it. A quick check can catch the big holes, but it can’t replace an expert.",
+      {h: "What it means for us"},
+      "AI makes building easy. Keeping your customers’ data safe is still your job."
+    ],
+    full_he: [
+      "כלי AI כמו Lovable מאפשרים לכל אחד לבנות אתר או אפליקציה רק על ידי תיאור במילים. בלי לכתוב קוד. אבל יש דבר אחד שה AI לא תמיד עושה בשבילכם: לנעול את הדלתות.",
+      "חברת האבטחה Crissy Field מהמבורג, יחד עם העיתון הגרמני Handelsblatt, בדקה כ 159,000 אפליקציות שנבנו ב Lovable. בכ 7,400 מהן הם יכלו לראות רשומות עם כתובות מייל של אנשים, בלי להתחבר בכלל.",
+      {h: "מה הם מצאו פתוח לכל אחד"},
+      {list: [
+        "פורום עם יותר מ 80,000 פרופילים: שמות, מיילים ותאריכי לידה.",
+        "אפליקציות של אירועים ומסעדות עם עשרות אלפי הזמנות, כולל טלפונים, כתובות ופרטי תשלום.",
+        "יותר מ 1,000 פרטי דרכונים.",
+        "חוזים, חשבוניות, תמונות פרטיות והודעות וואטסאפ."
+      ]},
+      {img: "assets/stories/lovable-app.jpg", alt: "אפליקציית Lovable בטלפון"},
+      "Lovable הגיבה שמדובר בבעיית הגדרות מוכרת בכל התעשייה, ולא רק אצלה. אבל בתנאי השימוש שלה כתוב שמי שבונה את האפליקציה אחראי לשמור על המידע, לא Lovable.",
+      {h: "3 בדיקות פשוטות שאפשר לעשות כבר היום"},
+      {list: [
+        "תפתחו את האפליקציה כמו זר. פותחים אותה בחלון פרטי (גלישה בסתר), בלי להתחבר. רואים משהו שאמור להיות פרטי, כמו שמות לקוחות, הזמנות או הודעות? אם כן, עוצרים ומתקנים.",
+        "תפתחו שני חשבונות לבדיקה. מתחברים עם הראשון ומנסים למצוא את הפרטים של השני. לקוח אחד אף פעם לא אמור לראות מידע של לקוח אחר.",
+        "תבקשו מה AI לנעול את המאגר. כותבים ל Lovable (או לכלי ה AI שלכם): \"תבדוק שכל טבלה במאגר הנתונים שלי נעולה, כך שכל משתמש רואה רק את המידע שלו.\" ב Supabase זה נקרא Row Level Security, והוא חייב להיות מופעל בכל טבלה."
+      ]},
+      "אבל זו רק בדיקה ראשונית. לפני שמכניסים מידע אמיתי של לקוחות לאפליקציה, צריך לתת למישהו שבאמת מבין באבטחה לבדוק אותה. בדיקה מהירה יכולה לתפוס את החורים הגדולים, אבל היא לא מחליפה מומחה.",
+      {h: "מה זה אומר לנו"},
+      "AI הופך את הבנייה לקלה. לשמור על המידע של הלקוחות זה עדיין התפקיד שלכם."
+    ],
+    links: [
+      {url: "https://cybernews.com/security/lovable-ai-apps-expose-personal-information/", en: "Read on Cybernews", he: "לקריאה ב Cybernews"}
+    ]
+  },
+  {
     id: "anthropic-ipo", date: "2026-11-19", tag: "Claude",
     icon: "assets/apps/claude.png",
     image: "assets/stories/anthropic-ipo.jpg",
