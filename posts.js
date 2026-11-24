@@ -24,6 +24,52 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "amazon-decart", date: "2026-11-23", tag: "Amazon",
+    icon: "assets/tools/israel-chip.png",
+    image: "assets/stories/decart-founders.jpg",
+    title_en: "A 3 year old Israeli AI company just made one of Israel’s biggest exits ever",
+    title_he: "חברת AI ישראלית בת 3 שנים עשתה אחד האקזיטים הגדולים בתולדות ישראל",
+    text_en: "Amazon agreed to buy Decart’s main technology and its team, in a deal reported at about $7.5 billion. Decart was founded in 2023 and has about 120 workers.",
+    text_he: "אמזון הסכימה לקנות את הטכנולוגיה המרכזית של דקארט ואת הצוות, בעסקה שדווחה בשווי של כ 7.5 מיליארד דולר. דקארט הוקמה ב 2023, ויש בה כ 120 עובדים.",
+    do_en: ["About $7.5 billion for the technology and the team", "The three founders join Amazon for 5 years", "The team joins Annapurna Labs, Amazon’s chip company in Israel"],
+    do_he: ["כ 7.5 מיליארד דולר על הטכנולוגיה והצוות", "שלושת המייסדים מצטרפים לאמזון ל 5 שנים", "הצוות מצטרף ל Annapurna Labs, חברת השבבים של אמזון בישראל"],
+    do_title_en: "The deal",
+    do_title_he: "העסקה",
+    full_en: [
+      "Decart was founded in 2023 and has about 120 workers. Yesterday Amazon agreed to buy its main technology and its team, in a deal reported at about $7.5 billion. That makes it one of the biggest exits in Israeli tech history.",
+      {h: "What did Amazon buy?"},
+      "Decart built software that makes AI run faster and cheaper, on many kinds of computer chips. Amazon wants this to make its own AI chips stronger, so companies use them instead of Nvidia’s chips.",
+      {h: "Good to know"},
+      {list: [
+        "Amazon is buying the technology and the team, not the whole company and not Decart’s AI video models.",
+        "The three founders, Dean Leitersdorf, Orian Leitersdorf and Moshe Shalev, are joining Amazon. According to the Israeli paper Globes, they must stay 5 years to get the full payment.",
+        "The team joins Annapurna Labs, Amazon’s chip company in Israel.",
+        "Earlier this year, Anthropic (the company behind Claude) was in talks to buy Decart for about $6 billion, but walked away.",
+        "The deal still needs approval from regulators."
+      ]},
+      {h: "What it means for us"},
+      "The big fight in AI is not only about smart chatbots. It’s about who controls the chips that run them. And an Israeli team just became a key part of that fight."
+    ],
+    full_he: [
+      "דקארט הוקמה ב 2023, ויש בה כ 120 עובדים. אתמול אמזון הסכימה לקנות את הטכנולוגיה המרכזית שלה ואת הצוות, בעסקה שדווחה בשווי של כ 7.5 מיליארד דולר. זה אחד האקזיטים הגדולים בהיסטוריה של ההייטק הישראלי.",
+      {h: "מה אמזון קנתה?"},
+      "דקארט בנתה תוכנה שגורמת ל AI לרוץ מהר יותר וזול יותר, על הרבה סוגים של שבבי מחשב. אמזון רוצה את זה כדי לחזק את שבבי ה AI שלה, כך שחברות ישתמשו בהם במקום בשבבים של נבידיה.",
+      {h: "חשוב לדעת"},
+      {list: [
+        "אמזון קונה את הטכנולוגיה ואת הצוות, לא את כל החברה ולא את מודלי הווידאו של דקארט.",
+        "שלושת המייסדים, דין לייטרסדורף, אוריין לייטרסדורף ומשה שלו, מצטרפים לאמזון. לפי \"גלובס\", הם צריכים להישאר 5 שנים כדי לקבל את כל התשלום.",
+        "הצוות מצטרף ל Annapurna Labs, חברת השבבים של אמזון בישראל.",
+        "מוקדם יותר השנה אנטרופיק (החברה שמאחורי קלוד) ניהלה מגעים לקנות את דקארט בכ 6 מיליארד דולר, אבל ויתרה.",
+        "העסקה עדיין צריכה אישור של הרגולטורים."
+      ]},
+      {h: "מה זה אומר לנו"},
+      "המלחמה הגדולה ב AI היא לא רק על צ'טבוטים חכמים. היא על מי שולט בשבבים שמריצים אותם. וצוות ישראלי הפך עכשיו לחלק מרכזי במלחמה הזאת."
+    ],
+    links: [
+      {url: "https://thenextweb.com/news/amazon-decart-7-5bn-optimization-stack-founders-trainium", en: "Read on The Next Web", he: "לקריאה ב The Next Web"}
+    ]
+  },
+  {
     id: "lovable-apps-exposed", date: "2026-11-21", tag: "Security",
     icon: "assets/tools/lovable.png",
     image: "assets/stories/lovable-exposed-data.jpg",
