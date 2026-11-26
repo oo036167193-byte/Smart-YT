@@ -24,6 +24,64 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "claude-riemann-hypothesis", date: "2026-11-20", tag: "Claude",
+    icon: "assets/apps/claude.png",
+    image: "assets/stories/riemann-hypothesis.jpg",
+    title_en: "Did Claude help solve the most famous problem in math?",
+    title_he: "האם קלוד עזר לפתור את הבעיה המפורסמת ביותר במתמטיקה?",
+    text_en: "For 167 years the best mathematicians in the world tried to prove the Riemann Hypothesis and failed. Now a mathematician says he did it, together with Claude.",
+    text_he: "במשך 167 שנה טובי המתמטיקאים בעולם ניסו להוכיח את השערת רימן ונכשלו. עכשיו מתמטיקאי אומר שהוא עשה את זה, יחד עם קלוד.",
+    do_en: ["The proof was published as Lean code a computer can check", "The Lean community says it has full confidence it’s correct", "Mathematicians still need to understand why it works"],
+    do_he: ["ההוכחה פורסמה כקוד Lean שמחשב יכול לבדוק", "קהילת Lean אומרת שיש לה ביטחון מלא שהיא נכונה", "המתמטיקאים עוד צריכים להבין למה היא עובדת"],
+    do_title_en: "What happened",
+    do_title_he: "מה קרה",
+    full_en: [
+      "For 167 years, the best mathematicians in the world tried to prove the Riemann Hypothesis and failed. It’s about the hidden pattern of prime numbers, and there’s a $1 million prize for solving it. Now a mathematician says he did it, together with Claude.",
+      {h: "What happened"},
+      {list: [
+        "On 20 November, Levent Alpöge, a mathematician at Anthropic, wrote: “I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis.”",
+        "He published the proof as code in Lean, a language a computer can check step by step.",
+        "The next day, the Lean community said they have full confidence the proof is correct.",
+        "Andrew Sutherland from MIT ran his own checks too."
+      ]},
+      {h: "But it’s not the end of the story"},
+      {list: [
+        "Right now the proof is mostly computer code that is very hard for people to read.",
+        "Mathematicians still need to understand what the proof shows and why it works.",
+        "It hasn’t been officially accepted yet, and there’s no full paper."
+      ]},
+      {h: "What it means for us"},
+      "If this holds up, it’s the first time AI helped crack one of the biggest problems in human history. A year ago this sounded like science fiction.",
+      {h: "My take"},
+      "AI that solves problems humans couldn’t is amazing, and scary. It could help find cures we’ve waited decades for. But the same power can also be used for harm. What happens next depends on the choices people make now."
+    ],
+    full_he: [
+      "במשך 167 שנה, טובי המתמטיקאים בעולם ניסו להוכיח את השערת רימן ונכשלו. היא עוסקת בסדר הנסתר של המספרים הראשוניים, ויש פרס של מיליון דולר למי שיפתור אותה. עכשיו מתמטיקאי אומר שהוא עשה את זה, יחד עם קלוד.",
+      {h: "מה קרה"},
+      {list: [
+        "ב 20 בנובמבר כתב לבנט אלפוגה, מתמטיקאי באנטרופיק: \"אני מאמין שגיליתי, יחד עם קלוד, הוכחה להשערת רימן.\"",
+        "הוא פרסם את ההוכחה כקוד ב Lean, שפה שמחשב יכול לבדוק צעד אחרי צעד.",
+        "יום אחרי, קהילת Lean אמרה שיש לה ביטחון מלא שההוכחה נכונה.",
+        "אנדרו סאתרלנד מ MIT הריץ גם בדיקות משלו."
+      ]},
+      {h: "אבל זה לא סוף הסיפור"},
+      {list: [
+        "כרגע ההוכחה היא בעיקר קוד מחשב שקשה מאוד לבני אדם לקרוא.",
+        "המתמטיקאים עוד צריכים להבין מה ההוכחה מראה ולמה היא עובדת.",
+        "היא עוד לא התקבלה רשמית, ואין עדיין מאמר מלא."
+      ]},
+      {h: "מה זה אומר לנו"},
+      "אם זה יחזיק, זו הפעם הראשונה ש AI עזר לפצח את אחת הבעיות הגדולות בהיסטוריה האנושית. לפני שנה זה נשמע כמו מדע בדיוני.",
+      {h: "דעתי"},
+      "AI שפותר בעיות שבני אדם לא הצליחו לפתור זה מדהים, וגם מפחיד. הוא יכול לעזור למצוא תרופות שחיכינו להן עשרות שנים. אבל אותו כוח יכול לשמש גם לנזק. מה שיקרה הלאה תלוי בהחלטות שבני אדם מקבלים עכשיו."
+    ],
+    links: [
+      {url: "https://www.nature.com/articles/d41586-026-03812-7", en: "Read on Nature", he: "לקריאה ב Nature"},
+      {url: "https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/", en: "Read on Scientific American", he: "לקריאה ב Scientific American"},
+      {url: "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/", en: "The Lean community statement", he: "ההודעה של קהילת Lean"}
+    ]
+  },
+  {
     id: "amazon-decart", date: "2026-11-23", tag: "Amazon",
     icon: "assets/tools/israel-chip.png",
     image: "assets/stories/decart-founders.jpg",
