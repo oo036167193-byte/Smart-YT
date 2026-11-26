@@ -24,6 +24,48 @@ var ISSUE = "2026-11-09";
 
 var POSTS = [
   {
+    id: "claude-ship", date: "2026-11-23", tag: "Claude",
+    icon: "assets/apps/claude.png",
+    image: "assets/stories/claude-ship.jpg",
+    title_en: "Claude writes the code. Now Claude can also approve it",
+    title_he: "קלוד כותב את הקוד. עכשיו קלוד יכול גם לאשר אותו",
+    text_en: "Anthropic launched Claude Ship, a set of AI helpers that check code, fix problems and decide what’s ready to go live.",
+    text_he: "אנטרופיק השיקה את Claude Ship, סט של עוזרי AI שבודקים קוד, מתקנים בעיות ומחליטים מה מוכן לעלות לאוויר.",
+    do_en: ["Code Review checks every change and finds bugs", "PR Steward fixes problems by itself and explains how to undo", "Claude Approvals approves simple changes by your team’s rules"],
+    do_he: ["Code Review בודק כל שינוי ומוצא באגים", "PR Steward מתקן בעיות בעצמו ומסביר איך לבטל", "Claude Approvals מאשר שינויים פשוטים לפי הכללים של הצוות"],
+    full_en: [
+      "When a team builds software, every change usually gets checked and approved by a person before it goes live. That made sense when people wrote every line. But today AI writes much of the code, much faster than people can check it.",
+      "So on Monday Anthropic launched Claude Ship, a set of AI helpers that check code, fix problems and decide what’s ready:",
+      {list: [
+        "Code Review: checks every change and finds bugs. Already available to all Team and Enterprise customers.",
+        "PR Steward (beta): fixes problems by itself, like failed tests, and explains what it changed and how to undo it.",
+        "Claude Approvals (beta): approves simple changes on its own, following rules the team writes in plain language."
+      ]},
+      "Anthropic says that in the Claude Code team, Claude already writes most of their code.",
+      {h: "The team stays in control"},
+      "They choose where it runs, how deep to check, and which changes must still go to a person. Anthropic suggests starting with “watch only” mode, on one project, with a monthly spending limit.",
+      {h: "What it means for us"},
+      "AI is moving from helping us work to making decisions on its own. The big question is which decisions we’re happy to let it make, and which must stay with a person."
+    ],
+    full_he: [
+      "כשצוות בונה תוכנה, כל שינוי בדרך כלל נבדק ומאושר על ידי בן אדם לפני שהוא עולה לאוויר. זה היה הגיוני כשאנשים כתבו כל שורה. אבל היום ה AI כותב חלק גדול מהקוד, הרבה יותר מהר ממה שאנשים מספיקים לבדוק.",
+      "אז ביום שני השיקה אנטרופיק את Claude Ship, סט של עוזרי AI שבודקים קוד, מתקנים בעיות ומחליטים מה מוכן:",
+      {list: [
+        "Code Review: בודק כל שינוי ומוצא באגים. כבר זמין לכל לקוחות Team ו Enterprise.",
+        "PR Steward (בטא): מתקן בעיות בעצמו, כמו בדיקות שנכשלו, ומסביר מה שינה ואיך לבטל.",
+        "Claude Approvals (בטא): מאשר שינויים פשוטים לבד, לפי כללים שהצוות כותב במילים רגילות."
+      ]},
+      "אנטרופיק אומרת שבצוות של Claude Code, קלוד כבר כותב את רוב הקוד שלהם.",
+      {h: "הצוות נשאר בשליטה"},
+      "הוא בוחר איפה זה רץ, כמה לעומק לבדוק, ואילו שינויים עדיין חייבים לעבור לבן אדם. אנטרופיק ממליצה להתחיל במצב \"צפייה בלבד\", על פרויקט אחד, עם תקרת הוצאות חודשית.",
+      {h: "מה זה אומר לנו"},
+      "ה AI עובר מלעזור לנו לעבוד לקבל החלטות בעצמו. השאלה הגדולה היא אילו החלטות אנחנו מוכנים לתת לו לקבל, ואילו חייבות להישאר אצל בן אדם."
+    ],
+    links: [
+      {url: "https://claude.com/resources/articles/introducing-claude-ship", en: "Read on Claude.com", he: "לקריאה ב Claude.com"}
+    ]
+  },
+  {
     id: "claude-riemann-hypothesis", date: "2026-11-20", tag: "Claude",
     icon: "assets/apps/claude.png",
     image: "assets/stories/riemann-hypothesis.jpg",
